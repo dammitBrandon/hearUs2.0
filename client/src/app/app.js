@@ -6,7 +6,10 @@ angular.module('hearUs', [
     'header',
     'ui.router',
     'mm.foundation',
-    'landing'
+    'landing',
+    'bills',
+    'bill',
+    'congressmen'
   ])
   .config(function myAppConfig($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
@@ -16,7 +19,7 @@ angular.module('hearUs', [
   .controller('AppCtrl', function AppCtrl($scope, $location) {
     $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
       if (angular.isDefined(toState.data.pageTitle)) {
-        $scope.pageTitle = toState.data.pageTitle + ' Thea Hear Us Project';
+        $scope.pageTitle = toState.data.pageTitle + ' | The Hear Us Project';
       }
     });
   });
