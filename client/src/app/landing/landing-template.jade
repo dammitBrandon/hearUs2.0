@@ -1,0 +1,10 @@
+.text-center
+  h1 The Hear Us Project
+div
+  .form-group
+    input.form-control(id="search-item", ng-model="searchTopic", placeholder="Search for Specifc topic")
+    button(ng-click="findTopic()") Search for Issue
+  .form-group
+    input.form-control(id="districr-search", ng-model="zipCode", placeholder="search for your district")
+    button(ng-click="findDistrict()") Find your District
+    
