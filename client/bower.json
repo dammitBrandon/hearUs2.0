@@ -10,6 +10,7 @@
         "angular-foundation": "0.2.2",
         "jquery": "2.1.0",
         "fontawesome": "4.0.3",
-        "pure": "latest"
+        "pure": "latest",
+        "foundation": "latest"
     }
 }

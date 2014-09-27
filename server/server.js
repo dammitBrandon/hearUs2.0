@@ -3,11 +3,14 @@
 var express = require('express'),
     path = require('path'),
     fs = require('fs'),
-    mongoose = require('mongoose');
+    mongoose = require('mongoose'),
+    sunlight = require('sunlight-congress-api');
 
 /**
  * Main application file
  */
+
+
 
 // Default node environment to development
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
@@ -37,6 +40,42 @@ require('./lib/config/express')(app);
 
 // Routing
 require('./lib/routes')(app, config);
+
+/**
+ * apikey sunlight labs api key
+ * init the sunlightlabs api module
+ */
+
+var apikey = config.apikey;
+
+sunlight.init(apikey);
+
+
+// RESULTS MIGHT NOT COME BACK IN THE ORDER WE REQUESTED THEM
+// THIS FUNCTION WILL HELP US KNOW WHICH IS WHICH BY CREATING
+// A STANDARD HEADER ROW SUCCESS FUNCTION WITH A LABEL
+var buildSuccess = function(title){
+    return function(data){
+        console.log("\n**************************** "+title+" ***********************************");
+        console.log(data);
+        console.log();
+    }
+}
+
+var senatorsPage1 = sunlight.legislators()
+    .filter("in_office", true)
+    .filter("chamber", "house")
+    .fields("first_name", "middle_name", "last_name", "twitter_id", "gender")
+    .fields("party", "term_start", "state", "state_rank")
+    .page(1, 50); //this might make more sense at 50... but it just fills up the demo screen
+
+// EXAMPLE RESPONSE: ./results/SenatorsPage1.json
+senatorsPage1.call(buildSuccess("SENTORS PAGE 1"));
+
+var gunControlBills = sunlight.billsSearch();
+gunControlBills.fields("official_title", "introduced_on", "last_vote_at");
+gunControlBills.search("\"gun control\"~1");
+gunControlBills.call(buildSuccess("GUN CONTROL"));
 
 // Start server
 app.listen(config.port, function () {

@@ -11,5 +11,5 @@ angular.module('landing.controllers', [
         
         $scope.findDistrict  = function findDistrict() {
             $log.log("landingCtrl#findDistrict", $scope.zipCode);
-        }
+        };
     });
