@@ -1,3 +1,6 @@
-/**
- * Created by brandon.bailey on 9/27/14.
- */
+angular.module('issueSearch.controllers', [
+  'ui.router'
+]).
+  controller('issueSearchCtrl', function issueSearchController($scope, $state, $log) {
+    
+  });
