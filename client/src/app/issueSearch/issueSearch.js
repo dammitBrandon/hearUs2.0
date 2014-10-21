@@ -5,8 +5,7 @@ angular.module('issueSearch', [
 .config(function issueSearchConfig($stateProvider) {
     $stateProvider
       .state('issueSearch', {
-//        TODO: dynamically udpate the url to reflect the issue being searched for
-        url: '/issue-search',
+        url: '/issue-search/:searchTopic',
         views: {
           "main": {
             controller: "issueSearchCtrl",
@@ -14,6 +13,6 @@ angular.module('issueSearch', [
           }
         },
 //        TODO: dynamically update the data to reflect the issue being searched for 
-        data: { pageTitle: "Search Topics" }
+        data: { pageTitle: "Search Topics"}
       });
   });

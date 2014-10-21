@@ -50,7 +50,6 @@ var apikey = config.apikey;
 
 sunlight.init(apikey);
 
-
 // RESULTS MIGHT NOT COME BACK IN THE ORDER WE REQUESTED THEM
 // THIS FUNCTION WILL HELP US KNOW WHICH IS WHICH BY CREATING
 // A STANDARD HEADER ROW SUCCESS FUNCTION WITH A LABEL
@@ -73,8 +72,8 @@ var senatorsPage1 = sunlight.legislators()
 senatorsPage1.call(buildSuccess("SENTORS PAGE 1"));
 
 var gunControlBills = sunlight.billsSearch();
-gunControlBills.fields("official_title", "introduced_on", "last_vote_at");
-gunControlBills.search("\"gun control\"~1");
+gunControlBills.fields("official_title", "introduced_on", "last_vote_at", "popular_title", "keywords");
+gunControlBills.search("\"gun control\"~5");
 gunControlBills.call(buildSuccess("GUN CONTROL"));
 
 // Start server
