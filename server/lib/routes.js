@@ -18,7 +18,8 @@ module.exports = function (app, config) {
   app.put('/api/users', users.changePassword);
   app.get('/api/users/me', ensureAuthenticated, users.me);
   app.get('/api/users/:id', users.show);
-  app.get('/api/sunlight/:issue', sunlightApi.searchIssue);
+  app.get('/api/sunlight/topic/:issue', sunlightApi.searchIssue);
+  app.get('/api/sunlight/district/:zipCode', sunlightApi.searchDistrictZipCode);
 
   app.post('/api/session', session.login);
   app.del('/api/session', session.logout);

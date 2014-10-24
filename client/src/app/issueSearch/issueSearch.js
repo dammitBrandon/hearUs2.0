@@ -13,6 +13,6 @@ angular.module('issueSearch', [
           }
         },
 //        TODO: dynamically update the data to reflect the issue being searched for 
-        data: { pageTitle: "Search Topics"}
+        data: { pageTitle: "Search Topics" }
       });
   });

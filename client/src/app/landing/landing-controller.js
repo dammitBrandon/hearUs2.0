@@ -9,7 +9,7 @@ angular.module('landing.controllers', [
       $state.go('issueSearch', {searchTopic: $scope.searchTopic});
     };
 
-    $scope.findDistrict = function findDistrict() {
-      $log.log("landingCtrl#findDistrict", $scope.zipCode);
+    $scope.findDistrictLanding = function findDistrict() {
+      $state.go('districtSearch', {zipCode: $scope.zipCode});
     };
   });

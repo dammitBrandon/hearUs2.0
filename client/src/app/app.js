@@ -7,7 +7,8 @@ angular.module('hearUs', [
   'ui.router',
   'mm.foundation',
   'landing',
-  'issueSearch'
+  'issueSearch',
+  'districtSearch'
 ])
   .config(function myAppConfig($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
