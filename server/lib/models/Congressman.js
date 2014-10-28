@@ -4,13 +4,18 @@ var mongoose = require('mongoose'),
   uniqueValidator = require('mongoose-unique-validator'),
   Schema = mongoose.Schema;
 
-var CongressManSchema = new Schema({
+var CongressmanSchema = new Schema({
+  bioguide_id: String,
   first_name: String,
   last_name: String,
   middle_name: String,
-  distirct: Number,
+  district: Number,
   party: String,
-  state: String
+  state: String,
+  chamber: String,
+  website: String
 });
 
-mongoose.model('Congressman', CongressManSchema);
+var Congressman  = mongoose.model('Congressman', CongressmanSchema);
+
+module.exports = Congressman;

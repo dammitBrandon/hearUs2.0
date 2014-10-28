@@ -9,7 +9,7 @@ module.exports = {
   mongo: {
     uri: process.env.MONGOLAB_URI ||
          process.env.MONGOHQ_URL ||
-         'mongodb://localhost/hearus'
+      'mongodb://heroku_app25943479:ri0pbkfb7373vlrrps73tge0hi@ds053428.mongolab.com:53428/heroku_app25943479'
   },
   server: {
     distFolder: path.resolve(rootPath + '/../client/dist')
