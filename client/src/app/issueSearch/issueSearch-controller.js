@@ -8,7 +8,6 @@ angular.module('issueSearch.controllers', [
     
     function findBills() {
       SunlightService.getIssues($scope.issue);
-      $log.log('issueSearchCtrl#findBills: ', $scope.issue);
     }
     
     findBills();

@@ -34,36 +34,73 @@ var saveTestData = function (title) {
   };
 };
 
+var success = function (data) {
+  return function (data) {
+    var testData = JSON.stringify(data, null, 4);
+    console.log("test Data: ", testData);
+  };
+};
+
 var gunControlBills = sunlight.billsSearch();
 gunControlBills.fields("official_title", "introduced_on", "last_vote_at", "popular_title", "keywords");
 gunControlBills.search("\"gun control\"~5");
 gunControlBills.call(saveTestData("GunControlBills"));
 
+var districtBills = sunlight.districtsLocate();
+districtBills.addZip("60653");
+districtBills.call(saveTestData("DistrictBills"));
+
 /**
  * load json data
  */
-var loadJsonFile = function() {
-  var jsonData = require('../../testData/GunControlBills.json');
-  console.log('#loadJsonFile: ', jsonData);
+var loadJsonFile = function(filename) {
+  var jsonData = require('../../testData/' + filename);
   return jsonData;
 };
 
 /**
  *  search for a topic
  */
-exports.searchIssue = function (req, res, next) {
+exports.searchIssue = function(req, res, next) {
   var searchTopic = req.params.issue;
-  console.log('search topic: ', searchTopic);
-  var data = loadJsonFile();
-  console.log('json data: ', data);
+  var filename = 'GunControlBills.json';
+  var data = loadJsonFile(filename);
+  res.send(data);
+};
+
+exports.loadHouseReps = function(req, res, next){
+  var reps = sunlight.legislators();
+  var filename = 'Reps.json';
+  reps.filter("in_office", true)
+    .filter("chamber", "house")
+    .fields("first_name", "middle_name", "last_name", "twitter_id", "gender", "party", "state", "district");
+//    .call();
+    var data = loadJsonFile(filename);
+  res.send(data);
+};
+
+exports.loadSenators = function(req, res, next){
+  var reps = sunlight.legislators();
+  var filename = 'Senators.json';
+  reps.filter("in_office", true)
+    .filter("chamber", "senate")
+    .fields("first_name", "middle_name", "last_name", "twitter_id", "gender", "party", "state", "district");
+//    .call();
+  var data = loadJsonFile(filename);
   res.send(data);
 };
 
 /**
- *
+ * search for district by zipcode
  */
 exports.searchDistrictZipCode  = function (req, res, next) {
-  var zipCode = req.params.zipCodea;
-  console.log('zip code search: ', zipCode);
-  res.send();
+  var zipCode = req.params.zipCode;
+  var filename = 'DistrictBills.json';
+  
+  var district = sunlight.districtsLocate();
+  district.addZip(zipCode);
+//  district.call();
+  var data = loadJsonFile(filename);
+  
+  res.send(data);
 };

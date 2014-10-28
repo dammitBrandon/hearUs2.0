@@ -1,0 +1,4390 @@
+{
+  "results" :
+    [
+      {
+        "district" : 19,
+        "first_name" : "Curtis",
+        "gender" : "M",
+        "last_name" : "Clawson",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "FL"
+      },
+      {
+        "district" : 13,
+        "first_name" : "David",
+        "gender" : "M",
+        "last_name" : "Jolly",
+        "middle_name" : "W.",
+        "party" : "R",
+        "state" : "FL",
+        "twitter_id" : "USRepDavidJolly"
+      },
+      {
+        "district" : 1,
+        "first_name" : "Bradley",
+        "gender" : "M",
+        "last_name" : "Byrne",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "AL",
+        "twitter_id" : "RepByrne"
+      },
+      {
+        "district" : 5,
+        "first_name" : "Katherine",
+        "gender" : "F",
+        "last_name" : "Clark",
+        "middle_name" : "M.",
+        "party" : "D",
+        "state" : "MA",
+        "twitter_id" : "RepKClark"
+      },
+      {
+        "district" : 5,
+        "first_name" : "Vance",
+        "gender" : "M",
+        "last_name" : "McAllister",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "LA",
+        "twitter_id" : "RepMcAllister"
+      },
+      {
+        "district" : 8,
+        "first_name" : "Jason",
+        "gender" : "M",
+        "last_name" : "Smith",
+        "middle_name" : "T.",
+        "party" : "R",
+        "state" : "MO",
+        "twitter_id" : "RepJasonSmith"
+      },
+      {
+        "district" : 2,
+        "first_name" : "Robin",
+        "gender" : "F",
+        "last_name" : "Kelly",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "IL",
+        "twitter_id" : "RepRobinKelly"
+      },
+      {
+        "district" : 2,
+        "first_name" : "Mark",
+        "gender" : "M",
+        "last_name" : "Pocan",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "WI",
+        "twitter_id" : "RepMarkPocan"
+      },
+      {
+        "district" : 10,
+        "first_name" : "Denny",
+        "gender" : "M",
+        "last_name" : "Heck",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "WA",
+        "twitter_id" : "RepDennyHeck"
+      },
+      {
+        "district" : 6,
+        "first_name" : "Derek",
+        "gender" : "M",
+        "last_name" : "Kilmer",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "WA",
+        "twitter_id" : "RepDerekKilmer"
+      },
+      {
+        "district" : 2,
+        "first_name" : "Chris",
+        "gender" : "M",
+        "last_name" : "Stewart",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "UT",
+        "twitter_id" : "RepChrisStewart"
+      },
+      {
+        "district" : 34,
+        "first_name" : "Filemon",
+        "gender" : "M",
+        "last_name" : "Vela",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "TX",
+        "twitter_id" : "RepFilemonVela"
+      },
+      {
+        "district" : 33,
+        "first_name" : "Marc",
+        "gender" : "M",
+        "last_name" : "Veasey",
+        "middle_name" : "A.",
+        "party" : "D",
+        "state" : "TX",
+        "twitter_id" : "RepVeasey"
+      },
+      {
+        "district" : 25,
+        "first_name" : "Roger",
+        "gender" : "M",
+        "last_name" : "Williams",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "TX",
+        "twitter_id" : "RepRWilliams"
+      },
+      {
+        "district" : 23,
+        "first_name" : "Pete",
+        "gender" : "M",
+        "last_name" : "Gallego",
+        "middle_name" : "P.",
+        "party" : "D",
+        "state" : "TX",
+        "twitter_id" : "RepPeteGallego"
+      },
+      {
+        "district" : 20,
+        "first_name" : "Joaquin",
+        "gender" : "M",
+        "last_name" : "Castro",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "TX",
+        "twitter_id" : "JoaquinCastrotx"
+      },
+      {
+        "district" : 16,
+        "first_name" : "Beto",
+        "gender" : "M",
+        "last_name" : "O'Rourke",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "TX",
+        "twitter_id" : "RepBetoORourke"
+      },
+      {
+        "district" : 14,
+        "first_name" : "Randy",
+        "gender" : "M",
+        "last_name" : "Weber",
+        "middle_name" : "K.",
+        "party" : "R",
+        "state" : "TX",
+        "twitter_id" : "TXRandy14"
+      },
+      {
+        "district" : 7,
+        "first_name" : "Tom",
+        "gender" : "M",
+        "last_name" : "Rice",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "SC",
+        "twitter_id" : "RepTomRice"
+      },
+      {
+        "district" : 17,
+        "first_name" : "Matthew",
+        "gender" : "M",
+        "last_name" : "Cartwright",
+        "middle_name" : "A.",
+        "party" : "D",
+        "state" : "PA",
+        "twitter_id" : "RepCartwright"
+      },
+      {
+        "district" : 12,
+        "first_name" : "Keith",
+        "gender" : "M",
+        "last_name" : "Rothfus",
+        "middle_name" : "J.",
+        "party" : "R",
+        "state" : "PA",
+        "twitter_id" : "KeithRothfus"
+      },
+      {
+        "district" : 4,
+        "first_name" : "Scott",
+        "gender" : "M",
+        "last_name" : "Perry",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "PA",
+        "twitter_id" : "RepScottPerry"
+      },
+      {
+        "district" : 2,
+        "first_name" : "Markwayne",
+        "gender" : "M",
+        "last_name" : "Mullin",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "OK",
+        "twitter_id" : "RepMullin"
+      },
+      {
+        "district" : 1,
+        "first_name" : "Jim",
+        "gender" : "M",
+        "last_name" : "Bridenstine",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "OK",
+        "twitter_id" : "RepJBridenstine"
+      },
+      {
+        "district" : 14,
+        "first_name" : "David",
+        "gender" : "M",
+        "last_name" : "Joyce",
+        "middle_name" : "P.",
+        "party" : "R",
+        "state" : "OH",
+        "twitter_id" : "RepDaveJoyce"
+      },
+      {
+        "district" : 3,
+        "first_name" : "Joyce",
+        "gender" : "F",
+        "last_name" : "Beatty",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "OH",
+        "twitter_id" : "RepBeatty"
+      },
+      {
+        "district" : 2,
+        "first_name" : "Brad",
+        "gender" : "M",
+        "last_name" : "Wenstrup",
+        "middle_name" : "R.",
+        "party" : "R",
+        "state" : "OH",
+        "twitter_id" : "RepBradWenstrup"
+      },
+      {
+        "district" : 27,
+        "first_name" : "Chris",
+        "gender" : "M",
+        "last_name" : "Collins",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "NY",
+        "twitter_id" : "RepChrisCollins"
+      },
+      {
+        "district" : 18,
+        "first_name" : "Sean",
+        "gender" : "M",
+        "last_name" : "Maloney",
+        "middle_name" : "Patrick",
+        "party" : "D",
+        "state" : "NY",
+        "twitter_id" : "RepSeanMaloney"
+      },
+      {
+        "district" : 8,
+        "first_name" : "Hakeem",
+        "gender" : "M",
+        "last_name" : "Jeffries",
+        "middle_name" : "S.",
+        "party" : "D",
+        "state" : "NY",
+        "twitter_id" : "RepJeffries"
+      },
+      {
+        "district" : 6,
+        "first_name" : "Grace",
+        "gender" : "F",
+        "last_name" : "Meng",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "NY",
+        "twitter_id" : "RepGraceMeng"
+      },
+      {
+        "district" : 4,
+        "first_name" : "Steven",
+        "gender" : "M",
+        "last_name" : "Horsford",
+        "middle_name" : "A.",
+        "party" : "D",
+        "state" : "NV",
+        "twitter_id" : "RepHorsford"
+      },
+      {
+        "district" : 1,
+        "first_name" : "Michelle",
+        "gender" : "F",
+        "last_name" : "Lujan Grisham",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "NM",
+        "twitter_id" : "RepLujanGrisham"
+      },
+      {
+        "district" : 2,
+        "first_name" : "Ann",
+        "gender" : "F",
+        "last_name" : "Kuster",
+        "middle_name" : "M.",
+        "party" : "D",
+        "state" : "NH",
+        "twitter_id" : "RepAnnieKuster"
+      },
+      {
+        "district" : 0,
+        "first_name" : "Kevin",
+        "gender" : "M",
+        "last_name" : "Cramer",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "ND",
+        "twitter_id" : "RepKevinCramer"
+      },
+      {
+        "district" : 13,
+        "first_name" : "George",
+        "gender" : "M",
+        "last_name" : "Holding",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "NC",
+        "twitter_id" : "RepHolding"
+      },
+      {
+        "district" : 11,
+        "first_name" : "Mark",
+        "gender" : "M",
+        "last_name" : "Meadows",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "NC",
+        "twitter_id" : "RepMarkMeadows"
+      },
+      {
+        "district" : 9,
+        "first_name" : "Robert",
+        "gender" : "M",
+        "last_name" : "Pittenger",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "NC",
+        "twitter_id" : "RepPittenger"
+      },
+      {
+        "district" : 8,
+        "first_name" : "Richard",
+        "gender" : "M",
+        "last_name" : "Hudson",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "NC",
+        "twitter_id" : "RepRichHudson"
+      },
+      {
+        "district" : 0,
+        "first_name" : "Steve",
+        "gender" : "M",
+        "last_name" : "Daines",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "MT",
+        "twitter_id" : "SteveDaines"
+      },
+      {
+        "district" : 2,
+        "first_name" : "Ann",
+        "gender" : "F",
+        "last_name" : "Wagner",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "MO",
+        "twitter_id" : "RepAnnWagner"
+      },
+      {
+        "district" : 11,
+        "first_name" : "Kerry",
+        "gender" : "M",
+        "last_name" : "Bentivolio",
+        "middle_name" : "L.",
+        "party" : "R",
+        "state" : "MI",
+        "twitter_id" : "RepKerryB"
+      },
+      {
+        "district" : 5,
+        "first_name" : "Daniel",
+        "gender" : "M",
+        "last_name" : "Kildee",
+        "middle_name" : "T.",
+        "party" : "D",
+        "state" : "MI",
+        "twitter_id" : "RepDanKildee"
+      },
+      {
+        "district" : 6,
+        "first_name" : "John",
+        "gender" : "M",
+        "last_name" : "Delaney",
+        "middle_name" : "K.",
+        "party" : "D",
+        "state" : "MD",
+        "twitter_id" : "RepJohnDelaney"
+      },
+      {
+        "district" : 4,
+        "first_name" : "Joseph",
+        "gender" : "M",
+        "last_name" : "Kennedy",
+        "middle_name" : "P.",
+        "party" : "D",
+        "state" : "MA",
+        "twitter_id" : "RepJoeKennedy"
+      },
+      {
+        "district" : 6,
+        "first_name" : "Garland",
+        "gender" : "M",
+        "last_name" : "Barr",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "KY",
+        "twitter_id" : "RepAndyBarr"
+      },
+      {
+        "district" : 6,
+        "first_name" : "Luke",
+        "gender" : "M",
+        "last_name" : "Messer",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "IN",
+        "twitter_id" : "RepLukeMesser"
+      },
+      {
+        "district" : 5,
+        "first_name" : "Susan",
+        "gender" : "F",
+        "last_name" : "Brooks",
+        "middle_name" : "W.",
+        "party" : "R",
+        "state" : "IN",
+        "twitter_id" : "SusanWBrooks"
+      },
+      {
+        "district" : 2,
+        "first_name" : "Jackie",
+        "gender" : "F",
+        "last_name" : "Walorski",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "IN",
+        "twitter_id" : "RepWalorski"
+      },
+      {
+        "district" : 17,
+        "first_name" : "Cheri",
+        "gender" : "F",
+        "last_name" : "Bustos",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "IL",
+        "twitter_id" : "RepCheri"
+      },
+      {
+        "district" : 13,
+        "first_name" : "Rodney",
+        "gender" : "M",
+        "last_name" : "Davis",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "IL",
+        "twitter_id" : "RodneyDavis"
+      },
+      {
+        "district" : 12,
+        "first_name" : "William",
+        "gender" : "M",
+        "last_name" : "Enyart",
+        "middle_name" : "L.",
+        "party" : "D",
+        "state" : "IL",
+        "twitter_id" : "RepBillEnyart"
+      },
+      {
+        "district" : 10,
+        "first_name" : "Bradley",
+        "gender" : "M",
+        "last_name" : "Schneider",
+        "middle_name" : "S.",
+        "party" : "D",
+        "state" : "IL",
+        "twitter_id" : "RepSchneider"
+      },
+      {
+        "district" : 8,
+        "first_name" : "Tammy",
+        "gender" : "F",
+        "last_name" : "Duckworth",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "IL",
+        "twitter_id" : "RepDuckworth"
+      },
+      {
+        "district" : 2,
+        "first_name" : "Tulsi",
+        "gender" : "F",
+        "last_name" : "Gabbard",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "HI",
+        "twitter_id" : "TulsiPress"
+      },
+      {
+        "district" : 9,
+        "first_name" : "Doug",
+        "gender" : "M",
+        "last_name" : "Collins",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "GA",
+        "twitter_id" : "RepDougCollins"
+      },
+      {
+        "district" : 26,
+        "first_name" : "Joe",
+        "gender" : "M",
+        "last_name" : "Garcia",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "FL",
+        "twitter_id" : "RepJoeGarcia"
+      },
+      {
+        "district" : 22,
+        "first_name" : "Lois",
+        "gender" : "F",
+        "last_name" : "Frankel",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "FL",
+        "twitter_id" : "RepLoisFrankel"
+      },
+      {
+        "district" : 18,
+        "first_name" : "Patrick",
+        "gender" : "M",
+        "last_name" : "Murphy",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "FL",
+        "twitter_id" : "RepMurphyFL"
+      },
+      {
+        "district" : 6,
+        "first_name" : "Ron",
+        "gender" : "M",
+        "last_name" : "DeSantis",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "FL",
+        "twitter_id" : "RepDeSantis"
+      },
+      {
+        "district" : 3,
+        "first_name" : "Ted",
+        "gender" : "M",
+        "last_name" : "Yoho",
+        "middle_name" : "S.",
+        "party" : "R",
+        "state" : "FL",
+        "twitter_id" : "RepTedYoho"
+      },
+      {
+        "district" : 5,
+        "first_name" : "Elizabeth",
+        "gender" : "F",
+        "last_name" : "Esty",
+        "middle_name" : "H.",
+        "party" : "D",
+        "state" : "CT",
+        "twitter_id" : "RepEsty"
+      },
+      {
+        "district" : 52,
+        "first_name" : "Scott",
+        "gender" : "M",
+        "last_name" : "Peters",
+        "middle_name" : "H.",
+        "party" : "D",
+        "state" : "CA",
+        "twitter_id" : "RepScottPeters"
+      },
+      {
+        "district" : 51,
+        "first_name" : "Juan",
+        "gender" : "M",
+        "last_name" : "Vargas",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "CA",
+        "twitter_id" : "RepJuanVargas"
+      },
+      {
+        "district" : 47,
+        "first_name" : "Alan",
+        "gender" : "M",
+        "last_name" : "Lowenthal",
+        "middle_name" : "S.",
+        "party" : "D",
+        "state" : "CA",
+        "twitter_id" : "RepLowenthal"
+      },
+      {
+        "district" : 41,
+        "first_name" : "Mark",
+        "gender" : "M",
+        "last_name" : "Takano",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "CA",
+        "twitter_id" : "RepMarkTakano"
+      },
+      {
+        "district" : 36,
+        "first_name" : "Raul",
+        "gender" : "M",
+        "last_name" : "Ruiz",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "CA",
+        "twitter_id" : "CongressmanRuiz"
+      },
+      {
+        "district" : 35,
+        "first_name" : "Gloria",
+        "gender" : "F",
+        "last_name" : "Negrete McLeod",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "CA",
+        "twitter_id" : "RepMcLeod"
+      },
+      {
+        "district" : 29,
+        "first_name" : "Tony",
+        "gender" : "M",
+        "last_name" : "Cárdenas",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "CA",
+        "twitter_id" : "RepCardenas"
+      },
+      {
+        "district" : 26,
+        "first_name" : "Julia",
+        "gender" : "F",
+        "last_name" : "Brownley",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "CA",
+        "twitter_id" : "JuliaBrownley26"
+      },
+      {
+        "district" : 21,
+        "first_name" : "David",
+        "gender" : "M",
+        "last_name" : "Valadao",
+        "middle_name" : "G.",
+        "party" : "R",
+        "state" : "CA",
+        "twitter_id" : "RepDavidValadao"
+      },
+      {
+        "district" : 15,
+        "first_name" : "Eric",
+        "gender" : "M",
+        "last_name" : "Swalwell",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "CA",
+        "twitter_id" : "RepSwalwell"
+      },
+      {
+        "district" : 8,
+        "first_name" : "Paul",
+        "gender" : "M",
+        "last_name" : "Cook",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "CA",
+        "twitter_id" : "RepPaulCook"
+      },
+      {
+        "district" : 7,
+        "first_name" : "Ami",
+        "gender" : "M",
+        "last_name" : "Bera",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "CA",
+        "twitter_id" : "RepBera"
+      },
+      {
+        "district" : 2,
+        "first_name" : "Jared",
+        "gender" : "M",
+        "last_name" : "Huffman",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "CA",
+        "twitter_id" : "RepHuffman"
+      },
+      {
+        "district" : 1,
+        "first_name" : "Doug",
+        "gender" : "M",
+        "last_name" : "LaMalfa",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "CA",
+        "twitter_id" : "RepLaMalfa"
+      },
+      {
+        "district" : 9,
+        "first_name" : "Kyrsten",
+        "gender" : "F",
+        "last_name" : "Sinema",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "AZ",
+        "twitter_id" : "RepSinema"
+      },
+      {
+        "district" : 4,
+        "first_name" : "Tom",
+        "gender" : "M",
+        "last_name" : "Cotton",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "AR",
+        "twitter_id" : "RepTomCotton"
+      },
+      {
+        "district" : 1,
+        "first_name" : "Dina",
+        "gender" : "F",
+        "last_name" : "Titus",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "NV",
+        "twitter_id" : "RepDinaTitus"
+      },
+      {
+        "district" : 1,
+        "first_name" : "Carol",
+        "gender" : "F",
+        "last_name" : "Shea-Porter",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "NH",
+        "twitter_id" : "RepSheaPorter"
+      },
+      {
+        "district" : 24,
+        "first_name" : "Daniel",
+        "gender" : "M",
+        "last_name" : "Maffei",
+        "middle_name" : "B.",
+        "party" : "D",
+        "state" : "NY",
+        "twitter_id" : "RepDanMaffei"
+      },
+      {
+        "district" : 1,
+        "first_name" : "Ann",
+        "gender" : "F",
+        "last_name" : "Kirkpatrick",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "AZ",
+        "twitter_id" : "RepKirkpatrick"
+      },
+      {
+        "district" : 9,
+        "first_name" : "Alan",
+        "gender" : "M",
+        "last_name" : "Grayson",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "FL",
+        "twitter_id" : null
+      },
+      {
+        "district" : 11,
+        "first_name" : "Bill",
+        "gender" : "M",
+        "last_name" : "Foster",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "IL",
+        "twitter_id" : "RepBillFoster"
+      },
+      {
+        "district" : 1,
+        "first_name" : "Marshall",
+        "gender" : "M",
+        "last_name" : "Sanford",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "SC",
+        "twitter_id" : "RepSanfordSC"
+      },
+      {
+        "district" : 5,
+        "first_name" : "Matt",
+        "gender" : "M",
+        "last_name" : "Salmon",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "AZ",
+        "twitter_id" : "RepMattSalmon"
+      },
+      {
+        "district" : 36,
+        "first_name" : "Steve",
+        "gender" : "M",
+        "last_name" : "Stockman",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "TX",
+        "twitter_id" : "SteveWorks4You"
+      },
+      {
+        "district" : 8,
+        "first_name" : "Richard",
+        "gender" : "M",
+        "last_name" : "Nolan",
+        "middle_name" : "M.",
+        "party" : "D",
+        "state" : "MN",
+        "twitter_id" : "USRepRickNolan"
+      },
+      {
+        "district" : 10,
+        "first_name" : "Donald",
+        "gender" : "M",
+        "last_name" : "Payne",
+        "middle_name" : "M.",
+        "party" : "D",
+        "state" : "NJ",
+        "twitter_id" : "RepDonaldPayne"
+      },
+      {
+        "district" : 4,
+        "first_name" : "Thomas",
+        "gender" : "M",
+        "last_name" : "Massie",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "KY",
+        "twitter_id" : "RepThomasMassie"
+      },
+      {
+        "district" : 1,
+        "first_name" : "Suzan",
+        "gender" : "F",
+        "last_name" : "DelBene",
+        "middle_name" : "K.",
+        "party" : "D",
+        "state" : "WA",
+        "twitter_id" : "RepDelBene"
+      },
+      {
+        "district" : 2,
+        "first_name" : "Ron",
+        "gender" : "M",
+        "last_name" : "Barber",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "AZ",
+        "twitter_id" : "RepRonBarber"
+      },
+      {
+        "district" : 1,
+        "first_name" : "Suzanne",
+        "gender" : "F",
+        "last_name" : "Bonamici",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "OR",
+        "twitter_id" : "RepBonamici"
+      },
+      {
+        "district" : 2,
+        "first_name" : "Mark",
+        "gender" : "M",
+        "last_name" : "Amodei",
+        "middle_name" : "E.",
+        "party" : "R",
+        "state" : "NV",
+        "twitter_id" : "MarkAmodeiNV2"
+      },
+      {
+        "district" : 44,
+        "first_name" : "Janice",
+        "gender" : "F",
+        "last_name" : "Hahn",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "CA",
+        "twitter_id" : "Rep_JaniceHahn"
+      },
+      {
+        "district" : 9,
+        "first_name" : "Todd",
+        "gender" : "M",
+        "last_name" : "Young",
+        "middle_name" : "C.",
+        "party" : "R",
+        "state" : "IN",
+        "twitter_id" : "RepToddYoung"
+      },
+      {
+        "district" : 0,
+        "first_name" : "Don",
+        "gender" : "M",
+        "last_name" : "Young",
+        "middle_name" : "E.",
+        "party" : "R",
+        "state" : "AK",
+        "twitter_id" : "RepDonYoung"
+      },
+      {
+        "district" : 3,
+        "first_name" : "Kevin",
+        "gender" : "M",
+        "last_name" : "Yoder",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "KS",
+        "twitter_id" : "RepKevinYoder"
+      },
+      {
+        "district" : 3,
+        "first_name" : "John",
+        "gender" : "M",
+        "last_name" : "Yarmuth",
+        "middle_name" : "A.",
+        "party" : "D",
+        "state" : "KY",
+        "twitter_id" : "RepJohnYarmuth"
+      },
+      {
+        "district" : 7,
+        "first_name" : "Rob",
+        "gender" : "M",
+        "last_name" : "Woodall",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "GA",
+        "twitter_id" : null
+      },
+      {
+        "district" : 3,
+        "first_name" : "Steve",
+        "gender" : "M",
+        "last_name" : "Womack",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "AR",
+        "twitter_id" : "Rep_SteveWomack"
+      },
+      {
+        "district" : 10,
+        "first_name" : "Frank",
+        "gender" : "M",
+        "last_name" : "Wolf",
+        "middle_name" : "R.",
+        "party" : "R",
+        "state" : "VA",
+        "twitter_id" : "RepWOLFPress"
+      },
+      {
+        "district" : 1,
+        "first_name" : "Robert",
+        "gender" : "M",
+        "last_name" : "Wittman",
+        "middle_name" : "J.",
+        "party" : "R",
+        "state" : "VA",
+        "twitter_id" : "RobWittman"
+      },
+      {
+        "district" : 24,
+        "first_name" : "Frederica",
+        "gender" : "F",
+        "last_name" : "Wilson",
+        "middle_name" : "S.",
+        "party" : "D",
+        "state" : "FL",
+        "twitter_id" : "RepWilson"
+      },
+      {
+        "district" : 2,
+        "first_name" : "Joe",
+        "gender" : "M",
+        "last_name" : "Wilson",
+        "middle_name" : "G.",
+        "party" : "R",
+        "state" : "SC",
+        "twitter_id" : "RepJoeWilson"
+      },
+      {
+        "district" : 1,
+        "first_name" : "Ed",
+        "gender" : "M",
+        "last_name" : "Whitfield",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "KY",
+        "twitter_id" : "RepEdWhitfield"
+      },
+      {
+        "district" : 3,
+        "first_name" : "Lynn",
+        "gender" : "M",
+        "last_name" : "Westmoreland",
+        "middle_name" : "A.",
+        "party" : "R",
+        "state" : "GA",
+        "twitter_id" : "RepWestmoreland"
+      },
+      {
+        "district" : 0,
+        "first_name" : "Peter",
+        "gender" : "M",
+        "last_name" : "Welch",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "VT",
+        "twitter_id" : "PeterWelch"
+      },
+      {
+        "district" : 10,
+        "first_name" : "Daniel",
+        "gender" : "M",
+        "last_name" : "Webster",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "FL",
+        "twitter_id" : "RepWebster"
+      },
+      {
+        "district" : 33,
+        "first_name" : "Henry",
+        "gender" : "M",
+        "last_name" : "Waxman",
+        "middle_name" : "A.",
+        "party" : "D",
+        "state" : "CA",
+        "twitter_id" : "WaxmanClimate"
+      },
+      {
+        "district" : 43,
+        "first_name" : "Maxine",
+        "gender" : "F",
+        "last_name" : "Waters",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "CA",
+        "twitter_id" : "MaxineWaters"
+      },
+      {
+        "district" : 23,
+        "first_name" : "Debbie",
+        "gender" : "F",
+        "last_name" : "Wasserman Schultz",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "FL",
+        "twitter_id" : "RepDWStweets"
+      },
+      {
+        "district" : 1,
+        "first_name" : "Timothy",
+        "gender" : "M",
+        "last_name" : "Walz",
+        "middle_name" : "James",
+        "party" : "D",
+        "state" : "MN",
+        "twitter_id" : "RepTimWalz"
+      },
+      {
+        "district" : 2,
+        "first_name" : "Greg",
+        "gender" : "M",
+        "last_name" : "Walden",
+        "middle_name" : "P.",
+        "party" : "R",
+        "state" : "OR",
+        "twitter_id" : "RepGregWalden"
+      },
+      {
+        "district" : 7,
+        "first_name" : "Tim",
+        "gender" : "M",
+        "last_name" : "Walberg",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "MI",
+        "twitter_id" : "RepWalberg"
+      },
+      {
+        "district" : 1,
+        "first_name" : "Peter",
+        "gender" : "M",
+        "last_name" : "Visclosky",
+        "middle_name" : "J.",
+        "party" : "D",
+        "state" : "IN",
+        "twitter_id" : "RepVisclosky"
+      },
+      {
+        "district" : 7,
+        "first_name" : "Nydia",
+        "gender" : "F",
+        "last_name" : "Velázquez",
+        "middle_name" : "M.",
+        "party" : "D",
+        "state" : "NY",
+        "twitter_id" : "NydiaVelazquez"
+      },
+      {
+        "district" : 8,
+        "first_name" : "Chris",
+        "gender" : "M",
+        "last_name" : "Van Hollen",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "MD",
+        "twitter_id" : "ChrisVanHollen"
+      },
+      {
+        "district" : 6,
+        "first_name" : "Fred",
+        "gender" : "M",
+        "last_name" : "Upton",
+        "middle_name" : "Stephen",
+        "party" : "R",
+        "state" : "MI",
+        "twitter_id" : "RepFredUpton"
+      },
+      {
+        "district" : 10,
+        "first_name" : "Michael",
+        "gender" : "M",
+        "last_name" : "Turner",
+        "middle_name" : "R.",
+        "party" : "R",
+        "state" : "OH",
+        "twitter_id" : "RepMikeTurner"
+      },
+      {
+        "district" : 3,
+        "first_name" : "Niki",
+        "gender" : "F",
+        "last_name" : "Tsongas",
+        "middle_name" : "S.",
+        "party" : "D",
+        "state" : "MA",
+        "twitter_id" : "NikiInTheHouse"
+      },
+      {
+        "district" : 20,
+        "first_name" : "Paul",
+        "gender" : "M",
+        "last_name" : "Tonko",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "NY",
+        "twitter_id" : "RepPaulTonko"
+      },
+      {
+        "district" : 3,
+        "first_name" : "Scott",
+        "gender" : "M",
+        "last_name" : "Tipton",
+        "middle_name" : "R.",
+        "party" : "R",
+        "state" : "CO",
+        "twitter_id" : "RepTipton"
+      },
+      {
+        "district" : 6,
+        "first_name" : "John",
+        "gender" : "M",
+        "last_name" : "Tierney",
+        "middle_name" : "F.",
+        "party" : "D",
+        "state" : "MA",
+        "twitter_id" : "RepTierney"
+      },
+      {
+        "district" : 12,
+        "first_name" : "Patrick",
+        "gender" : "M",
+        "last_name" : "Tiberi",
+        "middle_name" : "J.",
+        "party" : "R",
+        "state" : "OH",
+        "twitter_id" : "TiberiPress"
+      },
+      {
+        "district" : 13,
+        "first_name" : "Mac",
+        "gender" : "M",
+        "last_name" : "Thornberry",
+        "middle_name" : "M.",
+        "party" : "R",
+        "state" : "TX",
+        "twitter_id" : "MacTXPress"
+      },
+      {
+        "district" : 5,
+        "first_name" : "Glenn",
+        "gender" : "M",
+        "last_name" : "Thompson",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "PA",
+        "twitter_id" : "CongressmanGT"
+      },
+      {
+        "district" : 5,
+        "first_name" : "Mike",
+        "gender" : "M",
+        "last_name" : "Thompson",
+        "middle_name" : "Michael",
+        "party" : "D",
+        "state" : "CA",
+        "twitter_id" : "RepThompson"
+      },
+      {
+        "district" : 2,
+        "first_name" : "Bennie",
+        "gender" : "M",
+        "last_name" : "Thompson",
+        "middle_name" : "G.",
+        "party" : "D",
+        "state" : "MS",
+        "twitter_id" : "BennieGThompson"
+      },
+      {
+        "district" : 2,
+        "first_name" : "Lee",
+        "gender" : "M",
+        "last_name" : "Terry",
+        "middle_name" : "R.",
+        "party" : "R",
+        "state" : "NE",
+        "twitter_id" : "LEETERRYNE"
+      },
+      {
+        "district" : 38,
+        "first_name" : "Linda",
+        "gender" : "F",
+        "last_name" : "Sánchez",
+        "middle_name" : "T.",
+        "party" : "D",
+        "state" : "CA",
+        "twitter_id" : "RepLindaSanchez"
+      },
+      {
+        "district" : 3,
+        "first_name" : "Marlin",
+        "gender" : "M",
+        "last_name" : "Stutzman",
+        "middle_name" : "A.",
+        "party" : "R",
+        "state" : "IN",
+        "twitter_id" : "RepStutzman"
+      },
+      {
+        "district" : 15,
+        "first_name" : "Steve",
+        "gender" : "M",
+        "last_name" : "Stivers",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "OH",
+        "twitter_id" : "RepSteveStivers"
+      },
+      {
+        "district" : 14,
+        "first_name" : "Jackie",
+        "gender" : "F",
+        "last_name" : "Speier",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "CA",
+        "twitter_id" : "RepSpeier"
+      },
+      {
+        "district" : 2,
+        "first_name" : "Steve",
+        "gender" : "M",
+        "last_name" : "Southerland",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "FL",
+        "twitter_id" : "Rep_Southerland"
+      },
+      {
+        "district" : 21,
+        "first_name" : "Lamar",
+        "gender" : "M",
+        "last_name" : "Smith",
+        "middle_name" : "S.",
+        "party" : "R",
+        "state" : "TX",
+        "twitter_id" : "LamarSmithTX21"
+      },
+      {
+        "district" : 4,
+        "first_name" : "Christopher",
+        "gender" : "M",
+        "last_name" : "Smith",
+        "middle_name" : "H.",
+        "party" : "R",
+        "state" : "NJ",
+        "twitter_id" : "RepChrisSmith"
+      },
+      {
+        "district" : 3,
+        "first_name" : "Adrian",
+        "gender" : "M",
+        "last_name" : "Smith",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "NE",
+        "twitter_id" : "RepAdrianSmith"
+      },
+      {
+        "district" : 9,
+        "first_name" : "Adam",
+        "gender" : "M",
+        "last_name" : "Smith",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "WA",
+        "twitter_id" : "RepAdamSmith"
+      },
+      {
+        "district" : 25,
+        "first_name" : "Louise",
+        "gender" : "F",
+        "last_name" : "Slaughter",
+        "middle_name" : "McIntosh",
+        "party" : "D",
+        "state" : "NY",
+        "twitter_id" : "LouiseSlaughter"
+      },
+      {
+        "district" : 8,
+        "first_name" : "Albio",
+        "gender" : "M",
+        "last_name" : "Sires",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "NJ",
+        "twitter_id" : "Rep_Albio_Sires"
+      },
+      {
+        "district" : 2,
+        "first_name" : "Michael",
+        "gender" : "M",
+        "last_name" : "Simpson",
+        "middle_name" : "K.",
+        "party" : "R",
+        "state" : "ID",
+        "twitter_id" : "CongMikeSimpson"
+      },
+      {
+        "district" : 9,
+        "first_name" : "Bill",
+        "gender" : "M",
+        "last_name" : "Shuster",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "PA",
+        "twitter_id" : "RepBillShuster"
+      },
+      {
+        "district" : 15,
+        "first_name" : "John",
+        "gender" : "M",
+        "last_name" : "Shimkus",
+        "middle_name" : "M.",
+        "party" : "R",
+        "state" : "IL",
+        "twitter_id" : "RepShimkus"
+      },
+      {
+        "district" : 30,
+        "first_name" : "Brad",
+        "gender" : "M",
+        "last_name" : "Sherman",
+        "middle_name" : "J.",
+        "party" : "D",
+        "state" : "CA",
+        "twitter_id" : "BradSherman"
+      },
+      {
+        "district" : 7,
+        "first_name" : "Terri",
+        "gender" : "F",
+        "last_name" : "Sewell",
+        "middle_name" : "A.",
+        "party" : "D",
+        "state" : "AL",
+        "twitter_id" : "RepTerriSewell"
+      },
+      {
+        "district" : 32,
+        "first_name" : "Pete",
+        "gender" : "M",
+        "last_name" : "Sessions",
+        "middle_name" : "A.",
+        "party" : "R",
+        "state" : "TX",
+        "twitter_id" : "PeteSessions"
+      },
+      {
+        "district" : 15,
+        "first_name" : "José",
+        "gender" : "M",
+        "last_name" : "Serrano",
+        "middle_name" : "E.",
+        "party" : "D",
+        "state" : "NY",
+        "twitter_id" : "RepJoseSerrano"
+      },
+      {
+        "district" : 5,
+        "first_name" : "F.",
+        "gender" : "M",
+        "last_name" : "Sensenbrenner",
+        "middle_name" : "James",
+        "party" : "R",
+        "state" : "WI",
+        "twitter_id" : "JimPressOffice"
+      },
+      {
+        "district" : 3,
+        "first_name" : "Robert",
+        "gender" : "M",
+        "last_name" : "Scott",
+        "middle_name" : "C.",
+        "party" : "D",
+        "state" : "VA",
+        "twitter_id" : "RepBobbyScott"
+      },
+      {
+        "district" : 13,
+        "first_name" : "David",
+        "gender" : "M",
+        "last_name" : "Scott",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "GA",
+        "twitter_id" : "RepDavidScott"
+      },
+      {
+        "district" : 8,
+        "first_name" : "Austin",
+        "gender" : "M",
+        "last_name" : "Scott",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "GA",
+        "twitter_id" : "AustinScottGA08"
+      },
+      {
+        "district" : 6,
+        "first_name" : "David",
+        "gender" : "M",
+        "last_name" : "Schweikert",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "AZ",
+        "twitter_id" : "RepDavid"
+      },
+      {
+        "district" : 13,
+        "first_name" : "Allyson",
+        "gender" : "F",
+        "last_name" : "Schwartz",
+        "middle_name" : "Y.",
+        "party" : "D",
+        "state" : "PA",
+        "twitter_id" : null
+      },
+      {
+        "district" : 5,
+        "first_name" : "Kurt",
+        "gender" : "M",
+        "last_name" : "Schrader",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "OR",
+        "twitter_id" : "RepSchrader"
+      },
+      {
+        "district" : 18,
+        "first_name" : "Aaron",
+        "gender" : "M",
+        "last_name" : "Schock",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "IL",
+        "twitter_id" : "AaronSchock"
+      },
+      {
+        "district" : 28,
+        "first_name" : "Adam",
+        "gender" : "M",
+        "last_name" : "Schiff",
+        "middle_name" : "B.",
+        "party" : "D",
+        "state" : "CA",
+        "twitter_id" : "RepAdamSchiff"
+      },
+      {
+        "district" : 9,
+        "first_name" : "Janice",
+        "gender" : "F",
+        "last_name" : "Schakowsky",
+        "middle_name" : "D.",
+        "party" : "D",
+        "state" : "IL",
+        "twitter_id" : "JanSchakowsky"
+      },
+      {
+        "district" : 1,
+        "first_name" : "Steve",
+        "gender" : "M",
+        "last_name" : "Scalise",
+        "middle_name" : "Joseph",
+        "party" : "R",
+        "state" : "LA",
+        "twitter_id" : "SteveScalise"
+      },
+      {
+        "district" : 3,
+        "first_name" : "John",
+        "gender" : "M",
+        "last_name" : "Sarbanes",
+        "middle_name" : "P.",
+        "party" : "D",
+        "state" : "MD",
+        "twitter_id" : "RepJohnSarbanes"
+      },
+      {
+        "district" : 46,
+        "first_name" : "Loretta",
+        "gender" : "F",
+        "last_name" : "Sanchez",
+        "middle_name" : "B.",
+        "party" : "D",
+        "state" : "CA",
+        "twitter_id" : "LorettaSanchez"
+      },
+      {
+        "district" : 0,
+        "first_name" : "Gregorio",
+        "gender" : "M",
+        "last_name" : "Sablan",
+        "middle_name" : "Kilili Camacho",
+        "party" : "D",
+        "state" : "MP",
+        "twitter_id" : null
+      },
+      {
+        "district" : 13,
+        "first_name" : "Tim",
+        "gender" : "M",
+        "last_name" : "Ryan",
+        "middle_name" : "J.",
+        "party" : "D",
+        "state" : "OH",
+        "twitter_id" : "RepTimRyan"
+      },
+      {
+        "district" : 1,
+        "first_name" : "Paul",
+        "gender" : "M",
+        "last_name" : "Ryan",
+        "middle_name" : "D.",
+        "party" : "R",
+        "state" : "WI",
+        "twitter_id" : "RepPaulRyan"
+      },
+      {
+        "district" : 1,
+        "first_name" : "Bobby",
+        "gender" : "M",
+        "last_name" : "Rush",
+        "middle_name" : "L.",
+        "party" : "D",
+        "state" : "IL",
+        "twitter_id" : "RepBobbyRush"
+      },
+      {
+        "district" : 2,
+        "first_name" : "C.",
+        "gender" : "M",
+        "last_name" : "Ruppersberger",
+        "middle_name" : "A. Dutch",
+        "party" : "D",
+        "state" : "MD",
+        "twitter_id" : "Call_Me_Dutch"
+      },
+      {
+        "district" : 3,
+        "first_name" : "Jon",
+        "gender" : "M",
+        "last_name" : "Runyan",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "NJ",
+        "twitter_id" : "RepJonRunyan"
+      },
+      {
+        "district" : 39,
+        "first_name" : "Edward",
+        "gender" : "M",
+        "last_name" : "Royce",
+        "middle_name" : "R.",
+        "party" : "R",
+        "state" : "CA",
+        "twitter_id" : "RepEdRoyce"
+      },
+      {
+        "district" : 40,
+        "first_name" : "Lucille",
+        "gender" : "F",
+        "last_name" : "Roybal-Allard",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "CA",
+        "twitter_id" : "RepRoybalAllard"
+      },
+      {
+        "district" : 15,
+        "first_name" : "Dennis",
+        "gender" : "M",
+        "last_name" : "Ross",
+        "middle_name" : "A.",
+        "party" : "R",
+        "state" : "FL",
+        "twitter_id" : "RepDennisRoss"
+      },
+      {
+        "district" : 6,
+        "first_name" : "Peter",
+        "gender" : "M",
+        "last_name" : "Roskam",
+        "middle_name" : "J.",
+        "party" : "R",
+        "state" : "IL",
+        "twitter_id" : "PeterRoskam"
+      },
+      {
+        "district" : 27,
+        "first_name" : "Ileana",
+        "gender" : "F",
+        "last_name" : "Ros-Lehtinen",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "FL",
+        "twitter_id" : "RosLehtinen"
+      },
+      {
+        "district" : 17,
+        "first_name" : "Thomas",
+        "gender" : "M",
+        "last_name" : "Rooney",
+        "middle_name" : "J.",
+        "party" : "R",
+        "state" : "FL",
+        "twitter_id" : "TomRooney"
+      },
+      {
+        "district" : 4,
+        "first_name" : "Todd",
+        "gender" : "M",
+        "last_name" : "Rokita",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "IN",
+        "twitter_id" : "ToddRokita"
+      },
+      {
+        "district" : 48,
+        "first_name" : "Dana",
+        "gender" : "M",
+        "last_name" : "Rohrabacher",
+        "middle_name" : "T.",
+        "party" : "R",
+        "state" : "CA",
+        "twitter_id" : null
+      },
+      {
+        "district" : 3,
+        "first_name" : "Mike",
+        "gender" : "M",
+        "last_name" : "Rogers",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "AL",
+        "twitter_id" : "RepMikeRogersAL"
+      },
+      {
+        "district" : 8,
+        "first_name" : "Mike",
+        "gender" : "M",
+        "last_name" : "Rogers",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "MI",
+        "twitter_id" : "RepMikeRogers"
+      },
+      {
+        "district" : 5,
+        "first_name" : "Harold",
+        "gender" : "M",
+        "last_name" : "Rogers",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "KY",
+        "twitter_id" : "RepHalRogers"
+      },
+      {
+        "district" : 1,
+        "first_name" : "David",
+        "gender" : "M",
+        "last_name" : "Roe",
+        "middle_name" : "P.",
+        "party" : "R",
+        "state" : "TN",
+        "twitter_id" : "DrPhilRoe"
+      },
+      {
+        "district" : 2,
+        "first_name" : "Martha",
+        "gender" : "F",
+        "last_name" : "Roby",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "AL",
+        "twitter_id" : "RepMarthaRoby"
+      },
+      {
+        "district" : 2,
+        "first_name" : "Edward",
+        "gender" : "M",
+        "last_name" : "Rigell",
+        "middle_name" : "Scott",
+        "party" : "R",
+        "state" : "VA",
+        "twitter_id" : "RepScottRigell"
+      },
+      {
+        "district" : 2,
+        "first_name" : "Cedric",
+        "gender" : "M",
+        "last_name" : "Richmond",
+        "middle_name" : "L.",
+        "party" : "D",
+        "state" : "LA",
+        "twitter_id" : "RepRichmond"
+      },
+      {
+        "district" : 8,
+        "first_name" : "Reid",
+        "gender" : "M",
+        "last_name" : "Ribble",
+        "middle_name" : "J.",
+        "party" : "R",
+        "state" : "WI",
+        "twitter_id" : "RepRibble"
+      },
+      {
+        "district" : 16,
+        "first_name" : "James",
+        "gender" : "M",
+        "last_name" : "Renacci",
+        "middle_name" : "B.",
+        "party" : "R",
+        "state" : "OH",
+        "twitter_id" : "RepJimRenacci"
+      },
+      {
+        "district" : 8,
+        "first_name" : "David",
+        "gender" : "M",
+        "last_name" : "Reichert",
+        "middle_name" : "G.",
+        "party" : "R",
+        "state" : "WA",
+        "twitter_id" : "DaveReichert"
+      },
+      {
+        "district" : 23,
+        "first_name" : "Tom",
+        "gender" : "M",
+        "last_name" : "Reed",
+        "middle_name" : "W.",
+        "party" : "R",
+        "state" : "NY",
+        "twitter_id" : "RepTomReed"
+      },
+      {
+        "district" : 13,
+        "first_name" : "Charles",
+        "gender" : "M",
+        "last_name" : "Rangel",
+        "middle_name" : "B.",
+        "party" : "D",
+        "state" : "NY",
+        "twitter_id" : "CBRangel"
+      },
+      {
+        "district" : 3,
+        "first_name" : "Nick",
+        "gender" : "M",
+        "last_name" : "Rahall",
+        "middle_name" : "J.",
+        "party" : "D",
+        "state" : "WV",
+        "twitter_id" : null
+      },
+      {
+        "district" : 5,
+        "first_name" : "Mike",
+        "gender" : "M",
+        "last_name" : "Quigley",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "IL",
+        "twitter_id" : "RepMikeQuigley"
+      },
+      {
+        "district" : 6,
+        "first_name" : "Tom",
+        "gender" : "M",
+        "last_name" : "Price",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "GA",
+        "twitter_id" : "RepTomPrice"
+      },
+      {
+        "district" : 4,
+        "first_name" : "David",
+        "gender" : "M",
+        "last_name" : "Price",
+        "middle_name" : "E.",
+        "party" : "D",
+        "state" : "NC",
+        "twitter_id" : "RepDavidEPrice"
+      },
+      {
+        "district" : 8,
+        "first_name" : "Bill",
+        "gender" : "M",
+        "last_name" : "Posey",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "FL",
+        "twitter_id" : "CongBillPosey"
+      },
+      {
+        "district" : 4,
+        "first_name" : "Mike",
+        "gender" : "M",
+        "last_name" : "Pompeo",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "KS",
+        "twitter_id" : "RepMikePompeo"
+      },
+      {
+        "district" : 2,
+        "first_name" : "Jared",
+        "gender" : "M",
+        "last_name" : "Polis",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "CO",
+        "twitter_id" : "JaredPolis"
+      },
+      {
+        "district" : 2,
+        "first_name" : "Ted",
+        "gender" : "M",
+        "last_name" : "Poe",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "TX",
+        "twitter_id" : "JudgeTedPoe"
+      },
+      {
+        "district" : 16,
+        "first_name" : "Joseph",
+        "gender" : "M",
+        "last_name" : "Pitts",
+        "middle_name" : "R.",
+        "party" : "R",
+        "state" : "PA",
+        "twitter_id" : "RepJoePitts"
+      },
+      {
+        "district" : 1,
+        "first_name" : "Chellie",
+        "gender" : "F",
+        "last_name" : "Pingree",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "ME",
+        "twitter_id" : "ChelliePingree"
+      },
+      {
+        "district" : 0,
+        "first_name" : "Pedro",
+        "gender" : "M",
+        "last_name" : "Pierluisi",
+        "middle_name" : "R.",
+        "party" : "D",
+        "state" : "PR",
+        "twitter_id" : "PedroPierluisi"
+      },
+      {
+        "district" : 6,
+        "first_name" : "Thomas",
+        "gender" : "M",
+        "last_name" : "Petri",
+        "middle_name" : "E.",
+        "party" : "R",
+        "state" : "WI",
+        "twitter_id" : null
+      },
+      {
+        "district" : 7,
+        "first_name" : "Collin",
+        "gender" : "M",
+        "last_name" : "Peterson",
+        "middle_name" : "Clark",
+        "party" : "D",
+        "state" : "MN",
+        "twitter_id" : null
+      },
+      {
+        "district" : 14,
+        "first_name" : "Gary",
+        "gender" : "M",
+        "last_name" : "Peters",
+        "middle_name" : "C.",
+        "party" : "D",
+        "state" : "MI",
+        "twitter_id" : "RepGaryPeters"
+      },
+      {
+        "district" : 7,
+        "first_name" : "Ed",
+        "gender" : "M",
+        "last_name" : "Perlmutter",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "CO",
+        "twitter_id" : "RepPerlmutter"
+      },
+      {
+        "district" : 12,
+        "first_name" : "Nancy",
+        "gender" : "F",
+        "last_name" : "Pelosi",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "CA",
+        "twitter_id" : "NancyPelosi"
+      },
+      {
+        "district" : 2,
+        "first_name" : "Stevan",
+        "gender" : "M",
+        "last_name" : "Pearce",
+        "middle_name" : "E.",
+        "party" : "R",
+        "state" : "NM",
+        "twitter_id" : "RepStevePearce"
+      },
+      {
+        "district" : 3,
+        "first_name" : "Erik",
+        "gender" : "M",
+        "last_name" : "Paulsen",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "MN",
+        "twitter_id" : "RepErikPaulsen"
+      },
+      {
+        "district" : 7,
+        "first_name" : "Ed",
+        "gender" : "M",
+        "last_name" : "Pastor",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "AZ"
+      },
+      {
+        "district" : 9,
+        "first_name" : "Bill",
+        "gender" : "M",
+        "last_name" : "Pascrell",
+        "middle_name" : "J.",
+        "party" : "D",
+        "state" : "NJ",
+        "twitter_id" : "BillPascrell"
+      },
+      {
+        "district" : 6,
+        "first_name" : "Frank",
+        "gender" : "M",
+        "last_name" : "Pallone",
+        "middle_name" : "J.",
+        "party" : "D",
+        "state" : "NJ",
+        "twitter_id" : "FrankPallone"
+      },
+      {
+        "district" : 4,
+        "first_name" : "Steven",
+        "gender" : "M",
+        "last_name" : "Palazzo",
+        "middle_name" : "M.",
+        "party" : "R",
+        "state" : "MS",
+        "twitter_id" : "CongPalazzo"
+      },
+      {
+        "district" : 21,
+        "first_name" : "William",
+        "gender" : "M",
+        "last_name" : "Owens",
+        "middle_name" : "L.",
+        "party" : "D",
+        "state" : "NY",
+        "twitter_id" : "BillOwensNY"
+      },
+      {
+        "district" : 22,
+        "first_name" : "Pete",
+        "gender" : "M",
+        "last_name" : "Olson",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "TX",
+        "twitter_id" : "OlsonPressShop"
+      },
+      {
+        "district" : 1,
+        "first_name" : "Alan",
+        "gender" : "M",
+        "last_name" : "Nunnelee",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "MS",
+        "twitter_id" : "RepAlanNunnelee"
+      },
+      {
+        "district" : 22,
+        "first_name" : "Devin",
+        "gender" : "M",
+        "last_name" : "Nunes",
+        "middle_name" : "G.",
+        "party" : "R",
+        "state" : "CA",
+        "twitter_id" : "Rep_DevinNunes"
+      },
+      {
+        "district" : 11,
+        "first_name" : "Richard",
+        "gender" : "M",
+        "last_name" : "Nugent",
+        "middle_name" : "B.",
+        "party" : "R",
+        "state" : "FL",
+        "twitter_id" : "RepRichNugent"
+      },
+      {
+        "district" : 0,
+        "first_name" : "Eleanor",
+        "gender" : "F",
+        "last_name" : "Norton",
+        "middle_name" : "Holmes",
+        "party" : "D",
+        "state" : "DC",
+        "twitter_id" : "EleanorNorton"
+      },
+      {
+        "district" : 0,
+        "first_name" : "Kristi",
+        "gender" : "F",
+        "last_name" : "Noem",
+        "middle_name" : "L.",
+        "party" : "R",
+        "state" : "SD",
+        "twitter_id" : "RepKristiNoem"
+      },
+      {
+        "district" : 19,
+        "first_name" : "Randy",
+        "gender" : "M",
+        "last_name" : "Neugebauer",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "TX",
+        "twitter_id" : "RandyNeugebauer"
+      },
+      {
+        "district" : 1,
+        "first_name" : "Richard",
+        "gender" : "M",
+        "last_name" : "Neal",
+        "middle_name" : "E.",
+        "party" : "D",
+        "state" : "MA",
+        "twitter_id" : "RepRichardNeal"
+      },
+      {
+        "district" : 32,
+        "first_name" : "Grace",
+        "gender" : "F",
+        "last_name" : "Napolitano",
+        "middle_name" : "F.",
+        "party" : "D",
+        "state" : "CA",
+        "twitter_id" : "GraceNapolitano"
+      },
+      {
+        "district" : 10,
+        "first_name" : "Jerrold",
+        "gender" : "M",
+        "last_name" : "Nadler",
+        "middle_name" : "L.",
+        "party" : "D",
+        "state" : "NY",
+        "twitter_id" : "RepJerryNadler"
+      },
+      {
+        "district" : 18,
+        "first_name" : "Tim",
+        "gender" : "M",
+        "last_name" : "Murphy",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "PA",
+        "twitter_id" : "RepTimMurphy"
+      },
+      {
+        "district" : 5,
+        "first_name" : "Mick",
+        "gender" : "M",
+        "last_name" : "Mulvaney",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "SC",
+        "twitter_id" : "RepMickMulvaney"
+      },
+      {
+        "district" : 8,
+        "first_name" : "James",
+        "gender" : "M",
+        "last_name" : "Moran",
+        "middle_name" : "P.",
+        "party" : "D",
+        "state" : "VA",
+        "twitter_id" : "Jim_Moran"
+      },
+      {
+        "district" : 4,
+        "first_name" : "Gwen",
+        "gender" : "F",
+        "last_name" : "Moore",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "WI",
+        "twitter_id" : "RepGwenMoore"
+      },
+      {
+        "district" : 1,
+        "first_name" : "Jeff",
+        "gender" : "M",
+        "last_name" : "Miller",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "FL",
+        "twitter_id" : null
+      },
+      {
+        "district" : 11,
+        "first_name" : "George",
+        "gender" : "M",
+        "last_name" : "Miller",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "CA",
+        "twitter_id" : "AskGeorge"
+      },
+      {
+        "district" : 31,
+        "first_name" : "Gary",
+        "gender" : "M",
+        "last_name" : "Miller",
+        "middle_name" : "G.",
+        "party" : "R",
+        "state" : "CA",
+        "twitter_id" : "RepGaryMiller"
+      },
+      {
+        "district" : 10,
+        "first_name" : "Candice",
+        "gender" : "F",
+        "last_name" : "Miller",
+        "middle_name" : "S.",
+        "party" : "R",
+        "state" : "MI",
+        "twitter_id" : "CandiceMiller"
+      },
+      {
+        "district" : 2,
+        "first_name" : "Michael",
+        "gender" : "M",
+        "last_name" : "Michaud",
+        "middle_name" : "H.",
+        "party" : "D",
+        "state" : "ME",
+        "twitter_id" : "RepMikeMichaud"
+      },
+      {
+        "district" : 7,
+        "first_name" : "John",
+        "gender" : "M",
+        "last_name" : "Mica",
+        "middle_name" : "L.",
+        "party" : "R",
+        "state" : "FL",
+        "twitter_id" : null
+      },
+      {
+        "district" : 5,
+        "first_name" : "Gregory",
+        "gender" : "M",
+        "last_name" : "Meeks",
+        "middle_name" : "W.",
+        "party" : "D",
+        "state" : "NY",
+        "twitter_id" : "GregoryMeeks"
+      },
+      {
+        "district" : 7,
+        "first_name" : "Patrick",
+        "gender" : "M",
+        "last_name" : "Meehan",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "PA",
+        "twitter_id" : "RepMeehan"
+      },
+      {
+        "district" : 9,
+        "first_name" : "Jerry",
+        "gender" : "M",
+        "last_name" : "McNerney",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "CA",
+        "twitter_id" : "RepMcNerney"
+      },
+      {
+        "district" : 5,
+        "first_name" : "Cathy",
+        "gender" : "F",
+        "last_name" : "McMorris Rodgers",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "WA",
+        "twitter_id" : "CathyMcMorris"
+      },
+      {
+        "district" : 1,
+        "first_name" : "David",
+        "gender" : "M",
+        "last_name" : "McKinley",
+        "middle_name" : "B.",
+        "party" : "R",
+        "state" : "WV",
+        "twitter_id" : "RepMcKinley"
+      },
+      {
+        "district" : 25,
+        "first_name" : "Howard",
+        "gender" : "M",
+        "last_name" : "McKeon",
+        "middle_name" : "P.",
+        "party" : "R",
+        "state" : "CA",
+        "twitter_id" : "BuckMcKeon"
+      },
+      {
+        "district" : 7,
+        "first_name" : "Mike",
+        "gender" : "M",
+        "last_name" : "McIntyre",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "NC",
+        "twitter_id" : "RepMikeMcIntyre"
+      },
+      {
+        "district" : 10,
+        "first_name" : "Patrick",
+        "gender" : "M",
+        "last_name" : "McHenry",
+        "middle_name" : "T.",
+        "party" : "R",
+        "state" : "NC",
+        "twitter_id" : "PatrickMcHenry"
+      },
+      {
+        "district" : 2,
+        "first_name" : "James",
+        "gender" : "M",
+        "last_name" : "McGovern",
+        "middle_name" : "P.",
+        "party" : "D",
+        "state" : "MA",
+        "twitter_id" : "RepMcGovern"
+      },
+      {
+        "district" : 7,
+        "first_name" : "Jim",
+        "gender" : "M",
+        "last_name" : "McDermott",
+        "middle_name" : "A.",
+        "party" : "D",
+        "state" : "WA",
+        "twitter_id" : "RepJimMcDermott"
+      },
+      {
+        "district" : 4,
+        "first_name" : "Betty",
+        "gender" : "F",
+        "last_name" : "McCollum",
+        "middle_name" : "Louise",
+        "party" : "D",
+        "state" : "MN",
+        "twitter_id" : "BettyMcCollum04"
+      },
+      {
+        "district" : 4,
+        "first_name" : "Tom",
+        "gender" : "M",
+        "last_name" : "McClintock",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "CA",
+        "twitter_id" : "RepMcClintock"
+      },
+      {
+        "district" : 10,
+        "first_name" : "Michael",
+        "gender" : "M",
+        "last_name" : "McCaul",
+        "middle_name" : "T.",
+        "party" : "R",
+        "state" : "TX",
+        "twitter_id" : "McCaulPressShop"
+      },
+      {
+        "district" : 23,
+        "first_name" : "Kevin",
+        "gender" : "M",
+        "last_name" : "McCarthy",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "CA",
+        "twitter_id" : "GOPWhip"
+      },
+      {
+        "district" : 4,
+        "first_name" : "Carolyn",
+        "gender" : "F",
+        "last_name" : "McCarthy",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "NY",
+        "twitter_id" : "RepMcCarthyNY"
+      },
+      {
+        "district" : 6,
+        "first_name" : "Doris",
+        "gender" : "F",
+        "last_name" : "Matsui",
+        "middle_name" : "O.",
+        "party" : "D",
+        "state" : "CA",
+        "twitter_id" : "DorisMatsui"
+      },
+      {
+        "district" : 4,
+        "first_name" : "Jim",
+        "gender" : "M",
+        "last_name" : "Matheson",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "UT",
+        "twitter_id" : "RepJimMatheson"
+      },
+      {
+        "district" : 10,
+        "first_name" : "Tom",
+        "gender" : "M",
+        "last_name" : "Marino",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "PA",
+        "twitter_id" : "RepTomMarino"
+      },
+      {
+        "district" : 24,
+        "first_name" : "Kenny",
+        "gender" : "M",
+        "last_name" : "Marchant",
+        "middle_name" : "Ewell",
+        "party" : "R",
+        "state" : "TX",
+        "twitter_id" : "RepKenMarchant"
+      },
+      {
+        "district" : 12,
+        "first_name" : "Carolyn",
+        "gender" : "F",
+        "last_name" : "Maloney",
+        "middle_name" : "B.",
+        "party" : "D",
+        "state" : "NY",
+        "twitter_id" : "RepMaloney"
+      },
+      {
+        "district" : 8,
+        "first_name" : "Stephen",
+        "gender" : "M",
+        "last_name" : "Lynch",
+        "middle_name" : "F.",
+        "party" : "D",
+        "state" : "MA",
+        "twitter_id" : "RepStephenLynch"
+      },
+      {
+        "district" : 0,
+        "first_name" : "Cynthia",
+        "gender" : "F",
+        "last_name" : "Lummis",
+        "middle_name" : "M.",
+        "party" : "R",
+        "state" : "WY",
+        "twitter_id" : "CynthiaLummis"
+      },
+      {
+        "district" : 3,
+        "first_name" : "Ben",
+        "gender" : "M",
+        "last_name" : "Luján",
+        "middle_name" : "Ray",
+        "party" : "D",
+        "state" : "NM",
+        "twitter_id" : "RepBenRayLujan"
+      },
+      {
+        "district" : 3,
+        "first_name" : "Blaine",
+        "gender" : "M",
+        "last_name" : "Luetkemeyer",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "MO",
+        "twitter_id" : "RepBlainePress"
+      },
+      {
+        "district" : 3,
+        "first_name" : "Frank",
+        "gender" : "M",
+        "last_name" : "Lucas",
+        "middle_name" : "D.",
+        "party" : "R",
+        "state" : "OK",
+        "twitter_id" : "RepFrankLucas"
+      },
+      {
+        "district" : 17,
+        "first_name" : "Nita",
+        "gender" : "F",
+        "last_name" : "Lowey",
+        "middle_name" : "M.",
+        "party" : "D",
+        "state" : "NY",
+        "twitter_id" : "NitaLowey"
+      },
+      {
+        "district" : 7,
+        "first_name" : "Billy",
+        "gender" : "M",
+        "last_name" : "Long",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "MO",
+        "twitter_id" : "USRepLong"
+      },
+      {
+        "district" : 19,
+        "first_name" : "Zoe",
+        "gender" : "F",
+        "last_name" : "Lofgren",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "CA",
+        "twitter_id" : "RepZoeLofgren"
+      },
+      {
+        "district" : 2,
+        "first_name" : "David",
+        "gender" : "M",
+        "last_name" : "Loebsack",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "IA",
+        "twitter_id" : "DaveLoebsack"
+      },
+      {
+        "district" : 2,
+        "first_name" : "Frank",
+        "gender" : "M",
+        "last_name" : "LoBiondo",
+        "middle_name" : "A.",
+        "party" : "R",
+        "state" : "NJ",
+        "twitter_id" : "RepLoBiondo"
+      },
+      {
+        "district" : 3,
+        "first_name" : "Daniel",
+        "gender" : "M",
+        "last_name" : "Lipinski",
+        "middle_name" : "William",
+        "party" : "D",
+        "state" : "IL",
+        "twitter_id" : "RepLipinski"
+      },
+      {
+        "district" : 5,
+        "first_name" : "John",
+        "gender" : "M",
+        "last_name" : "Lewis",
+        "middle_name" : "R.",
+        "party" : "D",
+        "state" : "GA",
+        "twitter_id" : "RepJohnLewis"
+      },
+      {
+        "district" : 9,
+        "first_name" : "Sander",
+        "gender" : "M",
+        "last_name" : "Levin",
+        "middle_name" : "M.",
+        "party" : "D",
+        "state" : "MI",
+        "twitter_id" : "RepSandyLevin"
+      },
+      {
+        "district" : 13,
+        "first_name" : "Barbara",
+        "gender" : "F",
+        "last_name" : "Lee",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "CA",
+        "twitter_id" : "RepBarbaraLee"
+      },
+      {
+        "district" : 5,
+        "first_name" : "Robert",
+        "gender" : "M",
+        "last_name" : "Latta",
+        "middle_name" : "E.",
+        "party" : "R",
+        "state" : "OH",
+        "twitter_id" : "BobLatta"
+      },
+      {
+        "district" : 3,
+        "first_name" : "Tom",
+        "gender" : "M",
+        "last_name" : "Latham",
+        "middle_name" : "P.",
+        "party" : "R",
+        "state" : "IA",
+        "twitter_id" : "TomLatham"
+      },
+      {
+        "district" : 1,
+        "first_name" : "John",
+        "gender" : "M",
+        "last_name" : "Larson",
+        "middle_name" : "B.",
+        "party" : "D",
+        "state" : "CT",
+        "twitter_id" : "RepJohnLarson"
+      },
+      {
+        "district" : 2,
+        "first_name" : "Rick",
+        "gender" : "M",
+        "last_name" : "Larsen",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "WA",
+        "twitter_id" : "RepRickLarsen"
+      },
+      {
+        "district" : 5,
+        "first_name" : "James",
+        "gender" : "M",
+        "last_name" : "Lankford",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "OK",
+        "twitter_id" : "RepLankford"
+      },
+      {
+        "district" : 2,
+        "first_name" : "James",
+        "gender" : "M",
+        "last_name" : "Langevin",
+        "middle_name" : "R.",
+        "party" : "D",
+        "state" : "RI",
+        "twitter_id" : "JimLangevin"
+      },
+      {
+        "district" : 7,
+        "first_name" : "Leonard",
+        "gender" : "M",
+        "last_name" : "Lance",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "NJ",
+        "twitter_id" : "RepLanceNJ7"
+      },
+      {
+        "district" : 5,
+        "first_name" : "Doug",
+        "gender" : "M",
+        "last_name" : "Lamborn",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "CO",
+        "twitter_id" : "RepDLamborn"
+      },
+      {
+        "district" : 1,
+        "first_name" : "Raúl",
+        "gender" : "M",
+        "last_name" : "Labrador",
+        "middle_name" : "R.",
+        "party" : "R",
+        "state" : "ID",
+        "twitter_id" : "Raul_Labrador"
+      },
+      {
+        "district" : 2,
+        "first_name" : "John",
+        "gender" : "M",
+        "last_name" : "Kline",
+        "middle_name" : "Paul",
+        "party" : "R",
+        "state" : "MN",
+        "twitter_id" : "RepJohnKline"
+      },
+      {
+        "district" : 16,
+        "first_name" : "Adam",
+        "gender" : "M",
+        "last_name" : "Kinzinger",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "IL",
+        "twitter_id" : "RepKinzinger"
+      },
+      {
+        "district" : 1,
+        "first_name" : "Jack",
+        "gender" : "M",
+        "last_name" : "Kingston",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "GA",
+        "twitter_id" : "JackKingston"
+      },
+      {
+        "district" : 4,
+        "first_name" : "Steve",
+        "gender" : "M",
+        "last_name" : "King",
+        "middle_name" : "A.",
+        "party" : "R",
+        "state" : "IA",
+        "twitter_id" : "SteveKingIA"
+      },
+      {
+        "district" : 2,
+        "first_name" : "Peter",
+        "gender" : "M",
+        "last_name" : "King",
+        "middle_name" : "T.",
+        "party" : "R",
+        "state" : "NY",
+        "twitter_id" : "RepPeteKing"
+      },
+      {
+        "district" : 3,
+        "first_name" : "Ron",
+        "gender" : "M",
+        "last_name" : "Kind",
+        "middle_name" : "James",
+        "party" : "D",
+        "state" : "WI",
+        "twitter_id" : "RepRonKind"
+      },
+      {
+        "district" : 3,
+        "first_name" : "Mike",
+        "gender" : "M",
+        "last_name" : "Kelly",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "PA",
+        "twitter_id" : "MikeKellyPA"
+      },
+      {
+        "district" : 9,
+        "first_name" : "William",
+        "gender" : "M",
+        "last_name" : "Keating",
+        "middle_name" : "R.",
+        "party" : "D",
+        "state" : "MA",
+        "twitter_id" : "USRepKeating"
+      },
+      {
+        "district" : 9,
+        "first_name" : "Marcy",
+        "gender" : "F",
+        "last_name" : "Kaptur",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "OH",
+        "twitter_id" : "RepMarcyKaptur"
+      },
+      {
+        "district" : 4,
+        "first_name" : "Jim",
+        "gender" : "M",
+        "last_name" : "Jordan",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "OH",
+        "twitter_id" : "Jim_Jordan"
+      },
+      {
+        "district" : 3,
+        "first_name" : "Walter",
+        "gender" : "M",
+        "last_name" : "Jones",
+        "middle_name" : "B.",
+        "party" : "R",
+        "state" : "NC",
+        "twitter_id" : "RepWalterJones"
+      },
+      {
+        "district" : 3,
+        "first_name" : "Sam",
+        "gender" : "M",
+        "last_name" : "Johnson",
+        "middle_name" : "Robert",
+        "party" : "R",
+        "state" : "TX",
+        "twitter_id" : "SamsPressShop"
+      },
+      {
+        "district" : 4,
+        "first_name" : "Henry",
+        "gender" : "M",
+        "last_name" : "Johnson",
+        "middle_name" : "C.",
+        "party" : "D",
+        "state" : "GA",
+        "twitter_id" : "RepHankJohnson"
+      },
+      {
+        "district" : 30,
+        "first_name" : "Eddie",
+        "gender" : "F",
+        "last_name" : "Johnson",
+        "middle_name" : "Bernice",
+        "party" : "D",
+        "state" : "TX",
+        "twitter_id" : "RepEBJ"
+      },
+      {
+        "district" : 6,
+        "first_name" : "Bill",
+        "gender" : "M",
+        "last_name" : "Johnson",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "OH",
+        "twitter_id" : "RepBillJohnson"
+      },
+      {
+        "district" : 2,
+        "first_name" : "Lynn",
+        "gender" : "F",
+        "last_name" : "Jenkins",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "KS",
+        "twitter_id" : "RepLynnJenkins"
+      },
+      {
+        "district" : 18,
+        "first_name" : "Sheila",
+        "gender" : "F",
+        "last_name" : "Jackson Lee",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "TX",
+        "twitter_id" : "JacksonLeeTX18"
+      },
+      {
+        "district" : 49,
+        "first_name" : "Darrell",
+        "gender" : "M",
+        "last_name" : "Issa",
+        "middle_name" : "E.",
+        "party" : "R",
+        "state" : "CA",
+        "twitter_id" : "DarrellIssa"
+      },
+      {
+        "district" : 3,
+        "first_name" : "Steve",
+        "gender" : "M",
+        "last_name" : "Israel",
+        "middle_name" : "J.",
+        "party" : "D",
+        "state" : "NY",
+        "twitter_id" : "RepSteveIsrael"
+      },
+      {
+        "district" : 5,
+        "first_name" : "Robert",
+        "gender" : "M",
+        "last_name" : "Hurt",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "VA",
+        "twitter_id" : "RepRobertHurt"
+      },
+      {
+        "district" : 50,
+        "first_name" : "Duncan",
+        "gender" : "M",
+        "last_name" : "Hunter",
+        "middle_name" : "D.",
+        "party" : "R",
+        "state" : "CA",
+        "twitter_id" : "Rep_Hunter"
+      },
+      {
+        "district" : 14,
+        "first_name" : "Randy",
+        "gender" : "M",
+        "last_name" : "Hultgren",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "IL",
+        "twitter_id" : "RepHultgren"
+      },
+      {
+        "district" : 2,
+        "first_name" : "Bill",
+        "gender" : "M",
+        "last_name" : "Huizenga",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "MI",
+        "twitter_id" : "RepHuizenga"
+      },
+      {
+        "district" : 1,
+        "first_name" : "Tim",
+        "gender" : "M",
+        "last_name" : "Huelskamp",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "KS",
+        "twitter_id" : "CongHuelskamp"
+      },
+      {
+        "district" : 5,
+        "first_name" : "Steny",
+        "gender" : "M",
+        "last_name" : "Hoyer",
+        "middle_name" : "H.",
+        "party" : "D",
+        "state" : "MD",
+        "twitter_id" : "WhipHoyer"
+      },
+      {
+        "district" : 17,
+        "first_name" : "Michael",
+        "gender" : "M",
+        "last_name" : "Honda",
+        "middle_name" : "M.",
+        "party" : "D",
+        "state" : "CA",
+        "twitter_id" : "RepMikeHonda"
+      },
+      {
+        "district" : 12,
+        "first_name" : "Rush",
+        "gender" : "M",
+        "last_name" : "Holt",
+        "middle_name" : "D.",
+        "party" : "D",
+        "state" : "NJ",
+        "twitter_id" : null
+      },
+      {
+        "district" : 15,
+        "first_name" : "Rubén",
+        "gender" : "M",
+        "last_name" : "Hinojosa",
+        "middle_name" : "E.",
+        "party" : "D",
+        "state" : "TX",
+        "twitter_id" : "USRepRHinojosa"
+      },
+      {
+        "district" : 4,
+        "first_name" : "James",
+        "gender" : "M",
+        "last_name" : "Himes",
+        "middle_name" : "A.",
+        "party" : "D",
+        "state" : "CT",
+        "twitter_id" : "JAHimes"
+      },
+      {
+        "district" : 26,
+        "first_name" : "Brian",
+        "gender" : "M",
+        "last_name" : "Higgins",
+        "middle_name" : "M.",
+        "party" : "D",
+        "state" : "NY",
+        "twitter_id" : "RepBrianHiggins"
+      },
+      {
+        "district" : 3,
+        "first_name" : "Jaime",
+        "gender" : "F",
+        "last_name" : "Herrera Beutler",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "WA",
+        "twitter_id" : "HerreraBeutler"
+      },
+      {
+        "district" : 5,
+        "first_name" : "Jeb",
+        "gender" : "M",
+        "last_name" : "Hensarling",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "TX",
+        "twitter_id" : "RepHensarling"
+      },
+      {
+        "district" : 3,
+        "first_name" : "Joseph",
+        "gender" : "M",
+        "last_name" : "Heck",
+        "middle_name" : "J.",
+        "party" : "R",
+        "state" : "NV",
+        "twitter_id" : "RepJoeHeck"
+      },
+      {
+        "district" : 4,
+        "first_name" : "Doc",
+        "gender" : "M",
+        "last_name" : "Hastings",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "WA",
+        "twitter_id" : "DocHastings"
+      },
+      {
+        "district" : 20,
+        "first_name" : "Alcee",
+        "gender" : "M",
+        "last_name" : "Hastings",
+        "middle_name" : "L.",
+        "party" : "D",
+        "state" : "FL",
+        "twitter_id" : "RepHastingsFL"
+      },
+      {
+        "district" : 4,
+        "first_name" : "Vicky",
+        "gender" : "F",
+        "last_name" : "Hartzler",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "MO",
+        "twitter_id" : "RepHartzler"
+      },
+      {
+        "district" : 1,
+        "first_name" : "Andy",
+        "gender" : "M",
+        "last_name" : "Harris",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "MD",
+        "twitter_id" : "RepAndyHarrisMD"
+      },
+      {
+        "district" : 3,
+        "first_name" : "Gregg",
+        "gender" : "M",
+        "last_name" : "Harper",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "MS",
+        "twitter_id" : "GreggHarper"
+      },
+      {
+        "district" : 22,
+        "first_name" : "Richard",
+        "gender" : "M",
+        "last_name" : "Hanna",
+        "middle_name" : "L.",
+        "party" : "R",
+        "state" : "NY",
+        "twitter_id" : "RepRichardHanna"
+      },
+      {
+        "district" : 1,
+        "first_name" : "Colleen",
+        "gender" : "F",
+        "last_name" : "Hanabusa",
+        "middle_name" : "W.",
+        "party" : "D",
+        "state" : "HI",
+        "twitter_id" : "RepHanabusa"
+      },
+      {
+        "district" : 4,
+        "first_name" : "Ralph",
+        "gender" : "M",
+        "last_name" : "Hall",
+        "middle_name" : "M.",
+        "party" : "R",
+        "state" : "TX",
+        "twitter_id" : "RalphHallPress"
+      },
+      {
+        "district" : 4,
+        "first_name" : "Luis",
+        "gender" : "M",
+        "last_name" : "Gutiérrez",
+        "middle_name" : "V.",
+        "party" : "D",
+        "state" : "IL",
+        "twitter_id" : "LuisGutierrez"
+      },
+      {
+        "district" : 2,
+        "first_name" : "Brett",
+        "gender" : "M",
+        "last_name" : "Guthrie",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "KY",
+        "twitter_id" : "RepGuthrie"
+      },
+      {
+        "district" : 11,
+        "first_name" : "Michael",
+        "gender" : "M",
+        "last_name" : "Grimm",
+        "middle_name" : "G.",
+        "party" : "R",
+        "state" : "NY",
+        "twitter_id" : "RepMichaelGrimm"
+      },
+      {
+        "district" : 3,
+        "first_name" : "Raúl",
+        "gender" : "M",
+        "last_name" : "Grijalva",
+        "middle_name" : "M.",
+        "party" : "D",
+        "state" : "AZ",
+        "twitter_id" : "RepraulGrijalva"
+      },
+      {
+        "district" : 9,
+        "first_name" : "H.",
+        "gender" : "M",
+        "last_name" : "Griffith",
+        "middle_name" : "Morgan",
+        "party" : "R",
+        "state" : "VA",
+        "twitter_id" : "RepMGriffith"
+      },
+      {
+        "district" : 2,
+        "first_name" : "Tim",
+        "gender" : "M",
+        "last_name" : "Griffin",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "AR",
+        "twitter_id" : "RepTimGriffin"
+      },
+      {
+        "district" : 29,
+        "first_name" : "Gene",
+        "gender" : "M",
+        "last_name" : "Green",
+        "middle_name" : "Eugene",
+        "party" : "D",
+        "state" : "TX",
+        "twitter_id" : "RepGeneGreen"
+      },
+      {
+        "district" : 9,
+        "first_name" : "Al",
+        "gender" : "M",
+        "last_name" : "Green",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "TX",
+        "twitter_id" : "RepAlGreen"
+      },
+      {
+        "district" : 14,
+        "first_name" : "Tom",
+        "gender" : "M",
+        "last_name" : "Graves",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "GA",
+        "twitter_id" : "RepTomGraves"
+      },
+      {
+        "district" : 6,
+        "first_name" : "Sam",
+        "gender" : "M",
+        "last_name" : "Graves",
+        "middle_name" : "B.",
+        "party" : "R",
+        "state" : "MO",
+        "twitter_id" : null
+      },
+      {
+        "district" : 12,
+        "first_name" : "Kay",
+        "gender" : "F",
+        "last_name" : "Granger",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "TX",
+        "twitter_id" : "RepKayGranger"
+      },
+      {
+        "district" : 4,
+        "first_name" : "Trey",
+        "gender" : "M",
+        "last_name" : "Gowdy",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "SC",
+        "twitter_id" : "TGowdySC"
+      },
+      {
+        "district" : 4,
+        "first_name" : "Paul",
+        "gender" : "M",
+        "last_name" : "Gosar",
+        "middle_name" : "A.",
+        "party" : "R",
+        "state" : "AZ",
+        "twitter_id" : "RepGosar"
+      },
+      {
+        "district" : 6,
+        "first_name" : "Bob",
+        "gender" : "M",
+        "last_name" : "Goodlatte",
+        "middle_name" : "W.",
+        "party" : "R",
+        "state" : "VA",
+        "twitter_id" : "RepGoodlatte"
+      },
+      {
+        "district" : 1,
+        "first_name" : "Louie",
+        "gender" : "M",
+        "last_name" : "Gohmert",
+        "middle_name" : "B.",
+        "party" : "R",
+        "state" : "TX",
+        "twitter_id" : "RepLouieGohmert"
+      },
+      {
+        "district" : 11,
+        "first_name" : "Phil",
+        "gender" : "M",
+        "last_name" : "Gingrey",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "GA",
+        "twitter_id" : "RepPhilGingrey"
+      },
+      {
+        "district" : 19,
+        "first_name" : "Christopher",
+        "gender" : "M",
+        "last_name" : "Gibson",
+        "middle_name" : "P.",
+        "party" : "R",
+        "state" : "NY",
+        "twitter_id" : "RepChrisGibson"
+      },
+      {
+        "district" : 7,
+        "first_name" : "Bob",
+        "gender" : "M",
+        "last_name" : "Gibbs",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "OH",
+        "twitter_id" : "RepBobGibbs"
+      },
+      {
+        "district" : 6,
+        "first_name" : "Jim",
+        "gender" : "M",
+        "last_name" : "Gerlach",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "PA",
+        "twitter_id" : "JimGerlach"
+      },
+      {
+        "district" : 5,
+        "first_name" : "Scott",
+        "gender" : "M",
+        "last_name" : "Garrett",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "NJ",
+        "twitter_id" : "RepGarrett"
+      },
+      {
+        "district" : 4,
+        "first_name" : "Cory",
+        "gender" : "M",
+        "last_name" : "Gardner",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "CO",
+        "twitter_id" : "RepCoryGardner"
+      },
+      {
+        "district" : 3,
+        "first_name" : "John",
+        "gender" : "M",
+        "last_name" : "Garamendi",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "CA",
+        "twitter_id" : "RepGaramendi"
+      },
+      {
+        "district" : 11,
+        "first_name" : "Marcia",
+        "gender" : "F",
+        "last_name" : "Fudge",
+        "middle_name" : "L.",
+        "party" : "D",
+        "state" : "OH",
+        "twitter_id" : "RepMarciaFudge"
+      },
+      {
+        "district" : 11,
+        "first_name" : "Rodney",
+        "gender" : "M",
+        "last_name" : "Frelinghuysen",
+        "middle_name" : "P.",
+        "party" : "R",
+        "state" : "NJ",
+        "twitter_id" : "USRepRodney"
+      },
+      {
+        "district" : 8,
+        "first_name" : "Trent",
+        "gender" : "M",
+        "last_name" : "Franks",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "AZ",
+        "twitter_id" : "RepTrentFranks"
+      },
+      {
+        "district" : 5,
+        "first_name" : "Virginia",
+        "gender" : "F",
+        "last_name" : "Foxx",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "NC",
+        "twitter_id" : "VirginiaFoxx"
+      },
+      {
+        "district" : 1,
+        "first_name" : "Jeff",
+        "gender" : "M",
+        "last_name" : "Fortenberry",
+        "middle_name" : "Lane",
+        "party" : "R",
+        "state" : "NE",
+        "twitter_id" : "JeffFortenberry"
+      },
+      {
+        "district" : 4,
+        "first_name" : "J.",
+        "gender" : "M",
+        "last_name" : "Forbes",
+        "middle_name" : "Randy",
+        "party" : "R",
+        "state" : "VA",
+        "twitter_id" : "Randy_Forbes"
+      },
+      {
+        "district" : 17,
+        "first_name" : "Bill",
+        "gender" : "M",
+        "last_name" : "Flores",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "TX",
+        "twitter_id" : "RepBillFlores"
+      },
+      {
+        "district" : 4,
+        "first_name" : "John",
+        "gender" : "M",
+        "last_name" : "Fleming",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "LA",
+        "twitter_id" : "RepFleming"
+      },
+      {
+        "district" : 3,
+        "first_name" : "Charles",
+        "gender" : "M",
+        "last_name" : "Fleischmann",
+        "middle_name" : "J.",
+        "party" : "R",
+        "state" : "TN",
+        "twitter_id" : "RepChuck"
+      },
+      {
+        "district" : 8,
+        "first_name" : "Michael",
+        "gender" : "M",
+        "last_name" : "Fitzpatrick",
+        "middle_name" : "G.",
+        "party" : "R",
+        "state" : "PA",
+        "twitter_id" : "RepFitzpatrick"
+      },
+      {
+        "district" : 8,
+        "first_name" : "Stephen",
+        "gender" : "M",
+        "last_name" : "Fincher",
+        "middle_name" : "Lee",
+        "party" : "R",
+        "state" : "TN",
+        "twitter_id" : "RepFincherTN08"
+      },
+      {
+        "district" : 2,
+        "first_name" : "Chaka",
+        "gender" : "M",
+        "last_name" : "Fattah",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "PA",
+        "twitter_id" : "ChakaFattah"
+      },
+      {
+        "district" : 20,
+        "first_name" : "Sam",
+        "gender" : "M",
+        "last_name" : "Farr",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "CA",
+        "twitter_id" : "RepSamFarr"
+      },
+      {
+        "district" : 27,
+        "first_name" : "Blake",
+        "gender" : "M",
+        "last_name" : "Farenthold",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "TX",
+        "twitter_id" : "Farenthold"
+      },
+      {
+        "district" : 0,
+        "first_name" : "Eni",
+        "gender" : "M",
+        "last_name" : "Faleomavaega",
+        "middle_name" : "F. H.",
+        "party" : "D",
+        "state" : "AS",
+        "twitter_id" : "EFaleomavaega"
+      },
+      {
+        "district" : 18,
+        "first_name" : "Anna",
+        "gender" : "F",
+        "last_name" : "Eshoo",
+        "middle_name" : "G.",
+        "party" : "D",
+        "state" : "CA",
+        "twitter_id" : "RepAnnaEshoo"
+      },
+      {
+        "district" : 16,
+        "first_name" : "Eliot",
+        "gender" : "M",
+        "last_name" : "Engel",
+        "middle_name" : "L.",
+        "party" : "D",
+        "state" : "NY",
+        "twitter_id" : "RepEliotEngel"
+      },
+      {
+        "district" : 2,
+        "first_name" : "Renee",
+        "gender" : "F",
+        "last_name" : "Ellmers",
+        "middle_name" : "L.",
+        "party" : "R",
+        "state" : "NC",
+        "twitter_id" : "RepReneeEllmers"
+      },
+      {
+        "district" : 5,
+        "first_name" : "Keith",
+        "gender" : "M",
+        "last_name" : "Ellison",
+        "middle_name" : "Maurice",
+        "party" : "D",
+        "state" : "MN",
+        "twitter_id" : "KeithEllison"
+      },
+      {
+        "district" : 4,
+        "first_name" : "Donna",
+        "gender" : "F",
+        "last_name" : "Edwards",
+        "middle_name" : "F.",
+        "party" : "D",
+        "state" : "MD",
+        "twitter_id" : "RepDonnaEdwards"
+      },
+      {
+        "district" : 2,
+        "first_name" : "John",
+        "gender" : "M",
+        "last_name" : "Duncan",
+        "middle_name" : "J.",
+        "party" : "R",
+        "state" : "TN",
+        "twitter_id" : "RepJohnDuncanJr"
+      },
+      {
+        "district" : 3,
+        "first_name" : "Jeff",
+        "gender" : "M",
+        "last_name" : "Duncan",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "SC",
+        "twitter_id" : "RepJeffDuncan"
+      },
+      {
+        "district" : 7,
+        "first_name" : "Sean",
+        "gender" : "M",
+        "last_name" : "Duffy",
+        "middle_name" : "P.",
+        "party" : "R",
+        "state" : "WI",
+        "twitter_id" : "RepSeanDuffy"
+      },
+      {
+        "district" : 14,
+        "first_name" : "Michael",
+        "gender" : "M",
+        "last_name" : "Doyle",
+        "middle_name" : "F.",
+        "party" : "D",
+        "state" : "PA",
+        "twitter_id" : "USRepMikeDoyle"
+      },
+      {
+        "district" : 35,
+        "first_name" : "Lloyd",
+        "gender" : "M",
+        "last_name" : "Doggett",
+        "middle_name" : "A.",
+        "party" : "D",
+        "state" : "TX",
+        "twitter_id" : "RepLloydDoggett"
+      },
+      {
+        "district" : 12,
+        "first_name" : "John",
+        "gender" : "M",
+        "last_name" : "Dingell",
+        "middle_name" : "D.",
+        "party" : "D",
+        "state" : "MI",
+        "twitter_id" : "John_Dingell"
+      },
+      {
+        "district" : 25,
+        "first_name" : "Mario",
+        "gender" : "M",
+        "last_name" : "Diaz-Balart",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "FL",
+        "twitter_id" : "MarioDB"
+      },
+      {
+        "district" : 21,
+        "first_name" : "Theodore",
+        "gender" : "M",
+        "last_name" : "Deutch",
+        "middle_name" : "E.",
+        "party" : "D",
+        "state" : "FL",
+        "twitter_id" : "RepTedDeutch"
+      },
+      {
+        "district" : 4,
+        "first_name" : "Scott",
+        "gender" : "M",
+        "last_name" : "DesJarlais",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "TN",
+        "twitter_id" : "DesJarlaisTN04"
+      },
+      {
+        "district" : 15,
+        "first_name" : "Charles",
+        "gender" : "M",
+        "last_name" : "Dent",
+        "middle_name" : "W.",
+        "party" : "R",
+        "state" : "PA",
+        "twitter_id" : null
+      },
+      {
+        "district" : 10,
+        "first_name" : "Jeff",
+        "gender" : "M",
+        "last_name" : "Denham",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "CA",
+        "twitter_id" : "RepJeffDenham"
+      },
+      {
+        "district" : 3,
+        "first_name" : "Rosa",
+        "gender" : "F",
+        "last_name" : "DeLauro",
+        "middle_name" : "L.",
+        "party" : "D",
+        "state" : "CT",
+        "twitter_id" : "RosaDeLauro"
+      },
+      {
+        "district" : 1,
+        "first_name" : "Diana",
+        "gender" : "F",
+        "last_name" : "DeGette",
+        "middle_name" : "L.",
+        "party" : "D",
+        "state" : "CO",
+        "twitter_id" : "RepDianaDeGette"
+      },
+      {
+        "district" : 4,
+        "first_name" : "Peter",
+        "gender" : "M",
+        "last_name" : "DeFazio",
+        "middle_name" : "A.",
+        "party" : "D",
+        "state" : "OR",
+        "twitter_id" : "RepPeterDeFazio"
+      },
+      {
+        "district" : 53,
+        "first_name" : "Susan",
+        "gender" : "F",
+        "last_name" : "Davis",
+        "middle_name" : "A.",
+        "party" : "D",
+        "state" : "CA",
+        "twitter_id" : "RepSusanDavis"
+      },
+      {
+        "district" : 7,
+        "first_name" : "Danny",
+        "gender" : "M",
+        "last_name" : "Davis",
+        "middle_name" : "K.",
+        "party" : "D",
+        "state" : "IL",
+        "twitter_id" : "RepDannyDavis"
+      },
+      {
+        "district" : 7,
+        "first_name" : "Elijah",
+        "gender" : "M",
+        "last_name" : "Cummings",
+        "middle_name" : "E.",
+        "party" : "D",
+        "state" : "MD",
+        "twitter_id" : "RepCummings"
+      },
+      {
+        "district" : 7,
+        "first_name" : "John",
+        "gender" : "M",
+        "last_name" : "Culberson",
+        "middle_name" : "Abney",
+        "party" : "R",
+        "state" : "TX",
+        "twitter_id" : "CongCulberson"
+      },
+      {
+        "district" : 28,
+        "first_name" : "Henry",
+        "gender" : "M",
+        "last_name" : "Cuellar",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "TX",
+        "twitter_id" : "RepCuellar"
+      },
+      {
+        "district" : 14,
+        "first_name" : "Joseph",
+        "gender" : "M",
+        "last_name" : "Crowley",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "NY",
+        "twitter_id" : "RepJoeCrowley"
+      },
+      {
+        "district" : 4,
+        "first_name" : "Ander",
+        "gender" : "M",
+        "last_name" : "Crenshaw",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "FL",
+        "twitter_id" : "AnderCrenshaw"
+      },
+      {
+        "district" : 1,
+        "first_name" : "Eric",
+        "gender" : "M",
+        "last_name" : "Crawford",
+        "middle_name" : "A.",
+        "party" : "R",
+        "state" : "AR",
+        "twitter_id" : "RepRickCrawford"
+      },
+      {
+        "district" : 2,
+        "first_name" : "Joe",
+        "gender" : "M",
+        "last_name" : "Courtney",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "CT",
+        "twitter_id" : "RepJoeCourtney"
+      },
+      {
+        "district" : 16,
+        "first_name" : "Jim",
+        "gender" : "M",
+        "last_name" : "Costa",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "CA",
+        "twitter_id" : "RepJimCosta"
+      },
+      {
+        "district" : 5,
+        "first_name" : "Jim",
+        "gender" : "M",
+        "last_name" : "Cooper",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "TN",
+        "twitter_id" : "RepJimCooper"
+      },
+      {
+        "district" : 13,
+        "first_name" : "John",
+        "gender" : "M",
+        "last_name" : "Conyers",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "MI",
+        "twitter_id" : "RepJohnConyers"
+      },
+      {
+        "district" : 11,
+        "first_name" : "Gerald",
+        "gender" : "M",
+        "last_name" : "Connolly",
+        "middle_name" : "E.",
+        "party" : "D",
+        "state" : "VA",
+        "twitter_id" : "GerryConnolly"
+      },
+      {
+        "district" : 11,
+        "first_name" : "K.",
+        "gender" : "M",
+        "last_name" : "Conaway",
+        "middle_name" : "Michael",
+        "party" : "R",
+        "state" : "TX",
+        "twitter_id" : "ConawayTX11"
+      },
+      {
+        "district" : 4,
+        "first_name" : "Tom",
+        "gender" : "M",
+        "last_name" : "Cole",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "OK",
+        "twitter_id" : "TomColeOK04"
+      },
+      {
+        "district" : 9,
+        "first_name" : "Steve",
+        "gender" : "M",
+        "last_name" : "Cohen",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "TN",
+        "twitter_id" : "RepCohen"
+      },
+      {
+        "district" : 6,
+        "first_name" : "Mike",
+        "gender" : "M",
+        "last_name" : "Coffman",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "CO",
+        "twitter_id" : "RepMikeCoffman"
+      },
+      {
+        "district" : 6,
+        "first_name" : "Howard",
+        "gender" : "M",
+        "last_name" : "Coble",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "NC",
+        "twitter_id" : "HowardCoble"
+      },
+      {
+        "district" : 6,
+        "first_name" : "James",
+        "gender" : "M",
+        "last_name" : "Clyburn",
+        "middle_name" : "E.",
+        "party" : "D",
+        "state" : "SC",
+        "twitter_id" : "Clyburn"
+      },
+      {
+        "district" : 5,
+        "first_name" : "Emanuel",
+        "gender" : "M",
+        "last_name" : "Cleaver",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "MO",
+        "twitter_id" : "RepCleaver"
+      },
+      {
+        "district" : 1,
+        "first_name" : "Wm.",
+        "gender" : "M",
+        "last_name" : "Clay",
+        "middle_name" : "Lacy",
+        "party" : "D",
+        "state" : "MO",
+        "twitter_id" : null
+      },
+      {
+        "district" : 9,
+        "first_name" : "Yvette",
+        "gender" : "F",
+        "last_name" : "Clarke",
+        "middle_name" : "D.",
+        "party" : "D",
+        "state" : "NY",
+        "twitter_id" : "YvetteClarke"
+      },
+      {
+        "district" : 1,
+        "first_name" : "David",
+        "gender" : "M",
+        "last_name" : "Cicilline",
+        "middle_name" : "N.",
+        "party" : "D",
+        "state" : "RI",
+        "twitter_id" : "RepCicilline"
+      },
+      {
+        "district" : 27,
+        "first_name" : "Judy",
+        "gender" : "F",
+        "last_name" : "Chu",
+        "middle_name" : "M.",
+        "party" : "D",
+        "state" : "CA",
+        "twitter_id" : "RepJudyChu"
+      },
+      {
+        "district" : 0,
+        "first_name" : "Donna",
+        "gender" : "F",
+        "last_name" : "Christensen",
+        "middle_name" : "M.",
+        "party" : "D",
+        "state" : "VI",
+        "twitter_id" : "DelegateDonna"
+      },
+      {
+        "district" : 3,
+        "first_name" : "Jason",
+        "gender" : "M",
+        "last_name" : "Chaffetz",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "UT",
+        "twitter_id" : "JasonInTheHouse"
+      },
+      {
+        "district" : 1,
+        "first_name" : "Steve",
+        "gender" : "M",
+        "last_name" : "Chabot",
+        "middle_name" : "J.",
+        "party" : "R",
+        "state" : "OH",
+        "twitter_id" : "RepSteveChabot"
+      },
+      {
+        "district" : 14,
+        "first_name" : "Kathy",
+        "gender" : "F",
+        "last_name" : "Castor",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "FL",
+        "twitter_id" : "USRepKCastor"
+      },
+      {
+        "district" : 6,
+        "first_name" : "Bill",
+        "gender" : "M",
+        "last_name" : "Cassidy",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "LA",
+        "twitter_id" : null
+      },
+      {
+        "district" : 31,
+        "first_name" : "John",
+        "gender" : "M",
+        "last_name" : "Carter",
+        "middle_name" : "R.",
+        "party" : "R",
+        "state" : "TX",
+        "twitter_id" : "JudgeCarter"
+      },
+      {
+        "district" : 7,
+        "first_name" : "André",
+        "gender" : "M",
+        "last_name" : "Carson",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "IN",
+        "twitter_id" : "RepAndreCarson"
+      },
+      {
+        "district" : 0,
+        "first_name" : "John",
+        "gender" : "M",
+        "last_name" : "Carney",
+        "middle_name" : "C.",
+        "party" : "D",
+        "state" : "DE",
+        "twitter_id" : "JohnCarneyde"
+      },
+      {
+        "district" : 7,
+        "first_name" : "Michael",
+        "gender" : "M",
+        "last_name" : "Capuano",
+        "middle_name" : "E.",
+        "party" : "D",
+        "state" : "MA",
+        "twitter_id" : null
+      },
+      {
+        "district" : 24,
+        "first_name" : "Lois",
+        "gender" : "F",
+        "last_name" : "Capps",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "CA",
+        "twitter_id" : "RepLoisCapps"
+      },
+      {
+        "district" : 2,
+        "first_name" : "Shelley",
+        "gender" : "F",
+        "last_name" : "Capito",
+        "middle_name" : "Moore",
+        "party" : "R",
+        "state" : "WV",
+        "twitter_id" : "RepShelley"
+      },
+      {
+        "district" : 45,
+        "first_name" : "John",
+        "gender" : "M",
+        "last_name" : "Campbell",
+        "middle_name" : "Bayard Taylor",
+        "party" : "R",
+        "state" : "CA",
+        "twitter_id" : "RepJohnCampbell"
+      },
+      {
+        "district" : 4,
+        "first_name" : "Dave",
+        "gender" : "M",
+        "last_name" : "Camp",
+        "middle_name" : "Lee",
+        "party" : "R",
+        "state" : "MI",
+        "twitter_id" : "RepDaveCamp"
+      },
+      {
+        "district" : 42,
+        "first_name" : "Ken",
+        "gender" : "M",
+        "last_name" : "Calvert",
+        "middle_name" : "S.",
+        "party" : "R",
+        "state" : "CA",
+        "twitter_id" : "KenCalvert"
+      },
+      {
+        "district" : 1,
+        "first_name" : "George",
+        "gender" : "M",
+        "last_name" : "Butterfield",
+        "middle_name" : "Kenneth",
+        "party" : "D",
+        "state" : "NC",
+        "twitter_id" : "GKButterfield"
+      },
+      {
+        "district" : 26,
+        "first_name" : "Michael",
+        "gender" : "M",
+        "last_name" : "Burgess",
+        "middle_name" : "C.",
+        "party" : "R",
+        "state" : "TX",
+        "twitter_id" : "MichaelCBurgess"
+      },
+      {
+        "district" : 8,
+        "first_name" : "Larry",
+        "gender" : "M",
+        "last_name" : "Bucshon",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "IN",
+        "twitter_id" : "RepLarryBucshon"
+      },
+      {
+        "district" : 16,
+        "first_name" : "Vern",
+        "gender" : "M",
+        "last_name" : "Buchanan",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "FL",
+        "twitter_id" : "VernBuchanan"
+      },
+      {
+        "district" : 5,
+        "first_name" : "Corrine",
+        "gender" : "F",
+        "last_name" : "Brown",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "FL",
+        "twitter_id" : "RepCorrineBrown"
+      },
+      {
+        "district" : 10,
+        "first_name" : "Paul",
+        "gender" : "M",
+        "last_name" : "Broun",
+        "middle_name" : "C.",
+        "party" : "R",
+        "state" : "GA",
+        "twitter_id" : "RepPaulBrounMD"
+      },
+      {
+        "district" : 5,
+        "first_name" : "Mo",
+        "gender" : "M",
+        "last_name" : "Brooks",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "AL",
+        "twitter_id" : "RepMoBrooks"
+      },
+      {
+        "district" : 1,
+        "first_name" : "Bruce",
+        "gender" : "M",
+        "last_name" : "Braley",
+        "middle_name" : "L.",
+        "party" : "D",
+        "state" : "IA",
+        "twitter_id" : "BruceBraley"
+      },
+      {
+        "district" : 1,
+        "first_name" : "Robert",
+        "gender" : "M",
+        "last_name" : "Brady",
+        "middle_name" : "Alan",
+        "party" : "D",
+        "state" : "PA",
+        "twitter_id" : "RepBrady"
+      },
+      {
+        "district" : 8,
+        "first_name" : "Kevin",
+        "gender" : "M",
+        "last_name" : "Brady",
+        "middle_name" : "P.",
+        "party" : "R",
+        "state" : "TX",
+        "twitter_id" : "RepKevinBrady"
+      },
+      {
+        "district" : 3,
+        "first_name" : "Charles",
+        "gender" : "M",
+        "last_name" : "Boustany",
+        "middle_name" : "W.",
+        "party" : "R",
+        "state" : "LA",
+        "twitter_id" : "RepBoustany"
+      },
+      {
+        "district" : 0,
+        "first_name" : "Madeleine",
+        "gender" : "F",
+        "last_name" : "Bordallo",
+        "middle_name" : "Z.",
+        "party" : "D",
+        "state" : "GU",
+        "twitter_id" : null
+      },
+      {
+        "district" : 8,
+        "first_name" : "John",
+        "gender" : "M",
+        "last_name" : "Boehner",
+        "middle_name" : "A.",
+        "party" : "R",
+        "state" : "OH",
+        "twitter_id" : "SpeakerBoehner"
+      },
+      {
+        "district" : 3,
+        "first_name" : "Earl",
+        "gender" : "M",
+        "last_name" : "Blumenauer",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "OR",
+        "twitter_id" : "BlumenauerMedia"
+      },
+      {
+        "district" : 7,
+        "first_name" : "Marsha",
+        "gender" : "F",
+        "last_name" : "Blackburn",
+        "middle_name" : "W.",
+        "party" : "R",
+        "state" : "TN",
+        "twitter_id" : "MarshaBlackburn"
+      },
+      {
+        "district" : 6,
+        "first_name" : "Diane",
+        "gender" : "F",
+        "last_name" : "Black",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "TN",
+        "twitter_id" : "RepDianeBlack"
+      },
+      {
+        "district" : 1,
+        "first_name" : "Timothy",
+        "gender" : "M",
+        "last_name" : "Bishop",
+        "middle_name" : "H.",
+        "party" : "D",
+        "state" : "NY",
+        "twitter_id" : "TimBishopNY"
+      },
+      {
+        "district" : 2,
+        "first_name" : "Sanford",
+        "gender" : "M",
+        "last_name" : "Bishop",
+        "middle_name" : "D.",
+        "party" : "D",
+        "state" : "GA",
+        "twitter_id" : "SanfordBishop"
+      },
+      {
+        "district" : 1,
+        "first_name" : "Rob",
+        "gender" : "M",
+        "last_name" : "Bishop",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "UT",
+        "twitter_id" : "RepRobBishop"
+      },
+      {
+        "district" : 12,
+        "first_name" : "Gus",
+        "gender" : "M",
+        "last_name" : "Bilirakis",
+        "middle_name" : "M.",
+        "party" : "R",
+        "state" : "FL",
+        "twitter_id" : "RepGusBilirakis"
+      },
+      {
+        "district" : 1,
+        "first_name" : "Dan",
+        "gender" : "M",
+        "last_name" : "Benishek",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "MI",
+        "twitter_id" : "CongressmanDan"
+      },
+      {
+        "district" : 34,
+        "first_name" : "Xavier",
+        "gender" : "M",
+        "last_name" : "Becerra",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "CA",
+        "twitter_id" : "RepBecerra"
+      },
+      {
+        "district" : 37,
+        "first_name" : "Karen",
+        "gender" : "F",
+        "last_name" : "Bass",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "CA",
+        "twitter_id" : "RepKarenBass"
+      },
+      {
+        "district" : 6,
+        "first_name" : "Joe",
+        "gender" : "M",
+        "last_name" : "Barton",
+        "middle_name" : "Linus",
+        "party" : "R",
+        "state" : "TX",
+        "twitter_id" : "RepJoeBarton"
+      },
+      {
+        "district" : 12,
+        "first_name" : "John",
+        "gender" : "M",
+        "last_name" : "Barrow",
+        "middle_name" : null,
+        "party" : "D",
+        "state" : "GA",
+        "twitter_id" : "RepJohnBarrow"
+      },
+      {
+        "district" : 11,
+        "first_name" : "Lou",
+        "gender" : "M",
+        "last_name" : "Barletta",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "PA",
+        "twitter_id" : "RepLouBarletta"
+      },
+      {
+        "district" : 6,
+        "first_name" : "Spencer",
+        "gender" : "M",
+        "last_name" : "Bachus",
+        "middle_name" : "Thomas",
+        "party" : "R",
+        "state" : "AL",
+        "twitter_id" : "BachusAL06"
+      },
+      {
+        "district" : 6,
+        "first_name" : "Michele",
+        "gender" : "F",
+        "last_name" : "Bachmann",
+        "middle_name" : "Marie",
+        "party" : "R",
+        "state" : "MN",
+        "twitter_id" : "MicheleBachmann"
+      },
+      {
+        "district" : 3,
+        "first_name" : "Justin",
+        "gender" : "M",
+        "last_name" : "Amash",
+        "middle_name" : null,
+        "party" : "R",
+        "state" : "MI",
+        "twitter_id" : "RepJustinAmash"
+      },
+      {
+        "district" : 4,
+        "first_name" : "Robert",
+        "gender" : "M",
+        "last_name" : "Aderholt",
+        "middle_name" : "B.",
+        "party" : "R",
+        "state" : "AL",
+        "twitter_id" : "Robert_Aderholt"
+      }
+    ],
+  "count" : 438,
+  "page" :
+  {
+    "count" : 438,
+    "per_page" : null,
+    "page" : null
+  }
+}

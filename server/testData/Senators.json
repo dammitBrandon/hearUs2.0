@@ -1,0 +1,207 @@
+{
+  "results": [
+    {
+      "first_name": "John",
+      "gender": "M",
+      "last_name": "Walsh",
+      "middle_name": "E.",
+      "party": "D",
+      "state": "MT",
+      "twitter_id": "SenWalshOffice"
+    },
+    {
+      "first_name": "Cory",
+      "gender": "M",
+      "last_name": "Booker",
+      "middle_name": "Anthony",
+      "party": "D",
+      "state": "NJ",
+      "twitter_id": "SenBookerOfc"
+    },
+    {
+      "first_name": "Timothy",
+      "gender": "M",
+      "last_name": "Kaine",
+      "middle_name": null,
+      "party": "D",
+      "state": "VA",
+      "twitter_id": "SenKaineOffice"
+    },
+    {
+
+      "first_name": "Ted",
+      "gender": "M",
+      "last_name": "Cruz",
+      "middle_name": null,
+      "party": "R",
+      "state": "TX",
+      "twitter_id": "SenTedCruz"
+    },
+    {
+
+      "first_name": "Deb",
+      "gender": "F",
+      "last_name": "Fischer",
+      "middle_name": null,
+      "party": "R",
+      "state": "NE",
+      "twitter_id": "SenatorFischer"
+    },
+    {
+
+      "first_name": "Heidi",
+      "gender": "F",
+      "last_name": "Heitkamp",
+      "middle_name": null,
+      "party": "D",
+      "state": "ND",
+      "twitter_id": "SenatorHeitkamp"
+    },
+    {
+
+      "first_name": "Angus",
+      "gender": "M",
+      "last_name": "King",
+      "middle_name": null,
+      "party": "I",
+      "state": "ME",
+      "twitter_id": "SenAngusKing"
+    },
+    {
+
+      "first_name": "Elizabeth",
+      "gender": "F",
+      "last_name": "Warren",
+      "middle_name": null,
+      "party": "D",
+      "state": "MA",
+      "twitter_id": "SenWarren"
+    },
+    {
+
+      "first_name": "Brian",
+      "gender": "M",
+      "last_name": "Schatz",
+      "middle_name": "Emanuel",
+      "party": "D",
+      "state": "HI",
+      "twitter_id": "SenBrianSchatz"
+    },
+    {
+
+      "first_name": "Dean",
+      "gender": "M",
+      "last_name": "Heller",
+      "middle_name": null,
+      "party": "R",
+      "state": "NV",
+      "twitter_id": "SenDeanHeller"
+    },
+    {
+
+      "first_name": "Ron",
+      "gender": "M",
+      "last_name": "Wyden",
+      "middle_name": null,
+      "party": "D",
+      "state": "OR",
+      "twitter_id": "RonWyden"
+    },
+    {
+
+      "first_name": "David",
+      "gender": "M",
+      "last_name": "Vitter",
+      "middle_name": null,
+      "party": "R",
+      "state": "LA",
+      "twitter_id": null
+    },
+    {
+
+      "first_name": "Patrick",
+      "gender": "M",
+      "last_name": "Toomey",
+      "middle_name": "J.",
+      "party": "R",
+      "state": "PA",
+      "twitter_id": "SenToomey"
+    },
+    {
+
+      "first_name": "John",
+      "gender": "M",
+      "last_name": "Thune",
+      "middle_name": null,
+      "party": "R",
+      "state": "SD",
+      "twitter_id": "SenJohnThune"
+    },
+    {
+
+      "first_name": "Richard",
+      "gender": "M",
+      "last_name": "Shelby",
+      "middle_name": "C.",
+      "party": "R",
+      "state": "AL",
+      "twitter_id": "SenShelby"
+    },
+    {
+
+      "first_name": "Tim",
+      "gender": "M",
+      "last_name": "Scott",
+      "middle_name": null,
+      "party": "R",
+      "state": "SC",
+      "twitter_id": "SenatorTimScott"
+    },
+    {
+
+      "first_name": "Charles",
+      "gender": "M",
+      "last_name": "Schumer",
+      "middle_name": "E.",
+      "party": "D",
+      "state": "NY",
+      "twitter_id": "SenSchumer"
+    },
+    {
+
+      "first_name": "Marco",
+      "gender": "M",
+      "last_name": "Rubio",
+      "middle_name": null,
+      "party": "R",
+      "state": "FL",
+      "twitter_id": "SenRubioPress"
+    },
+    {
+
+      "first_name": "Harry",
+      "gender": "M",
+      "last_name": "Reid",
+      "middle_name": "M.",
+      "party": "D",
+      "state": "NV",
+      "twitter_id": "SenatorReid"
+    },
+    {
+
+      "first_name": "Robert",
+      "gender": "M",
+      "last_name": "Portman",
+      "middle_name": "J.",
+      "party": "R",
+      "state": "OH",
+      "twitter_id": "SenRobPortman"
+    }
+  ],
+  "count": 100,
+  "page": {
+    "count": 20,
+    "per_page": 20,
+    "page": 1
+  }
+}

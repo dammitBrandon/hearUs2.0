@@ -27,7 +27,6 @@ angular.module('services.SunlightApi', [
     function getDistrict(zipCode) {
       var deferred = $q.defer();
       var url = baseUrl + 'district/' + zipCode;
-      $log.log('the url: ', url);
       
       $http({
         method: 'Get',
@@ -43,8 +42,44 @@ angular.module('services.SunlightApi', [
         });
     }
 
+    function getSenators() {
+      var deferred = $q.defer();
+      var url = baseUrl + 'senators';
+      
+      $http({
+        method: 'Get',
+        url: url
+      })
+        .success(function (data, status, headers, config) {
+          $log.debug('successful getting data ', data);
+        })
+        .error(function(err, status, headers, config) {
+          $log.debug('failed to get data', err);
+          deferred.reject(err);
+        });
+    }
+    
+    function getReps() {
+      var deferred = $q.defer();
+      var url = baseUrl + 'representatives';
+      
+      $http({
+        method: 'Get',
+        url: url
+      })
+        .sucess(function (data, status, headers, config) {
+          $log.debug('successufl getting data', data);
+        })
+        .error(function (err, status, headers, config) {
+          $log.debug('failed to get data', err);
+          deferred.reject(err);
+        });
+    }
+    
     return {
       getIssues: getIssues,
-      getDistrict: getDistrict
+      getDistrict: getDistrict,
+      getSenators: getSenators,
+      getReps: getReps
     };
   });
