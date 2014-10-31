@@ -1,6 +1,7 @@
 angular.module('landing', [
     'ui.router',
-    'landing.controllers'
+    'landing.controllers',
+    'geolocate'
 ])
 .config(function landingConfig($stateProvider) {
         $stateProvider

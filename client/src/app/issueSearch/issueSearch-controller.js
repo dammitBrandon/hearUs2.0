@@ -7,7 +7,9 @@ angular.module('issueSearch.controllers', [
     $scope.bills = [];
     
     function findBills() {
-      SunlightService.getIssues($scope.issue);
+      SunlightService.getIssues($scope.issue).then(function(bills) {
+        $scope.bills = bills.results;
+      });
     }
     
     findBills();

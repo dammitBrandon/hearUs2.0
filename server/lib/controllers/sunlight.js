@@ -3,7 +3,9 @@
 var fs = require('fs'),
   sunlight = require('sunlight-congress-api'),
   config = require('../config/config'),
-  apikey = config.apikey;
+  apikey = config.apikey,
+  mongoose = require('mongoose'),
+  Congressman = mongoose.model('Congressman');
 
 var path = './testData';
 
@@ -24,7 +26,7 @@ fs.exists(path, function (exists) {
 var saveTestData = function (title) {
   return function (data) {
     var testFile = JSON.stringify(data, null, 4);
-    fs.writeFile(path + '/' +  title + '.json', testFile, function (err) {
+    fs.writeFile(path + '/' + title + '.json', testFile, function (err) {
       if (err) {
         console.log('File failed to save, error: ', err);
       } else {
@@ -53,7 +55,7 @@ districtBills.call(saveTestData("DistrictBills"));
 /**
  * load json data
  */
-var loadJsonFile = function(filename) {
+var loadJsonFile = function (filename) {
   var jsonData = require('../../testData/' + filename);
   return jsonData;
 };
@@ -61,25 +63,62 @@ var loadJsonFile = function(filename) {
 /**
  *  search for a topic
  */
-exports.searchIssue = function(req, res, next) {
+exports.searchIssue = function (req, res, next) {
   var searchTopic = req.params.issue;
   var filename = 'GunControlBills.json';
   var data = loadJsonFile(filename);
   res.send(data);
 };
 
-exports.loadHouseReps = function(req, res, next){
+exports.getCongressmen = function (req, res, next) {
+  var districtObj = {
+    state: req.params.state,
+    district: req.params.district
+  };
+
+  var members = {};
+
+//  var data = congressmen.getCongressmenInDistrict(districtObj);
+//  TODO: can this be moved to the controllers/congressmen.js file?
+  Congressman.find(
+    {
+      state: districtObj.state,
+      district: districtObj.district
+    })
+    .exec(function (err, docs) {
+      if (err) {
+        console.log('error performing query: ', err);
+        res.send(err);
+      }
+      members.house = docs;
+    });
+
+  Congressman.find({
+    state: districtObj.state,
+    chamber: 'senate'
+  })
+    .exec(function (err, docs) {
+      if (err) {
+        console.log('error performing query: ', err);
+        res.send(err);
+      }
+      members.senate = docs;
+      res.send(members);
+    });
+};
+
+exports.loadHouseReps = function (req, res, next) {
   var reps = sunlight.legislators();
   var filename = 'Reps.json';
   reps.filter("in_office", true)
     .filter("chamber", "house")
     .fields("first_name", "middle_name", "last_name", "twitter_id", "gender", "party", "state", "district");
 //    .call();
-    var data = loadJsonFile(filename);
+  var data = loadJsonFile(filename);
   res.send(data);
 };
 
-exports.loadSenators = function(req, res, next){
+exports.loadSenators = function (req, res, next) {
   var reps = sunlight.legislators();
   var filename = 'Senators.json';
   reps.filter("in_office", true)
@@ -93,14 +132,38 @@ exports.loadSenators = function(req, res, next){
 /**
  * search for district by zipcode
  */
-exports.searchDistrictZipCode  = function (req, res, next) {
+exports.searchDistrictByZipCode = function (req, res, next) {
   var zipCode = req.params.zipCode;
-  var filename = 'DistrictBills.json';
-  
+  var filename;
+
+  if (zipCode === '60653') {
+    filename = 'Districts.json';
+  } else {
+    filename = 'District.json';
+  }
+
   var district = sunlight.districtsLocate();
   district.addZip(zipCode);
 //  district.call();
   var data = loadJsonFile(filename);
-  
+
   res.send(data);
+};
+
+exports.searchDistrictCoords = function (req, res, next) {
+  var coords = {
+    lat: req.params.lat,
+    long: req.params.long
+  };
+
+  var filename = 'District.json';
+
+  var district = sunlight.districtsLocate();
+  district.addCoords(coords);
+//  district.call();
+
+  var data = loadJsonFile(filename);
+
+  res.send(data);
+
 };
