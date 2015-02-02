@@ -2,27 +2,14 @@ angular.module('districtSearch.controllers', [
   'ui.router',
   'services.SunlightApi'
 ]).
-  controller('districtSearchCtrl', function districtSearchController($scope, $rootScope, $state, $stateParams, $log, SunlightService) {
-    $scope.zipCode = '';
-    $scope.coords = {};
-
+  controller('districtSearchCtrl', function districtSearchController($scope, $rootScope, $state, $stateParams, $log, SunlightService, district) {
+    
     function initDistrictSearch() {
-      $log.log('inside district search');
-//      $log.log('district ', district);
-      if (angular.isDefined($state.params.zipCode)) {
-        $scope.zipCode = $state.params.zipCode;
-        $log.log('get district by zip code');
-        getDistrictByZipCode($scope.params.zipCode);
-      } else if (angular.isDefined($state.params.lat) && angular.isDefined($state.params.long)) {
-        $scope.coords = {
-          lat: $state.params.lat,
-          long: $state.params.long
-        };
-        $log.log('get district by coords');
-//        getDistrictByLatLong($scope.coords);
-      }
+      $scope.district = district;
+      getCongressmen(district);
     }
-
+    
+    
     var getDistrictByZipCode = function (zipCode) {
       SunlightService.getDistrictByZipCode(zipCode).then(function (district) {
 
@@ -54,12 +41,21 @@ angular.module('districtSearch.controllers', [
       });
     };
 
-    var getCongressmen = function (district) {
-      SunlightService.getCongressmen(district).then(function (members) {
-        console.log(members);
-        $scope.members = members;
+    function getCongressmen(district) {
+      var congressMen = {};
+      SunlightService.getCongressmen(district).then(function (congressmenData) {
+        $scope.test = congressmenData
+        
+        congressMen = {
+          house: congressmenData.house[0],
+          senate: congressmenData.senate
+        };
+        $scope.houseRep = congressMen.house;
       });
-    };
+    }
     initDistrictSearch();
-
+    
+    $scope.test = function () {
+      $log.log('test ');
+    };
   });

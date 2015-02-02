@@ -151,6 +151,7 @@ exports.searchDistrictByZipCode = function (req, res, next) {
 };
 
 exports.searchDistrictCoords = function (req, res, next) {
+  console.log(req);
   var coords = {
     lat: req.params.lat,
     long: req.params.long

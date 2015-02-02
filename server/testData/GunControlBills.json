@@ -16,7 +16,7 @@
             "bill_id": "hr321-113",
             "introduced_on": "2013-01-18",
             "search": {
-                "score": 0.8841268,
+                "score": 0.88018405,
                 "type": "bill"
             }
         },
@@ -54,7 +54,7 @@
             "bill_id": "hr2910-113",
             "introduced_on": "2013-08-01",
             "search": {
-                "score": 0.2210317,
+                "score": 0.22004601,
                 "type": "bill"
             }
         },
@@ -193,7 +193,7 @@
             "bill_id": "s1284-113",
             "introduced_on": "2013-07-11",
             "search": {
-                "score": 0.13675638,
+                "score": 0.13614653,
                 "type": "bill"
             }
         },
@@ -212,7 +212,7 @@
             "bill_id": "hres40-113",
             "introduced_on": "2013-01-22",
             "search": {
-                "score": 0.078832835,
+                "score": 0.07902506,
                 "type": "bill"
             }
         },
@@ -235,7 +235,7 @@
             "bill_id": "hr236-113",
             "introduced_on": "2013-01-14",
             "search": {
-                "score": 0.06897873,
+                "score": 0.06914693,
                 "type": "bill"
             }
         },
@@ -282,7 +282,7 @@
             "bill_id": "s2872-113",
             "introduced_on": "2014-09-18",
             "search": {
-                "score": 0.04266952,
+                "score": 0.042773567,
                 "type": "bill"
             }
         },
@@ -329,7 +329,7 @@
             "bill_id": "hr4783-113",
             "introduced_on": "2014-05-30",
             "search": {
-                "score": 0.04266952,
+                "score": 0.042773567,
                 "type": "bill"
             }
         },
@@ -706,7 +706,7 @@
             "bill_id": "hr3547-113",
             "introduced_on": "2013-11-20",
             "search": {
-                "score": 0.03907325,
+                "score": 0.03889901,
                 "type": "bill"
             }
         },
@@ -726,7 +726,7 @@
             "bill_id": "hr4806-113",
             "introduced_on": "2014-06-05",
             "search": {
-                "score": 0.017627558,
+                "score": 0.01767054,
                 "type": "bill"
             }
         },
@@ -746,7 +746,19 @@
             "bill_id": "s2445-113",
             "introduced_on": "2014-06-05",
             "search": {
-                "score": 0.017627558,
+                "score": 0.01767054,
+                "type": "bill"
+            }
+        },
+        {
+            "last_vote_at": null,
+            "keywords": [],
+            "popular_title": null,
+            "official_title": "To provide family members and close associates of an individual who they fear is a danger to himself, herself, or others new tools to prevent gun violence.",
+            "bill_id": "hr410-114",
+            "introduced_on": "2015-01-20",
+            "search": {
+                "score": 0.01767054,
                 "type": "bill"
             }
         },
@@ -841,7 +853,7 @@
             "bill_id": "hr1960-113",
             "introduced_on": "2013-05-14",
             "search": {
-                "score": 0.0063607967,
+                "score": 0.006376307,
                 "type": "bill"
             }
         },
@@ -1259,7 +1271,7 @@
             "bill_id": "hr83-113",
             "introduced_on": "2013-01-03",
             "search": {
-                "score": 0.0060969163,
+                "score": 0.0061117825,
                 "type": "bill"
             }
         },
@@ -1416,7 +1428,7 @@
             "bill_id": "s1197-113",
             "introduced_on": "2013-06-20",
             "search": {
-                "score": 0.005028652,
+                "score": 0.005040914,
                 "type": "bill"
             }
         },
@@ -1558,7 +1570,7 @@
             "bill_id": "hr4435-113",
             "introduced_on": "2014-04-09",
             "search": {
-                "score": 0.004927052,
+                "score": 0.0049390662,
                 "type": "bill"
             }
         },
@@ -1730,7 +1742,7 @@
             "bill_id": "hr3304-113",
             "introduced_on": "2013-10-22",
             "search": {
-                "score": 0.0040229214,
+                "score": 0.004032731,
                 "type": "bill"
             }
         },
@@ -1746,14 +1758,14 @@
             "bill_id": "hres441-113",
             "introduced_on": "2013-12-12",
             "search": {
-                "score": 0.0040229214,
+                "score": 0.004032731,
                 "type": "bill"
             }
         }
     ],
-    "count": 16,
+    "count": 17,
     "page": {
-        "count": 16,
+        "count": 17,
         "per_page": 20,
         "page": 1
     },

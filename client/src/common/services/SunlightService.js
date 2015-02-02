@@ -49,13 +49,13 @@ angular.module('services.SunlightApi', [
     function getDistrictByCoords(coords) {
       var deferred = $q.defer();
       var url = baseUrl + 'district/lat/' + coords.lat + '/long/' + coords.long;
-
+      
       $http({
         method: 'Get',
         url: url
       })
         .success(function(data, status, headers, config) {
-          $log.debug('successful getting data back: ', data);
+//          $log.debug('successful getting data back: ', data);
           deferred.resolve(data);
         })
         .error(function(err, status, headers, config){
@@ -68,7 +68,7 @@ angular.module('services.SunlightApi', [
     
     function getCongressmen(districtObj) {
       var deferred = $q.defer();
-      var url = baseUrl + 'district/congressmen/state/' + districtObj.state + '/district/' + districtObj.number;
+      var url = baseUrl + 'district/congressmen/state/' + districtObj.state + '/district/' + districtObj.districtNumber;
       $log.log('dis obj ', districtObj);
       $log.log('url ', url);
       $http({
