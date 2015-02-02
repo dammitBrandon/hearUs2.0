@@ -44,7 +44,7 @@ var success = function (data) {
 };
 
 var gunControlBills = sunlight.billsSearch();
-gunControlBills.fields("official_title", "introduced_on", "last_vote_at", "popular_title", "keywords");
+gunControlBills.fields("official_title", "introduced_on", "last_vote_at", "popular_title", "short_title", "keywords");
 gunControlBills.search("\"gun control\"~5");
 gunControlBills.call(saveTestData("GunControlBills"));
 
@@ -68,6 +68,13 @@ exports.searchIssue = function (req, res, next) {
   var filename = 'GunControlBills.json';
   var data = loadJsonFile(filename);
   res.send(data);
+};
+
+exports.getBill = function (req, res, next){
+  var billId = req.params.id;
+  sunlight.bills().filter("bill_id", billId).call().then(function(data){
+    res.send(data);
+  });
 };
 
 exports.getCongressmen = function (req, res, next) {

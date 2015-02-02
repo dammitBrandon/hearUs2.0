@@ -10,6 +10,7 @@ angular.module('issueSearch.controllers', [
       SunlightService.getIssues($scope.issue).then(function(bills) {
         $scope.bills = bills.results;
         $scope.bill = $scope.bills[0];
+        $log.log('bill ', $scope.bill);
       });
     }
     

@@ -2,6 +2,7 @@
     "results": [
         {
             "last_vote_at": null,
+            "short_title": "Firearm Safety and Public Health Research Act of 2013",
             "keywords": [
                 "Appropriations",
                 "Crime and law enforcement",
@@ -16,12 +17,13 @@
             "bill_id": "hr321-113",
             "introduced_on": "2013-01-18",
             "search": {
-                "score": 0.88561887,
+                "score": 0.8880168,
                 "type": "bill"
             }
         },
         {
             "last_vote_at": null,
+            "short_title": "Gun Violence Prevention and Reduction Act of 2013",
             "keywords": [
                 "Aging",
                 "Child health",
@@ -54,12 +56,13 @@
             "bill_id": "hr2910-113",
             "introduced_on": "2013-08-01",
             "search": {
-                "score": 0.22140472,
+                "score": 0.2220042,
                 "type": "bill"
             }
         },
         {
             "last_vote_at": null,
+            "short_title": "Departments of Labor, Health and Human Services, and Education, and Related Agencies Appropriations Act, 2014",
             "keywords": [
                 "Administrative law and regulatory procedures",
                 "Administrative remedies",
@@ -193,12 +196,13 @@
             "bill_id": "s1284-113",
             "introduced_on": "2013-07-11",
             "search": {
-                "score": 0.13698718,
+                "score": 0.1373581,
                 "type": "bill"
             }
         },
         {
             "last_vote_at": null,
+            "short_title": null,
             "keywords": [
                 "District of Columbia",
                 "Firearms and explosives",
@@ -212,12 +216,13 @@
             "bill_id": "hres40-113",
             "introduced_on": "2013-01-22",
             "search": {
-                "score": 0.07875216,
+                "score": 0.07879562,
                 "type": "bill"
             }
         },
         {
             "last_vote_at": null,
+            "short_title": "Crackdown on Deadbeat Gun Dealers Act of 2013",
             "keywords": [
                 "Business records",
                 "Civil actions and liability",
@@ -235,12 +240,13 @@
             "bill_id": "hr236-113",
             "introduced_on": "2013-01-14",
             "search": {
-                "score": 0.06890814,
+                "score": 0.06894617,
                 "type": "bill"
             }
         },
         {
             "last_vote_at": null,
+            "short_title": "Promoting Healthy Minds for Safer Communities Act of 2014",
             "keywords": [
                 "Administrative law and regulatory procedures",
                 "Administrative remedies",
@@ -282,12 +288,13 @@
             "bill_id": "s2872-113",
             "introduced_on": "2014-09-18",
             "search": {
-                "score": 0.042625856,
+                "score": 0.042649377,
                 "type": "bill"
             }
         },
         {
             "last_vote_at": null,
+            "short_title": "Promoting Healthy Minds for Safer Communities Act of 2014",
             "keywords": [
                 "Administrative law and regulatory procedures",
                 "Administrative remedies",
@@ -329,12 +336,13 @@
             "bill_id": "hr4783-113",
             "introduced_on": "2014-05-30",
             "search": {
-                "score": 0.042625856,
+                "score": 0.042649377,
                 "type": "bill"
             }
         },
         {
             "last_vote_at": "2014-01-16",
+            "short_title": "Consolidated Appropriations Act, 2014",
             "keywords": [
                 "Administrative Conference of the U.S.",
                 "Administrative law and regulatory procedures",
@@ -706,12 +714,13 @@
             "bill_id": "hr3547-113",
             "introduced_on": "2013-11-20",
             "search": {
-                "score": 0.039139193,
+                "score": 0.03924517,
                 "type": "bill"
             }
         },
         {
             "last_vote_at": null,
+            "short_title": "Pause for Safety Act of 2014",
             "keywords": [
                 "Crime and law enforcement",
                 "Crime prevention",
@@ -726,12 +735,13 @@
             "bill_id": "hr4806-113",
             "introduced_on": "2014-06-05",
             "search": {
-                "score": 0.017609518,
+                "score": 0.017619235,
                 "type": "bill"
             }
         },
         {
             "last_vote_at": null,
+            "short_title": "Pause for Safety Act of 2014",
             "keywords": [
                 "Crime and law enforcement",
                 "Crime prevention",
@@ -746,24 +756,26 @@
             "bill_id": "s2445-113",
             "introduced_on": "2014-06-05",
             "search": {
-                "score": 0.017609518,
+                "score": 0.017619235,
                 "type": "bill"
             }
         },
         {
             "last_vote_at": null,
+            "short_title": "Pause for Safety Act of 2015",
             "keywords": [],
             "popular_title": null,
             "official_title": "To provide family members and close associates of an individual who they fear is a danger to himself, herself, or others new tools to prevent gun violence.",
             "bill_id": "hr410-114",
             "introduced_on": "2015-01-20",
             "search": {
-                "score": 0.017609518,
+                "score": 0.017619235,
                 "type": "bill"
             }
         },
         {
             "last_vote_at": "2013-06-14T17:08:00Z",
+            "short_title": "National Defense Authorization Act for Fiscal Year 2014",
             "keywords": [
                 "Administrative remedies",
                 "Advanced technology and technological innovations",
@@ -853,12 +865,13 @@
             "bill_id": "hr1960-113",
             "introduced_on": "2013-05-14",
             "search": {
-                "score": 0.0063542873,
+                "score": 0.006357794,
                 "type": "bill"
             }
         },
         {
             "last_vote_at": "2014-12-12T02:38:00Z",
+            "short_title": null,
             "keywords": [
                 "Abortion",
                 "Access Board",
@@ -1271,12 +1284,13 @@
             "bill_id": "hr83-113",
             "introduced_on": "2013-01-03",
             "search": {
-                "score": 0.006090677,
+                "score": 0.0060940376,
                 "type": "bill"
             }
         },
         {
             "last_vote_at": "2013-11-18",
+            "short_title": "National Defense Authorization Act for Fiscal Year 2014",
             "keywords": [
                 "Administrative law and regulatory procedures",
                 "Advanced technology and technological innovations",
@@ -1428,12 +1442,13 @@
             "bill_id": "s1197-113",
             "introduced_on": "2013-06-20",
             "search": {
-                "score": 0.0050235055,
+                "score": 0.005026278,
                 "type": "bill"
             }
         },
         {
             "last_vote_at": "2014-05-22T16:17:00Z",
+            "short_title": "Howard P. \"Buck\" McKeon National Defense Authorization Act for Fiscal Year 2015",
             "keywords": [
                 "Accidents",
                 "Accounting and auditing",
@@ -1570,12 +1585,13 @@
             "bill_id": "hr4435-113",
             "introduced_on": "2014-04-09",
             "search": {
-                "score": 0.00492201,
+                "score": 0.004924726,
                 "type": "bill"
             }
         },
         {
             "last_vote_at": "2013-11-19",
+            "short_title": "National Defense Authorization Act for Fiscal Year 2014",
             "keywords": [
                 "Administrative law and regulatory procedures",
                 "Advanced technology and technological innovations",
@@ -1742,12 +1758,13 @@
             "bill_id": "hr3304-113",
             "introduced_on": "2013-10-22",
             "search": {
-                "score": 0.0040188045,
+                "score": 0.0040210225,
                 "type": "bill"
             }
         },
         {
             "last_vote_at": "2013-12-12T23:37:00Z",
+            "short_title": null,
             "keywords": [
                 "Congress",
                 "House of Representatives",
@@ -1758,7 +1775,7 @@
             "bill_id": "hres441-113",
             "introduced_on": "2013-12-12",
             "search": {
-                "score": 0.0040188045,
+                "score": 0.0040210225,
                 "type": "bill"
             }
         }

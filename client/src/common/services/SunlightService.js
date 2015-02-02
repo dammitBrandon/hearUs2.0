@@ -19,10 +19,31 @@ angular.module('services.SunlightApi', [
         deferred.resolve(data);
       })
         .error(function(err, status, headers, config) {
-        $log.debug('failed to get data', err);
-        deferred.reject(err);
-      });
+          $log.debug('failed to get data', err);
+          deferred.reject(err);
+        });
 
+      return deferred.promise;
+    }
+    
+    function getBill(billId) {
+      console.log('bill id ', billId);
+      var deferred = $q.defer();
+      var url = baseUrl + 'bill/' + billId;
+      
+      $http({
+        method: 'GET',
+        url: url
+      })
+        .success(function(data, status, headers, config) {
+          $log.debug('successful getting data', data);
+          deferred.resolve(data);
+        })
+        .error(function(err, status, headers, config) {
+          $log.debug('failed to get data', err);
+          deferred.reject(err);
+        });
+      
       return deferred.promise;
     }
     
@@ -127,6 +148,7 @@ angular.module('services.SunlightApi', [
     
     return {
       getIssues: getIssues,
+      getBill: getBill,
       getDistrictByZipCode: getDistrictByZipCode,
       getDistrictByCoords: getDistrictByCoords,
       getCongressmen: getCongressmen,

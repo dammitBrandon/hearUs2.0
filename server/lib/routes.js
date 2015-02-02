@@ -19,6 +19,7 @@ module.exports = function (app, config) {
   app.get('/api/users/me', ensureAuthenticated, users.me);
   app.get('/api/users/:id', users.show);
   app.get('/api/sunlight/topic/:issue', sunlightApi.searchIssue);
+  app.get('/api/sunlight/bill/:id', sunlightApi.getBill);
   app.get('/api/sunlight/district/congressmen/state/:state/district/:district', sunlightApi.getCongressmen);
   app.get('/api/sunlight/district/lat/:lat/long/:long', sunlightApi.searchDistrictCoords);
   app.get('/api/sunlight/district/:zipCode', sunlightApi.searchDistrictByZipCode);

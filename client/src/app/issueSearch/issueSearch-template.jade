@@ -1,4 +1,10 @@
 div
   h4 The issue page
     
-  div {{bill}}
+  div
+    ul(ng-repeat="bill in bills")
+      li 
+        div
+          a(ui-sref="bill({ id: bill.bill_id })"){{bill.official_title}}
+          {{bill.introduced_on}}
+          {{bill.bill_id}}

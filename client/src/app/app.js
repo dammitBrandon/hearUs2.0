@@ -10,6 +10,7 @@ angular.module('hearUs', [
   'landing',
   'issueSearch',
   'districtSearch',
+  'bill',
   'geolocate'
 ])
   .config(function myAppConfig($stateProvider, $urlRouterProvider) {
