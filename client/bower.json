@@ -7,8 +7,10 @@
     "angular-mocks": "1.2.12",
     "angular-ui-utils": "0.1.1",
     "angular-ui-router": "latest",
+    "angular-ui-map": "latest",
     "angular-foundation": "0.2.2",
     "jquery": "2.1.0",
+    "underscore": "latest",
     "fontawesome": "4.0.3",
     "pure": "latest",
     "foundation": "latest"

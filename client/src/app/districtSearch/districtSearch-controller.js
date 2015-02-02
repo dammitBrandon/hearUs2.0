@@ -5,8 +5,13 @@ angular.module('districtSearch.controllers', [
   controller('districtSearchCtrl', function districtSearchController($scope, $rootScope, $state, $stateParams, $log, SunlightService, district) {
     
     function initDistrictSearch() {
-      $scope.district = district;
-      getCongressmen(district);
+      if(district.count === 1) {
+        $scope.district = district;
+        getCongressmen(district);
+      } else {
+        $log.log('find out what district they are in', district);
+        
+      }
     }
     
     

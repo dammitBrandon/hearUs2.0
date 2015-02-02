@@ -5,6 +5,7 @@ angular.module('hearUs', [
   'templates-jade_common',
   'header',
   'ui.router',
+  'ui.map',
   'mm.foundation',
   'landing',
   'issueSearch',

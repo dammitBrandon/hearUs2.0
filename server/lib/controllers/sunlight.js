@@ -151,16 +151,15 @@ exports.searchDistrictByZipCode = function (req, res, next) {
 };
 
 exports.searchDistrictCoords = function (req, res, next) {
-  console.log(req);
   var coords = {
-    lat: req.params.lat,
-    long: req.params.long
+    latitude: req.params.lat,
+    longitude: req.params.long
   };
 
   var filename = 'District.json';
 
   var district = sunlight.districtsLocate();
-  district.addCoords(coords);
+  district.addCoordinates(coords);
 //  district.call();
 
   var data = loadJsonFile(filename);
