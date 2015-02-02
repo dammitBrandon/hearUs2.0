@@ -44,13 +44,14 @@ angular.module('districtSearch.controllers', [
     function getCongressmen(district) {
       var congressMen = {};
       SunlightService.getCongressmen(district).then(function (congressmenData) {
-        $scope.test = congressmenData
-        
+        $scope.test = congressmenData;
+        $log.log('test ', $scope.test);
         congressMen = {
           house: congressmenData.house[0],
           senate: congressmenData.senate
         };
         $scope.houseRep = congressMen.house;
+        $scope.senate = congressMen.senate;
       });
     }
     initDistrictSearch();
