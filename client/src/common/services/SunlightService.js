@@ -97,6 +97,7 @@ angular.module('services.SunlightApi', [
         url: url
       })
         .success(function (data, status, headers, config) {
+          $log.debug('successful getting data ', data);
           deferred.resolve(data);
         })
         .error(function(err, status, headers, config) {
@@ -104,6 +105,26 @@ angular.module('services.SunlightApi', [
           deferred.reject(err);
         });
       
+      return deferred.promise;
+    }
+    
+    function getCongressmanById(id) {
+      var deferred = $q.defer();
+      var url = baseUrl + 'congressman/' + id;
+      $log.log('id ', id);
+      $log.log('url ', url);
+      $http({
+        method: 'GET',
+        url: url
+      })
+        .success(function (data, status, headers, config) {
+          $log.debug('successful getting data ', data);
+          deferred.resolve(data);
+        })
+        .error(function (err, status, headers, config) {
+          $log.debug('failed to get data', err);
+          deferred.reject(err);
+        });
       return deferred.promise;
     }
     
@@ -152,6 +173,7 @@ angular.module('services.SunlightApi', [
       getDistrictByZipCode: getDistrictByZipCode,
       getDistrictByCoords: getDistrictByCoords,
       getCongressmen: getCongressmen,
+      getCongressmanById: getCongressmanById,
       getSenators: getSenators,
       getReps: getReps
     };

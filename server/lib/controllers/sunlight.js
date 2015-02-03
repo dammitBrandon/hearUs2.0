@@ -5,6 +5,7 @@ var fs = require('fs'),
   config = require('../config/config'),
   apikey = config.apikey,
   mongoose = require('mongoose'),
+  _ = require('lodash'),
   Congressman = mongoose.model('Congressman');
 
 var path = './testData';
@@ -39,7 +40,6 @@ var saveTestData = function (title) {
 var success = function (data) {
   return function (data) {
     var testData = JSON.stringify(data, null, 4);
-    console.log("test Data: ", testData);
   };
 };
 
@@ -112,6 +112,40 @@ exports.getCongressmen = function (req, res, next) {
       members.senate = docs;
       res.send(members);
     });
+};
+
+exports.getCongressmanById = function (req, res, next) {
+  var id = req.params.id;
+  Congressman.find(
+    {
+      bioguide_id: id
+    })
+    .exec(function(err, docs) {
+      if(err) {
+        console.log('error performing query ', err);
+      } else if(!_.isEmpty(docs)) {
+        res.send(docs);
+      } else {
+        console.log('didnt find congressman by id, look for id with api ', id);
+        var congressman = getCongressmanFromSunlight(id);
+        if (congressman != -1) {
+          res.send(congressman);
+        } else {
+          console.log('unable to find congressman');
+          res.send(500);
+        }
+      }
+    });
+};
+
+var getCongressmanFromSunlight = function(id) {
+  sunlight.legislators().filter('bioguide_id', id).then(function(response) {
+    if(response.status === 'success') {
+      return response.results[0];
+    } else {
+      return -1;
+    }
+  }); 
 };
 
 exports.loadHouseReps = function (req, res, next) {

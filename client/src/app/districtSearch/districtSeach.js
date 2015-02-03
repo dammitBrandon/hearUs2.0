@@ -12,7 +12,6 @@ angular.module('districtSearch', [
           templateUrl: "districtSearch/districtSearch-template.html"
         }
       },
-
 //        TODO: dynamically update the data to reflect the zipcode
       data: { pageTitle: "Your District" }
     })
@@ -53,7 +52,6 @@ angular.module('districtSearch', [
             }
           }
         }}
-
     })
     .state('districtSearch.coords', {
       url: '/district-search?lat&long',

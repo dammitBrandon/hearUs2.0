@@ -17,7 +17,7 @@
             "bill_id": "hr321-113",
             "introduced_on": "2013-01-18",
             "search": {
-                "score": 0.8880168,
+                "score": 0.8778578,
                 "type": "bill"
             }
         },
@@ -56,7 +56,7 @@
             "bill_id": "hr2910-113",
             "introduced_on": "2013-08-01",
             "search": {
-                "score": 0.2220042,
+                "score": 0.21946445,
                 "type": "bill"
             }
         },
@@ -196,7 +196,7 @@
             "bill_id": "s1284-113",
             "introduced_on": "2013-07-11",
             "search": {
-                "score": 0.1373581,
+                "score": 0.13578671,
                 "type": "bill"
             }
         },
@@ -216,7 +216,7 @@
             "bill_id": "hres40-113",
             "introduced_on": "2013-01-22",
             "search": {
-                "score": 0.07879562,
+                "score": 0.08013879,
                 "type": "bill"
             }
         },
@@ -240,7 +240,7 @@
             "bill_id": "hr236-113",
             "introduced_on": "2013-01-14",
             "search": {
-                "score": 0.06894617,
+                "score": 0.07012144,
                 "type": "bill"
             }
         },
@@ -288,7 +288,7 @@
             "bill_id": "s2872-113",
             "introduced_on": "2014-09-18",
             "search": {
-                "score": 0.042649377,
+                "score": 0.04337639,
                 "type": "bill"
             }
         },
@@ -336,7 +336,7 @@
             "bill_id": "hr4783-113",
             "introduced_on": "2014-05-30",
             "search": {
-                "score": 0.042649377,
+                "score": 0.04337639,
                 "type": "bill"
             }
         },
@@ -714,7 +714,7 @@
             "bill_id": "hr3547-113",
             "introduced_on": "2013-11-20",
             "search": {
-                "score": 0.03924517,
+                "score": 0.0387962,
                 "type": "bill"
             }
         },
@@ -735,7 +735,7 @@
             "bill_id": "hr4806-113",
             "introduced_on": "2014-06-05",
             "search": {
-                "score": 0.017619235,
+                "score": 0.017919578,
                 "type": "bill"
             }
         },
@@ -756,7 +756,7 @@
             "bill_id": "s2445-113",
             "introduced_on": "2014-06-05",
             "search": {
-                "score": 0.017619235,
+                "score": 0.017919578,
                 "type": "bill"
             }
         },
@@ -769,7 +769,7 @@
             "bill_id": "hr410-114",
             "introduced_on": "2015-01-20",
             "search": {
-                "score": 0.017619235,
+                "score": 0.017919578,
                 "type": "bill"
             }
         },
@@ -865,7 +865,7 @@
             "bill_id": "hr1960-113",
             "introduced_on": "2013-05-14",
             "search": {
-                "score": 0.006357794,
+                "score": 0.0064661703,
                 "type": "bill"
             }
         },
@@ -1284,7 +1284,7 @@
             "bill_id": "hr83-113",
             "introduced_on": "2013-01-03",
             "search": {
-                "score": 0.0060940376,
+                "score": 0.006197918,
                 "type": "bill"
             }
         },
@@ -1442,7 +1442,7 @@
             "bill_id": "s1197-113",
             "introduced_on": "2013-06-20",
             "search": {
-                "score": 0.005026278,
+                "score": 0.005111957,
                 "type": "bill"
             }
         },
@@ -1585,7 +1585,7 @@
             "bill_id": "hr4435-113",
             "introduced_on": "2014-04-09",
             "search": {
-                "score": 0.004924726,
+                "score": 0.005008674,
                 "type": "bill"
             }
         },
@@ -1758,7 +1758,7 @@
             "bill_id": "hr3304-113",
             "introduced_on": "2013-10-22",
             "search": {
-                "score": 0.0040210225,
+                "score": 0.0040895655,
                 "type": "bill"
             }
         },
@@ -1775,7 +1775,7 @@
             "bill_id": "hres441-113",
             "introduced_on": "2013-12-12",
             "search": {
-                "score": 0.0040210225,
+                "score": 0.0040895655,
                 "type": "bill"
             }
         }

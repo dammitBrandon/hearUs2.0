@@ -22,3 +22,18 @@ exports.getCongressmenInDistrict = function(districtObj) {
       return docs;
     });
 };
+
+exports.getCongressmenById = function(id) {
+  Congressman.find(
+    {
+      bioguide_id: id
+    }
+  ).exec(function(err, docs) {
+      if(err){
+        console.log('error performing query: ', err);
+        return err;
+      }
+      console.log('search complete', docs);
+      return docs;
+    });
+};
