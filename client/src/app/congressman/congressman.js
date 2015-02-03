@@ -13,7 +13,6 @@ angular.module('congressman', [
             resolve: {
               congressman: function($log, $stateParams, SunlightService) {
                 return SunlightService.getCongressmanById($stateParams.id).then(function(congressmanData){
-                  $log.log('congressman ', congressmanData);
                   return congressmanData[0];
                 });
               }

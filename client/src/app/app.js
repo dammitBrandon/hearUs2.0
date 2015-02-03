@@ -13,7 +13,7 @@ angular.module('hearUs', [
   'bill',
   'congressman',
   'geolocate',
-  'hearFilters'
+  'hearUsFilters'
 ])
   .config(function myAppConfig($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');

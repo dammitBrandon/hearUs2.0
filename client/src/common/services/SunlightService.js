@@ -87,7 +87,7 @@ angular.module('services.SunlightApi', [
       return deferred.promise;
     }
     
-    function getCongressmen(districtObj) {
+    function getCongressmenByDistrict(districtObj) {
       var deferred = $q.defer();
       var url = baseUrl + 'district/congressmen/state/' + districtObj.state + '/district/' + districtObj.districtNumber;
       $log.log('dis obj ', districtObj);
@@ -97,7 +97,7 @@ angular.module('services.SunlightApi', [
         url: url
       })
         .success(function (data, status, headers, config) {
-          $log.debug('successful getting data ', data);
+//          $log.debug('successful getting data ', data);
           deferred.resolve(data);
         })
         .error(function(err, status, headers, config) {
@@ -111,14 +111,13 @@ angular.module('services.SunlightApi', [
     function getCongressmanById(id) {
       var deferred = $q.defer();
       var url = baseUrl + 'congressman/' + id;
-      $log.log('id ', id);
-      $log.log('url ', url);
+
       $http({
         method: 'GET',
         url: url
       })
         .success(function (data, status, headers, config) {
-          $log.debug('successful getting data ', data);
+//          $log.debug('successful getting data ', data);
           deferred.resolve(data);
         })
         .error(function (err, status, headers, config) {
@@ -137,7 +136,7 @@ angular.module('services.SunlightApi', [
         url: url
       })
         .success(function (data, status, headers, config) {
-          $log.debug('successful getting data ', data);
+//          $log.debug('successful getting data ', data);
           deferred.resolve(data);
         })
         .error(function(err, status, headers, config) {
@@ -157,7 +156,7 @@ angular.module('services.SunlightApi', [
         url: url
       })
         .sucess(function (data, status, headers, config) {
-          $log.debug('successufl getting data', data);
+//          $log.debug('successufl getting data', data);
         })
         .error(function (err, status, headers, config) {
           $log.debug('failed to get data', err);
@@ -172,7 +171,7 @@ angular.module('services.SunlightApi', [
       getBill: getBill,
       getDistrictByZipCode: getDistrictByZipCode,
       getDistrictByCoords: getDistrictByCoords,
-      getCongressmen: getCongressmen,
+      getCongressmenByDistrict: getCongressmenByDistrict,
       getCongressmanById: getCongressmanById,
       getSenators: getSenators,
       getReps: getReps

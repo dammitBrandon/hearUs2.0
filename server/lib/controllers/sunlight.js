@@ -77,6 +77,13 @@ exports.getBill = function (req, res, next){
   });
 };
 
+exports.searchForIssue = function (req, res, next) {
+  var searchTopic = req.params.issue;
+  sunlight.billsSearch().search(searchTopic).call().then(function(data) {
+    res.send(data);
+  });
+};
+
 exports.getCongressmen = function (req, res, next) {
   var districtObj = {
     state: req.params.state,
@@ -128,7 +135,7 @@ exports.getCongressmanById = function (req, res, next) {
       } else {
         console.log('didnt find congressman by id, look for id with api ', id);
         var congressman = getCongressmanFromSunlight(id);
-        if (congressman != -1) {
+        if (congressman !== -1) {
           res.send(congressman);
         } else {
           console.log('unable to find congressman');

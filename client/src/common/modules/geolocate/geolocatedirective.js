@@ -18,8 +18,6 @@ angular.module('geolocate.directives', [
               };
               $state.go('districtSearch.coords', coords);
             });
-
-//            });
           } else {
             alert('Geolocation is not supported by this browser or you must allow this site to access that information');
           }
