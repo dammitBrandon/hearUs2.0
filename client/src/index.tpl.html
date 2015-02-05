@@ -1,6 +1,11 @@
 <!DOCTYPE html>
-<html ng-app="hearUs">
+<!--[if lt IE 7]>      <html ng-app="hearUs" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html ng-app="hearUs" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html ng-app="hearUs" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html ng-app="hearUs" class="no-js"> <!--<![endif]-->
 <head>
+  <meta name="The Hear Us Project">\
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
@@ -9,20 +14,45 @@
   <!-- font awesome from BootstrapCDN -->
   <!--<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">-->
 
+  
   <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
   <link rel="stylesheet" type="text/css" href="static/<%= file %>"/>
   <% }); %>
-
+  <link rel="stylesheet" type="text/css" href="static/assets/css/theme.css"/>
+  
   <!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
   <script type="text/javascript" src="static/<%= file %>"></script>
-  <% }); %>
+  <% }); %>  
 
 </head>
 <body>
 
-<div ng-include="'static/src/common/modules/header/header-template.html'"></div>
+<div class="nav-container">
+  <nav class="top-bar simple-bar">
+    <div class="container">
+      
+      <div class="row nav-menu">
+        <div class="col-sm-3 col-md-3 columns">
+          <h3>The Hear Us Project</h3>
+        </div>
+      
+        <div class="col-md-9 col-sm-9 columns text-right">
+          <ul class="menu">
+            <li><a href="#">First Link</a></li>
+            <li><a href="#">Second Link</a></li>
+            <li><a href="#">Third Link</a></li>
+          </ul>
+        </div>
+        
+        <div class="mobile-toggle">
+          <i class="icon icon-menu"></i>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
 
-<div class="container" ui-view="main"></div>
+<div class="main-container" ui-view="main" resize></div>
 
 <!--<footer class="footer">-->
   <!--<div class="container">-->

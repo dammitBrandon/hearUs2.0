@@ -65,6 +65,10 @@ module.exports = {
    */
   vendor_files: {
     js: [
+      'vendor/jquery/dist/jquery.js',
+      'vendor/jquery-smooth-scroll/jquery.smooth-scroll.js',
+      'vendor/skrollr/src/skrollr.js',
+      'vendor/scrollReveal.js/scrollReveal.js',
       'vendor/angular/angular.js',
       'vendor/angular-bootstrap/ui-bootstrap-tpls.min.js',
       'vendor/angular-ui-router/release/angular-ui-router.js',

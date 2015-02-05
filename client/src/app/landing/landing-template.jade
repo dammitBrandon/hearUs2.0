@@ -1,13 +1,20 @@
-.text-center
-  h1 The Hear Us Project
-div
-  .form-group
-    input.form-control(id="search-item", ng-model="searchTopic", placeholder="Search for Specifc topic")
-    //button(ng-click="findTopic()") Search for Issue
-    button(ng-click="findTopic()") Search for Issue
-  
-  .form-group
-    input.form-control(id="district-search", ng-model="zipCode", placeholder="search for your district")
-    button(ng-click="findDistrictLanding()") Find your District
-  hu-geolocate
-    
+.container
+  .row.text-center
+    h1 The project that allows us to keep our Congress accountible.  We the people.
+      
+  .row.text-center
+    form.mail-list-signup(name="form.landingPage")
+      .row
+        .col-md-4.col-sm-4.col-md-offset-2.col-sm-offset-2
+          .input-group
+            input.form-control(type="text", placeholder="Your topic", ng-click="findTopic", ng-model="searchTopic")
+            span.input-group-btn
+              button.btn.btn-default(type="button", ng-click="findTopic()") Find Bills
+            
+        .col-md-3.col-sm-4
+          .input-group
+            input.form-control(type="text", placeholder="zipcode", ng-model="zipCode")
+            span.input-group-btn
+              button.btn.btn-default(type="button", ng-click="findDistrictLanding()") Find District
+            
+    span We never store or share your info with third parties, let alone persist it.

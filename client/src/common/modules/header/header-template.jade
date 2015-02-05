@@ -1,47 +1,19 @@
-.navbar.navbar-static-top(ng-controller="HeaderCtrl")
-  .navbar-links(role="navigation")
+.nav-container(ng-controller="HeaderCtrl" )
+  nav.top-bar.simple-bar
     .container
-      .navbar-left
-        ul.nav.navbar.nav
-          li
-            a(href="http://www.slalom.com") Slalom.com
-      .navbar-right
-        ul.nav.navbar-nav
-          li
-            a(href="http://www.google.com") Google
-          li
-            a(href="http://www.twitter.com") Twitter
-          li
-            a(href="http://www.cnn.com") CNN
-
-  .navbar-inverse(role="navigation")
-    .container
-      .navbar-header
-        button.navbar-toggle(type="button", data-toggle="collapse", data-target=".navbar-collapse")
-          span.sr-only Toggle Nagivation
-          span.icon-bar
-          span.icon-bar
-          span.icon-bar
-        a.navbar-brand(href="#") Sample App
-      .collapse.navbar-collapse
-        ul.nav.navbar-nav
-          li(ui-sref-active="active")
-            a(ui-sref="home") Home
-          li(ui-sref-active="active")
-            a(ui-sref="showUsers") Show Users
-          li(ui-sref-active="active")
-            a(ui-sref="contact") Contact
-
-        ul.nav.navbar-nav.navbar-right
-          li.dropdown
-            a.dropdown-toggle Hello, {{user.username}}
-              b.caret
-            ul.dropdown-menu
-              li
-                a(href="#") My Account
-              li
-                a(href="#") Logout
-
-
-
-
+      
+      .row.nav-menu
+        .col-sm-3.col-md-3.columns
+          h3 The Hear Us Project
+            
+        .col-md-9.col-sm-9.columns.text-right
+          ul.menu
+            li 
+              a(href="#") First Link
+            li
+              a(href="#") Second Link
+            li
+              a(href="#") Third Link
+      
+      .mobile-toggle
+        i.icon.icon-menu
