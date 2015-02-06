@@ -4,10 +4,10 @@ angular.module('geolocate.directives', [
 ])
   .directive('huGeolocate', function (SunlightService, $state, $stateParams, $rootScope, $log) {
     return {
-      replace: false,
+      replace: true,
       restrict: 'E',
       scope: {},
-      template: '<button id="geolocate" type="button">Current Location</button>',
+      template: '<button id="geolocate" type="button" class="btn btn-default"><span class="icon-compass"></span></button>',
       link: function ($scope, elems, attrs) {
         elems.bind("click", function getLocation() {
           if (navigator.geolocation) {

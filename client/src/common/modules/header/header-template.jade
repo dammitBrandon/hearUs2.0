@@ -1,10 +1,11 @@
-.nav-container(ng-controller="HeaderCtrl" )
+.navbar.navbar-static-top(ng-controller="HeaderCtrl" )
   nav.top-bar.simple-bar
     .container
       
       .row.nav-menu
         .col-sm-3.col-md-3.columns
-          h3 The Hear Us Project
+          h3 
+            a(ui-sref="landingPage") The Hear Us Project
             
         .col-md-9.col-sm-9.columns.text-right
           ul.menu

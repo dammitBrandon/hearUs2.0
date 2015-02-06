@@ -82,13 +82,13 @@
 .font-heading {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-body {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  color: #777777;
-  font-size: 14px;
-  line-height: 24px;
-}
+/*body {*/
+  /*font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  /*-webkit-font-smoothing: antialiased;*/
+  /*color: #777777;*/
+  /*font-size: 14px;*/
+  /*line-height: 24px;*/
+/*}*/
 h1,
 h2,
 h3,
@@ -417,7 +417,8 @@ nav hr {
   display: none;
 }
 .top-bar {
-  position: absolute;
+  position: relative;
+  display: block;
   background: #fff;
   width: 100%;
   z-index: 10;
@@ -4343,4 +4344,8 @@ footer.short-2 .contact-action:hover {
 }
 .no-loader .loader {
   display: none !important;
+}
+
+.form-control {
+    height: 33px;
 }
