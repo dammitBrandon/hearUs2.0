@@ -1,1 +1,15 @@
 .idea/
+
+# files to ignore in client dir
+
+client/*.sw*
+client/*~
+client/build/
+client/bin/
+client/node_modules/
+client/vendor/
+client/.sass-cache
+
+# files to ignore in server dir
+
+server/node_modules
