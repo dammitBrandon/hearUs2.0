@@ -1,0 +1,13 @@
+li.result-item {
+  display: block;
+  padding: 5px;
+  border-bottom: 1px solid #808080;
+  
+  &:hover {
+    background-color: #d3d3d3;  
+  }
+  
+  &:last-child {
+    border-bottom: none;
+  }
+}

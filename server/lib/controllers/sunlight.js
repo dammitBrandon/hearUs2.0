@@ -44,7 +44,7 @@ var success = function (data) {
 };
 
 var gunControlBills = sunlight.billsSearch();
-gunControlBills.fields("official_title", "introduced_on", "last_vote_at", "popular_title", "short_title", "keywords");
+gunControlBills.fields("official_title", "introduced_on", "last_vote_at", "popular_title", "short_title", "keywords", "summary_short");
 gunControlBills.search("\"gun control\"~5");
 gunControlBills.call(saveTestData("GunControlBills"));
 
@@ -79,7 +79,11 @@ exports.getBill = function (req, res, next){
 
 exports.searchForIssue = function (req, res, next) {
   var searchTopic = req.params.issue;
-  sunlight.billsSearch().search(searchTopic).call().then(function(data) {
+  sunlight.billsSearch()
+    .fields("official_title", "introduced_on", "last_vote_at", "popular_title", "short_title", "keywords", "summary_short", "sponsor")
+    .search(searchTopic)
+    .call()
+    .then(function(data) {
     res.send(data);
   });
 };
