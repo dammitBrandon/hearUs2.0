@@ -5,10 +5,10 @@ angular.module('districtSearch.controllers', [
   controller('districtSearchCtrl', function districtSearchController($scope, $rootScope, $state, $stateParams, $log, SunlightService, district) {
     
     function initDistrictSearch() {
-      if(district.count === 1) {
+      if(_.isUndefined(district.count)) {
         $scope.district = district;
         getCongressmen(district);
-      } else {
+      } else if (district.count < 1){
         $log.log('find out what district they are in', district);
         
       }

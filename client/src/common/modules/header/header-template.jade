@@ -1,20 +1,16 @@
-.navbar.navbar-static-top(ng-controller="HeaderCtrl" )
-  nav.top-bar.simple-bar
-    .container
-      
-      .row.nav-menu
-        .col-sm-3.col-md-3.columns
-          h3 
-            a(ui-sref="landingPage") The Hear Us Project
-            
-        .col-md-9.col-sm-9.columns.text-right
-          ul.menu
-            li 
-              a(href="#") First Link
-            li
-              a(href="#") Second Link
-            li
-              a(href="#") Third Link
-      
-      .mobile-toggle
-        i.icon.icon-menu
+nav.navbar.navbar-static-top
+  .container-fluid
+    
+    .navbar-header
+      button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target="#nav-menu-items")
+        i.fa.fa-bars
+      a.navbar-brand(ui-sref="landingPage") The Hear Us Project
+        
+    #nav-menu-items.collapse.navbar-collapse
+      ul.nav.navbar-nav
+        li
+          a(href="#") First Link
+        li
+          a(href="#") Second Link
+        li
+          a(href="#") Third Link

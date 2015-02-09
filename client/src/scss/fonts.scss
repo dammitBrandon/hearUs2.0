@@ -1,3 +1,7 @@
+// this variable is for the font awesome font path
+$fa-font-path:        "../assets/fonts" !default;
+
+// this is for the elegant fonts
 @font-face {
   font-family: 'et-line';
   src:url('../assets/fonts/et-line.eot');
@@ -321,3 +325,4 @@
 .icon-dribbble:before {
   content: "\e063";
 }
+
