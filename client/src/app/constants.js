@@ -1,6 +1,8 @@
 angular.module('hearUs')
   .constant('states', {
     "AK": "Alaska",
+    
+    "AL": "Alabama",
 
     "AZ": "Arizona",
 

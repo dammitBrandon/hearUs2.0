@@ -13,7 +13,10 @@ var CongressmanSchema = new Schema({
   party: String,
   state: String,
   chamber: String,
-  website: String
+  website: String,
+  phone: String,
+  fax: String,
+  office: String
 });
 
 var Congressman  = mongoose.model('Congressman', CongressmanSchema);

@@ -1,4 +1,28 @@
-h4 congressman {{congressman.chamber | chamberFilter}} {{congressman.first_name}} {{congressman.last_name}}
-  h5 state {{congressman.state | stateFilter}}
+h4 {{congressman.chamber | chamberFilter}} {{congressman | congressmanNameFilter}} {{congressman.party}}
+  span title {{congressman.title}}
+  h5(ng-if="congressman.chamber === 'house'") {{congressman.state | stateFilter}} {{congressman.district}}
+  h5(ng-if="congressman.chamber === 'sentate'") {{congressman.state | stateFilter}} {{congressman.rank}}
     br
-    a(href="{{congressman.website}}", target="_blank") Website
+    a(href="{{congressman.website}}", target="_blank") {{congressman | congressmanNameFilter}}'s Official Website
+      
+.contact-info
+  p Washington, DC Office 
+    br
+    {{congressman.office}}
+    br 
+    span DC Washington, 20515 
+    br
+    span Phone: {{congressman.phone}}
+    br
+    span Fax: {{congressman.fax}}
+      
+.sponsored-bills
+  h4 Bills Sponsored by {{congressman | congressmanNameFilter}}
+  ul(ng-repeat="bill in bills")
+    li.result-item
+      div
+        h4
+          a(ui-sref="bill({id: bill.bill_id})") {{bill | titleFilter}}
+            span.pull-right {{bill.bill_id}}
+        p {{bill.summary_short}}
+          span.pull-right Introduced on {{bill.introduced_on}}

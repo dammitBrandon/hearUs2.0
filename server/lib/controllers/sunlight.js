@@ -72,7 +72,10 @@ exports.searchIssue = function (req, res, next) {
 
 exports.getBill = function (req, res, next){
   var billId = req.params.id;
-  sunlight.bills().filter("bill_id", billId).call().then(function(data){
+  sunlight.bills().filter("bill_id", billId)
+    .fields("official_title", "introduced_on", "last_vote_at", "popular_title", "short_title", "keywords", "summary_short", "sponsor")
+    .call()
+    .then(function(data){
     res.send(data);
   });
 };
@@ -81,6 +84,7 @@ exports.searchForIssue = function (req, res, next) {
   var searchTopic = req.params.issue;
   sunlight.billsSearch()
     .fields("official_title", "introduced_on", "last_vote_at", "popular_title", "short_title", "keywords", "summary_short", "sponsor")
+    .filter("order", "introduced_on")
     .search(searchTopic)
     .call()
     .then(function(data) {
@@ -125,6 +129,18 @@ exports.getCongressmen = function (req, res, next) {
     });
 };
 
+exports.billsSponsoredByCongressman  = function (req, res, next) {
+  var id = req.params.id;
+  sunlight.billsSearch()
+    .filter("sponsor_id", id)
+    .filter("order", "introduced_on")
+    .fields("official_title", "introduced_on", "last_vote_at", "popular_title", "short_title", "keywords", "summary_short", "summary", "sponsor")
+    .call()
+    .then(function(data){
+    res.send(data);
+  });
+};
+
 exports.getCongressmanById = function (req, res, next) {
   var id = req.params.id;
   Congressman.find(
@@ -164,7 +180,7 @@ exports.loadHouseReps = function (req, res, next) {
   var filename = 'Reps.json';
   reps.filter("in_office", true)
     .filter("chamber", "house")
-    .fields("first_name", "middle_name", "last_name", "twitter_id", "gender", "party", "state", "district");
+    .fields("first_name", "middle_name", "last_name", "twitter_id", "gender", "party", "state", "district", "contact_info", "phone", "fax", "office");
 //    .call();
   var data = loadJsonFile(filename);
   res.send(data);
@@ -175,7 +191,7 @@ exports.loadSenators = function (req, res, next) {
   var filename = 'Senators.json';
   reps.filter("in_office", true)
     .filter("chamber", "senate")
-    .fields("first_name", "middle_name", "last_name", "twitter_id", "gender", "party", "state", "district");
+    .fields("first_name", "middle_name", "last_name", "twitter_id", "gender", "party", "state", "state_rank", "contact_info", "phone", "fax", "office");
 //    .call();
   var data = loadJsonFile(filename);
   res.send(data);

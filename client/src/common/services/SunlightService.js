@@ -47,6 +47,26 @@ angular.module('services.SunlightApi', [
       return deferred.promise;
     }
     
+    function billsSponsoredByCongressman(congressmanId) {
+      var deferred = $q.defer();
+      var url = baseUrl + 'congressman/bills/' + congressmanId;
+      
+      $http({
+        method: 'Get',
+        url: url
+      })
+        .success(function(data, status, headers, config){
+//          $log.debug('success getting bills for ' + congressmanId + ': ', data);
+          deferred.resolve(data);
+        })
+        .error(function(err, status, headers, config){
+          $log.debug('failure getting bills for ' + congressmanId + ': ', err);
+          deferred.reject(err);
+        });
+      
+      return deferred.promise;
+    }
+    
     function getDistrictByZipCode(zipCode) {
       var deferred = $q.defer();
       var url = baseUrl + 'district/' + zipCode;
@@ -169,6 +189,7 @@ angular.module('services.SunlightApi', [
     return {
       getIssues: getIssues,
       getBill: getBill,
+      billsSponsoredByCongressman: billsSponsoredByCongressman,
       getDistrictByZipCode: getDistrictByZipCode,
       getDistrictByCoords: getDistrictByCoords,
       getCongressmenByDistrict: getCongressmenByDistrict,
