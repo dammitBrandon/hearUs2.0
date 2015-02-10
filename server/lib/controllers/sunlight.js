@@ -78,19 +78,7 @@ exports.getBill = function (req, res, next) {
     .fields("official_title", "introduced_on", "last_vote_at", "popular_title", "short_title", "keywords", "summary_short", "summary", "sponsor_id", "urls", "cosponsor_ids", "cosponsors_count")
     .call()
     .then(function (data) {
-//      if(data.results[0].cosponsors_count > 0) {
-//        getCongressmanByIdArray(data.results[0].cosponsor_ids)
-//          .addBack(function(err, queryResults) {
-//          if (err) {
-//            console.error('error getting data from query ', err);
-//          } else if (!_.isUndefined(queryResults)) {
-//            data.results[0].cosponsors = JSON.stringify(queryResults);
-//            res.send(data);
-//          }
-//        });
-//      }
-        res.send(data);
-      
+      res.send(data);
     });
 };
 
@@ -173,8 +161,11 @@ exports.getCosponsors = function (req, res, next) {
 // the Congressmen that we find will be added to the data that will be passed to the frontend, an array that has congressman records of cosponsors for now
 
 var getCongressmanByIdArray = function (idArray) {
-  
-  var congressmen =  Congressman.find(
+
+  if (!_.isArray(idArray)) {
+    idArray = [idArray];
+  }
+  var congressmen = Congressman.find(
     {
       bioguide_id: { $in: idArray }
     })
@@ -185,52 +176,33 @@ var getCongressmanByIdArray = function (idArray) {
         return docs;
       }
     });
-  
+
   return congressmen;
 };
 
-//var getCongressmanByIdFromMongo = function (idArray) {
-//  Congressman.find(
-//    {
-//      bioguide_id: { $in: idArray }
-//    })
-//    .exec(function (err, docs) {
-//      if (err) {
-//        console.log('error performing query ', err);
-//      } else if (!_.isEmpty(docs)) {
-//        console.log('docs ', docs);
-//        return docs;
-//      } else {
-////        go to api, the congressman bioguide_id is not in mongo
-//        var congressman = getCongressmanFromSunlight(id);
-//        return congressman;
-//      }
-//    });
-//};
-
-  exports.getCongressmanById = function (req, res, next) {
-    var id = req.params.id;
-    Congressman.find(
-      {
-        bioguide_id: id
-      })
-      .exec(function(err, docs) {
-        if(err) {
-          console.log('error performing query ', err);
-        } else if(!_.isEmpty(docs)) {
-          res.send(docs);
+exports.getCongressmanById = function (req, res, next) {
+  var id = req.params.id;
+  Congressman.find(
+    {
+      bioguide_id: id
+    })
+    .exec(function (err, docs) {
+      if (err) {
+        console.log('error performing query ', err);
+      } else if (!_.isEmpty(docs)) {
+        res.send(docs);
+      } else {
+        console.log('didnt find congressman by id, look for id with api ', id);
+        var congressman = getCongressmanFromSunlight(id);
+        if (congressman !== -1) {
+          res.send(congressman);
         } else {
-          console.log('didnt find congressman by id, look for id with api ', id);
-          var congressman = getCongressmanFromSunlight(id);
-          if (congressman !== -1) {
-            res.send(congressman);
-          } else {
-            console.log('unable to find congressman');
-            res.send(500);
-          }
+          console.log('unable to find congressman');
+          res.send(500);
         }
-      });
-  };
+      }
+    });
+};
 
 var getCongressmanFromSunlight = function (id) {
   sunlight.legislators().filter('bioguide_id', id).then(function (response) {

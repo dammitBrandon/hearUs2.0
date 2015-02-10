@@ -50,6 +50,17 @@ angular.module('hearUsFilters', [])
       }
     };
   })
+  .filter('summaryFilter', function($log) {
+    return function (billObj) {
+      if(!_.isNull(billObj.summary_short) && !_.isUndefined(billObj.summary_short)) {
+        return billObj.summary_short;
+      } else if (!_.isNull(billObj.summary) && !_.isUndefined(billObj.summary)) {
+        return billObj.summary;
+      } else {
+        return "There is no summary for this bill as of yet.  You can view the bill by clicking the provided link.";
+      }
+    }
+  })
   .filter('stateFilter', function ($log, states) {
     return function (state) {
       if (!_.isUndefined(states[state])) {

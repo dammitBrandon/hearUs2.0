@@ -27,7 +27,6 @@ angular.module('services.SunlightApi', [
     }
 
     function getBill(billId) {
-      console.log('bill id ', billId);
       var deferred = $q.defer();
       var url = baseUrl + 'bill/' + billId;
 

@@ -11,10 +11,8 @@ angular.module('bill.controllers', [
     }
     
     function getCosponsors(cosponsorIds) {
-      $log.log('getting co sponsors ');
       SunlightService.getCosponsors(cosponsorIds).then(function(cosponsorsData) {
-        $log.log('cosponsorsData ', cosponsorsData);
-//        $scope.cosponsors = cosponsors;
+        $scope.cosponsors = cosponsorsData;
       });
     }
 
