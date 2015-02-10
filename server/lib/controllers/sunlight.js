@@ -180,6 +180,70 @@ var getCongressmanByIdArray = function (idArray) {
   return congressmen;
 };
 
+
+// #getSenatorsForState, #getRepsForState, #getCongressmenForDistrict are methods that 
+// allow us to get the congressmen data, instead of making a round trip call from the 
+// front end back to the backend, not sure if this saves much time but it makes more
+// sense than making a backend call that resolves the district only to make a call 
+// to get the congressmen in the initialization function of the districtSearch 
+// controller
+
+var getSenatorsForState = function (districtObj) {
+  var senators = Congressman.find({
+    chamber: 'senate',
+    state: districtObj.state
+  })
+    .exec(function (err, docs) {
+      if (err) {
+        console.error('error performing query ', err);
+      } else if (!_.isEmpty(docs)) {
+        return docs;
+      }
+    });
+  return senators;
+};
+
+var getRepsForState = function (districtObj) {
+  var reps = Congressman.find({
+    chamber: 'house',
+    state: districtObj.state,
+    district: districtObj.district
+  })
+    .exec(function (err, docs) {
+      if (err) {
+        console.error('error performing query ', err);
+      } else if (!_.isEmpty(docs)) {
+        return docs;
+      }
+    });
+  return reps;
+};
+
+var getCongressmenForDistrict = function (districtObj) {
+  var congressmen = Congressman.find({
+    $or: [
+      {
+        district: districtObj.district,
+        chamber: 'house',
+        state: districtObj.state
+      },
+      {
+        chamber: 'senate',
+        state: districtObj.state
+      }
+    ]
+  })
+    .exec(function (err, docs) {
+      if (err) {
+        console.error('error performing query ', err);
+      } else if (!_.isEmpty(docs)) {
+        return docs;
+      }
+    });
+
+  return congressmen;
+};
+
 exports.getCongressmanById = function (req, res, next) {
   var id = req.params.id;
   Congressman.find(
@@ -241,36 +305,73 @@ exports.loadSenators = function (req, res, next) {
  */
 exports.searchDistrictByZipCode = function (req, res, next) {
   var zipCode = req.params.zipCode;
-  var filename;
 
-  if (zipCode === '60653') {
-    filename = 'Districts.json';
-  } else {
-    filename = 'District.json';
-  }
+  sunlight.districtsLocate()
+    .addZip(zipCode)
+    .call()
+    .then(function (data) {
+      if (!_.isUndefined(data.count) && (data.count === 1)) {
+        getCongressmenForDistrict(data.results[0])
+          .addBack(function (err, queryResults) {
+            if (err) {
+              console.error('error getting data from query ', err);
+            } else if (!_.isUndefined(queryResults)) {
+              data.results[0].congressmen = queryResults;
+              res.send(data);
+            } else {
+              res.next(data);
+            }
+          });
+      } else {
+        res.send(data);
+      }
+    });
 
-  var district = sunlight.districtsLocate();
-  district.addZip(zipCode);
-//  district.call();
-  var data = loadJsonFile(filename);
-
-  res.send(data);
+//  this is the mock data used for testing
+//  var filename;
+//
+//  if (zipCode === '60653') {
+//    filename = 'Districts.json';
+//  } else {
+//    filename = 'District.json';
+//  }
+//  var data = loadJsonFile(filename);
+//
+//  res.send(data);
 };
 
+/**
+ * search for district by coords 
+ */
 exports.searchDistrictCoords = function (req, res, next) {
   var coords = {
     latitude: req.params.lat,
     longitude: req.params.long
   };
 
-  var filename = 'District.json';
+  sunlight.districtsLocate()
+    .addCoordinates(coords)
+    .call()
+    .then(function (data) {
+      if (!_.isUndefined(data.count) && (data.count === 1)) {
+        getCongressmenForDistrict(data.results[0])
+          .addBack(function (err, queryResults) {
+            if (err) {
+              console.error('error getting data from query ', err);
+            } else if (!_.isUndefined(queryResults)) {
+              data.results[0].congressmen = queryResults;
+              res.send(data);
+            } else {
+              res.next(data);
+            }
+          });
+      } else {
+        res.send(data);
+      }
+    });
 
-  var district = sunlight.districtsLocate();
-  district.addCoordinates(coords);
-//  district.call();
-
-  var data = loadJsonFile(filename);
-
-  res.send(data);
-
+//  this is the mock data used for testing
+//  var filename = 'District.json';
+//  var data = loadJsonFile(filename);
+//  res.send(data);
 };

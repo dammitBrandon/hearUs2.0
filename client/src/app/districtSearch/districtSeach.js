@@ -28,10 +28,9 @@ angular.module('districtSearch', [
                 if(districtData.count <= 1) {
                   districtInfo = {
                     state: districtData.results[0].state,
-                    districtNumber: districtData.results[0].district,
-                    count: districtData.count
+                    districtNumber: districtData.results[0].district
                   };
-                  return districtInfo;
+                  return [districtInfo, districtData.results[0].congressmen];
                 } else {
 //                  zipcode returned 2 districts, need to find out the district that the user is apart of
 //                  what can we do? 1. get the street and find the lat and long from the street, 2. geolocate
@@ -66,7 +65,7 @@ angular.module('districtSearch', [
                   state: districtData.results[0].state,
                   districtNumber: districtData.results[0].district
                 };
-                return districtInfo;
+                return [districtInfo, districtData.results[0].congressmen];
               });
             }
           }

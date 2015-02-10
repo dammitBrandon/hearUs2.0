@@ -1,10 +1,13 @@
 div
   h3 district landing page Test :: 
-    p state: {{district.state}} district number: {{district.districtNumber}}
+    p {{district.state | stateFilter}} district number: {{district.districtNumber}}
       
    div Rep
-     h4 {{houseRep.first_name}} {{houseRep.last_name}}
+     h4 
+      a(ui-sref="congressman({id: houseRep.bioguide_id})") {{houseRep | congressmanNameFilter}}
        
    dic Senate
-     h4 {{senate[0].first_name}} {{senate[0].last_name}}
-     h4 {{senate[1].first_name}} {{senate[1].last_name}}
+     h4 
+      a(ui-sref="congressman({id: senators[0].bioguide_id})") {{senators[0] | congressmanNameFilter}}
+     h4
+      a(ui-sref="congressman({id: senators[1].bioguide_id})") {{senators[1] | congressmanNameFilter}}

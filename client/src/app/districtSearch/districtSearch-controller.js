@@ -6,57 +6,23 @@ angular.module('districtSearch.controllers', [
     
     function initDistrictSearch() {
       if(_.isUndefined(district.count)) {
-        $scope.district = district;
-        getCongressmen(district);
+        $scope.district = district[0];
+        $scope.senators = [];
+
+        _.forEach(district[1], function(congressman) {
+          if(congressman.chamber === 'senate') {
+            $scope.senators.push(congressman);
+          } else if (congressman.chamber === 'house') {
+            $scope.houseRep = congressman;
+          }
+        });
+        
       } else if (district.count < 1){
         $log.log('find out what district they are in', district);
         
       }
     }
     
-    
-    var getDistrictByZipCode = function (zipCode) {
-      SunlightService.getDistrictByZipCode(zipCode).then(function (district) {
-
-        if (district.results.length > 1) {
-//          TODO: if there are more than one districts then we must get more info from the user to 
-//          get the correct district info
-          $log.log('modal pops up to get more info from user');
-        } else {
-          $log.log('district ', district);
-          getCongressmen($scope.district);
-        }
-      });
-    };
-
-    var getDistrictByLatLong = function (coords) {
-      SunlightService.getDistrictByCoords(coords).then(function (district) {
-        if (district.results.length > 1) {
-          //          TODO: if there are more than one districts then we must get more info from the user to 
-//          get the correct district info
-          $log.log('modal pops up to get more info from user');
-        } else {
-          $scope.district = {
-            state: district.results[0].state,
-            number: district.results[0].district
-          };
-          $log.log('district search controller ', $scope.district);
-          getCongressmen($scope.district);
-        }
-      });
-    };
-
-    function getCongressmen(district) {
-      var congressMen = {};
-      SunlightService.getCongressmenByDistrict(district).then(function (congressmenData) {
-        congressMen = {
-          house: congressmenData.house[0],
-          senate: congressmenData.senate
-        };
-        $scope.houseRep = congressMen.house;
-        $scope.senate = congressMen.senate;
-      });
-    }
     initDistrictSearch();
     
     $scope.test = function () {
