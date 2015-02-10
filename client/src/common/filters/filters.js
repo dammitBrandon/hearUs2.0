@@ -59,7 +59,7 @@ angular.module('hearUsFilters', [])
       } else {
         return "There is no summary for this bill as of yet.  You can view the bill by clicking the provided link.";
       }
-    }
+    };
   })
   .filter('capitalizeFilter', function($log){
     return function(string) {
