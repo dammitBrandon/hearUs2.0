@@ -75,7 +75,7 @@ exports.getBill = function (req, res, next) {
   sunlight.bills()
     .filter("bill_id", billId)
     .filter("order", "introduced_on")
-    .fields("official_title", "introduced_on", "last_vote_at", "popular_title", "short_title", "keywords", "summary_short", "summary", "sponsor_id", "urls", "cosponsor_ids", "cosponsors_count")
+    .fields("official_title", "introduced_on", "last_vote_at", "popular_title", "short_title", "keywords", "summary_short", "summary", "sponsor", "urls", "cosponsor_ids", "cosponsors_count", "last_version")
     .call()
     .then(function (data) {
       res.send(data);

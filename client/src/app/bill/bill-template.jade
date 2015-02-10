@@ -1,7 +1,23 @@
 .container
-  h4 {{bill | titleFilter}}
-    sponsor 
-    a(ui-sref="congressman({id: bill.sponsor_id})") {{bill.sponsor.first_name}} {{bill.sponsor.last_name}} {{bill.sponsor_id}}
+  h4 {{bill | titleFilter}} 
+    span.pull-right {{bill.bill_id}}
       
   .bill-container
+    span {{bill.last_version.version_name}}
     p {{bill | summaryFilter}}
+      
+  .sponsor
+    span sponsor 
+      a(ui-sref="congressman({id: bill.sponsor_id})") {{bill.sponsor | congressmanNameFilter}}
+  
+  .cosponsors
+    span Cosponsors of {{bill | titleFilter}}
+    ul(ng-repeat="sponsor in cosponsors")
+      li
+        p 
+          a(ui-sref="congressman({id: sponsor.bioguide_id})") {{sponsor | congressmanNameFilter}}
+            
+  .additional_resources
+    span Additional resources:
+    div(ng-repeat="(resource, url) in bill.urls")
+      a(href="url") {{resource | capitalizeFilter}}

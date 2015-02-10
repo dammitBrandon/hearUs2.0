@@ -61,6 +61,15 @@ angular.module('hearUsFilters', [])
       }
     }
   })
+  .filter('capitalizeFilter', function($log){
+    return function(string) {
+      if(!_.isUndefined(string) && !_.isNull(string)) {
+        return string.charAt(0).toUpperCase() + string.substring(1).toLowerCase();
+      } else {
+        return string;
+      }
+    };
+  })
   .filter('stateFilter', function ($log, states) {
     return function (state) {
       if (!_.isUndefined(states[state])) {
