@@ -5,17 +5,19 @@
   .bill-container
     span {{bill.last_version.version_name}}
     p {{bill | summaryFilter}}
+    a(href="{{bill.last_version.urls.pdf}}", target="_blank") View as Pdf
       
   .sponsor
     span sponsor 
-      a(ui-sref="congressman({id: bill.sponsor_id})") {{bill.sponsor | congressmanNameFilter}}
+      a(ui-sref="congressman({id: bill.sponsor.bioguide_id})") {{bill.sponsor | congressmanNameFilter}}
   
   .cosponsors
     span Cosponsors of {{bill | titleFilter}}
-    ul(ng-repeat="sponsor in cosponsors")
+    ul(ng-repeat="sponsor in cosponsors| limitTo: 4")
       li
         p 
           a(ui-sref="congressman({id: sponsor.bioguide_id})") {{sponsor | congressmanNameFilter}}
+    a(href="#") See all cosponsors
             
   .additional_resources
     span Additional resources:
