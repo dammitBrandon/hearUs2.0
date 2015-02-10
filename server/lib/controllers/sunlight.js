@@ -70,14 +70,28 @@ exports.searchIssue = function (req, res, next) {
   res.send(data);
 };
 
-exports.getBill = function (req, res, next){
+exports.getBill = function (req, res, next) {
   var billId = req.params.id;
-  sunlight.bills().filter("bill_id", billId)
-    .fields("official_title", "introduced_on", "last_vote_at", "popular_title", "short_title", "keywords", "summary_short", "sponsor")
+  sunlight.bills()
+    .filter("bill_id", billId)
+    .filter("order", "introduced_on")
+    .fields("official_title", "introduced_on", "last_vote_at", "popular_title", "short_title", "keywords", "summary_short", "summary", "sponsor_id", "urls", "cosponsor_ids", "cosponsors_count")
     .call()
-    .then(function(data){
-    res.send(data);
-  });
+    .then(function (data) {
+//      if(data.results[0].cosponsors_count > 0) {
+//        getCongressmanByIdArray(data.results[0].cosponsor_ids)
+//          .addBack(function(err, queryResults) {
+//          if (err) {
+//            console.error('error getting data from query ', err);
+//          } else if (!_.isUndefined(queryResults)) {
+//            data.results[0].cosponsors = JSON.stringify(queryResults);
+//            res.send(data);
+//          }
+//        });
+//      }
+        res.send(data);
+      
+    });
 };
 
 exports.searchForIssue = function (req, res, next) {
@@ -87,9 +101,9 @@ exports.searchForIssue = function (req, res, next) {
     .filter("order", "introduced_on")
     .search(searchTopic)
     .call()
-    .then(function(data) {
-    res.send(data);
-  });
+    .then(function (data) {
+      res.send(data);
+    });
 };
 
 exports.getCongressmen = function (req, res, next) {
@@ -129,50 +143,103 @@ exports.getCongressmen = function (req, res, next) {
     });
 };
 
-exports.billsSponsoredByCongressman  = function (req, res, next) {
+exports.billsSponsoredByCongressman = function (req, res, next) {
   var id = req.params.id;
   sunlight.billsSearch()
     .filter("sponsor_id", id)
     .filter("order", "introduced_on")
-    .fields("official_title", "introduced_on", "last_vote_at", "popular_title", "short_title", "keywords", "summary_short", "summary", "sponsor")
+    .fields("official_title", "introduced_on", "last_vote_at", "popular_title", "short_title", "keywords", "summary_short", "summary", "sponsor_id")
     .call()
-    .then(function(data){
-    res.send(data);
-  });
+    .then(function (data) {
+      res.send(data);
+    });
 };
 
-exports.getCongressmanById = function (req, res, next) {
-  var id = req.params.id;
-  Congressman.find(
-    {
-      bioguide_id: id
-    })
-    .exec(function(err, docs) {
-      if(err) {
-        console.log('error performing query ', err);
-      } else if(!_.isEmpty(docs)) {
-        res.send(docs);
+exports.getCosponsors = function (req, res, next) {
+  var ids = req.query.cosponsorIds;
+  getCongressmanByIdArray(ids)
+    .addBack(function (err, queryResults) {
+      if (err) {
+        console.error('error getting data from query ', err);
+      } else if (!_.isUndefined(queryResults)) {
+        res.send(JSON.stringify(queryResults));
       } else {
-        console.log('didnt find congressman by id, look for id with api ', id);
-        var congressman = getCongressmanFromSunlight(id);
-        if (congressman !== -1) {
-          res.send(congressman);
-        } else {
-          console.log('unable to find congressman');
-          res.send(500);
-        }
+        res.next();
       }
     });
 };
 
-var getCongressmanFromSunlight = function(id) {
-  sunlight.legislators().filter('bioguide_id', id).then(function(response) {
-    if(response.status === 'success') {
+// For lack of better name, this function will get congressmen from MongoDB, we pass a collection (for now we pass an array, maybe some other collection in the future)
+// the Congressmen that we find will be added to the data that will be passed to the frontend, an array that has congressman records of cosponsors for now
+
+var getCongressmanByIdArray = function (idArray) {
+  
+  var congressmen =  Congressman.find(
+    {
+      bioguide_id: { $in: idArray }
+    })
+    .exec(function (err, docs) {
+      if (err) {
+        console.error('error performing query ', err);
+      } else if (!_.isEmpty(docs)) {
+        return docs;
+      }
+    });
+  
+  return congressmen;
+};
+
+//var getCongressmanByIdFromMongo = function (idArray) {
+//  Congressman.find(
+//    {
+//      bioguide_id: { $in: idArray }
+//    })
+//    .exec(function (err, docs) {
+//      if (err) {
+//        console.log('error performing query ', err);
+//      } else if (!_.isEmpty(docs)) {
+//        console.log('docs ', docs);
+//        return docs;
+//      } else {
+////        go to api, the congressman bioguide_id is not in mongo
+//        var congressman = getCongressmanFromSunlight(id);
+//        return congressman;
+//      }
+//    });
+//};
+
+  exports.getCongressmanById = function (req, res, next) {
+    var id = req.params.id;
+    Congressman.find(
+      {
+        bioguide_id: id
+      })
+      .exec(function(err, docs) {
+        if(err) {
+          console.log('error performing query ', err);
+        } else if(!_.isEmpty(docs)) {
+          res.send(docs);
+        } else {
+          console.log('didnt find congressman by id, look for id with api ', id);
+          var congressman = getCongressmanFromSunlight(id);
+          if (congressman !== -1) {
+            res.send(congressman);
+          } else {
+            console.log('unable to find congressman');
+            res.send(500);
+          }
+        }
+      });
+  };
+
+var getCongressmanFromSunlight = function (id) {
+  sunlight.legislators().filter('bioguide_id', id).then(function (response) {
+    if (response.status === 'success') {
       return response.results[0];
     } else {
       return -1;
     }
-  }); 
+  });
 };
 
 exports.loadHouseReps = function (req, res, next) {
@@ -180,7 +247,7 @@ exports.loadHouseReps = function (req, res, next) {
   var filename = 'Reps.json';
   reps.filter("in_office", true)
     .filter("chamber", "house")
-    .fields("first_name", "middle_name", "last_name", "twitter_id", "gender", "party", "state", "district", "contact_info", "phone", "fax", "office");
+    .fields("first_name", "middle_name", "last_name", "twitter_id", "gender", "party", "state", "district", "contact_info", "phone", "fax", "office", "oc_email");
 //    .call();
   var data = loadJsonFile(filename);
   res.send(data);
@@ -191,7 +258,7 @@ exports.loadSenators = function (req, res, next) {
   var filename = 'Senators.json';
   reps.filter("in_office", true)
     .filter("chamber", "senate")
-    .fields("first_name", "middle_name", "last_name", "twitter_id", "gender", "party", "state", "state_rank", "contact_info", "phone", "fax", "office");
+    .fields("first_name", "middle_name", "last_name", "twitter_id", "gender", "party", "state", "state_rank", "contact_info", "phone", "fax", "office", "oc_email");
 //    .call();
   var data = loadJsonFile(filename);
   res.send(data);

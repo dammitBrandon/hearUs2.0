@@ -1,4 +1,4 @@
 h4 bill template
-  p bill: {{bill.short_title}}
+  p bill: {{bill | titleFilter}}
   sponsor 
   a(ui-sref="congressman({id: bill.sponsor_id})") {{bill.sponsor.first_name}} {{bill.sponsor.last_name}} {{bill.sponsor_id}} 

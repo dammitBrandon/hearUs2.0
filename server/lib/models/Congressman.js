@@ -14,6 +14,7 @@ var CongressmanSchema = new Schema({
   state: String,
   chamber: String,
   website: String,
+  oc_email: String,
   phone: String,
   fax: String,
   office: String

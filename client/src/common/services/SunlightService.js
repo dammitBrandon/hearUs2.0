@@ -5,19 +5,19 @@ angular.module('services.SunlightApi', [
 ])
   .factory('SunlightService', function ($q, $http, $log) {
     var baseUrl = '/api/sunlight/';
-    
+
     function getIssues(issue) {
       var deferred = $q.defer();
       var url = baseUrl + 'topic/' + issue;
-      
+
       $http({
         method: 'GET',
         url: url
       })
         .success(function (data, status, headers, config) {
-        $log.debug('successful getting data', data);
-        deferred.resolve(data);
-      })
+          $log.debug('successful getting data', data);
+          deferred.resolve(data);
+        })
         .error(function(err, status, headers, config) {
           $log.debug('failed to get data', err);
           deferred.reject(err);
@@ -25,12 +25,12 @@ angular.module('services.SunlightApi', [
 
       return deferred.promise;
     }
-    
+
     function getBill(billId) {
       console.log('bill id ', billId);
       var deferred = $q.defer();
       var url = baseUrl + 'bill/' + billId;
-      
+
       $http({
         method: 'GET',
         url: url
@@ -43,14 +43,14 @@ angular.module('services.SunlightApi', [
           $log.debug('failed to get data', err);
           deferred.reject(err);
         });
-      
+
       return deferred.promise;
     }
-    
+
     function billsSponsoredByCongressman(congressmanId) {
       var deferred = $q.defer();
       var url = baseUrl + 'congressman/bills/' + congressmanId;
-      
+
       $http({
         method: 'Get',
         url: url
@@ -63,14 +63,14 @@ angular.module('services.SunlightApi', [
           $log.debug('failure getting bills for ' + congressmanId + ': ', err);
           deferred.reject(err);
         });
-      
+
       return deferred.promise;
     }
-    
+
     function getDistrictByZipCode(zipCode) {
       var deferred = $q.defer();
       var url = baseUrl + 'district/' + zipCode;
-      
+
       $http({
         method: 'Get',
         url: url
@@ -83,14 +83,14 @@ angular.module('services.SunlightApi', [
           $log.debug('failed to get data, ', err);
           deferred.reject(err);
         });
-      
+
       return deferred.promise;
     }
 
     function getDistrictByCoords(coords) {
       var deferred = $q.defer();
       var url = baseUrl + 'district/lat/' + coords.lat + '/long/' + coords.long;
-      
+
       $http({
         method: 'Get',
         url: url
@@ -103,10 +103,10 @@ angular.module('services.SunlightApi', [
           $log.debug('failed to get data, ', err);
           deferred.reject(err);
         });
-      
+
       return deferred.promise;
     }
-    
+
     function getCongressmenByDistrict(districtObj) {
       var deferred = $q.defer();
       var url = baseUrl + 'district/congressmen/state/' + districtObj.state + '/district/' + districtObj.districtNumber;
@@ -124,10 +124,10 @@ angular.module('services.SunlightApi', [
           $log.debug('failed to get data', err);
           deferred.reject(err);
         });
-      
+
       return deferred.promise;
     }
-    
+
     function getCongressmanById(id) {
       var deferred = $q.defer();
       var url = baseUrl + 'congressman/' + id;
@@ -146,11 +146,31 @@ angular.module('services.SunlightApi', [
         });
       return deferred.promise;
     }
-    
+
+    function getCosponsors(ids) {
+      var deferred = $q.defer();
+      var url = baseUrl + 'congressmen/cosponsors';
+
+      $http({
+        method: 'GET',
+        url: url,
+        params: {cosponsorIds: ids}
+      })
+        .success(function (data, status, headers, config) {
+          $log.debug('successful getting data ', data);
+          deferred.resolve(data);
+        })
+        .error(function (err, status, headers, config) {
+          $log.debug('failed to get data', err);
+          deferred.reject(err);
+        });
+      return deferred.promise;
+    }
+
     function getSenators() {
       var deferred = $q.defer();
       var url = baseUrl + 'senators';
-      
+
       $http({
         method: 'Get',
         url: url
@@ -166,11 +186,11 @@ angular.module('services.SunlightApi', [
 
       return deferred.promise;
     }
-    
+
     function getReps() {
       var deferred = $q.defer();
       var url = baseUrl + 'representatives';
-      
+
       $http({
         method: 'Get',
         url: url
@@ -185,7 +205,7 @@ angular.module('services.SunlightApi', [
 
       return deferred.promise;
     }
-    
+
     return {
       getIssues: getIssues,
       getBill: getBill,
@@ -194,6 +214,7 @@ angular.module('services.SunlightApi', [
       getDistrictByCoords: getDistrictByCoords,
       getCongressmenByDistrict: getCongressmenByDistrict,
       getCongressmanById: getCongressmanById,
+      getCosponsors: getCosponsors,
       getSenators: getSenators,
       getReps: getReps
     };
