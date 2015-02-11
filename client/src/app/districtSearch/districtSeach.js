@@ -2,7 +2,8 @@ angular.module('districtSearch', [
   'ui.router',
   'districtSearch.controllers',
   'test.controllers',
-  'services.SunlightApi'
+  'services.SunlightApi',
+  'services.hearModal'
 ]).config(function districtSearchConfig($stateProvider) {
   $stateProvider
     .state('districtSearch', {
@@ -22,8 +23,10 @@ angular.module('districtSearch', [
           controller: "districtSearchCtrl",
           templateUrl: "districtSearch/district-landing-template.html",
           resolve: {
-            district: function ($log, $stateParams, SunlightService) {
+            district: function ($log, $stateParams, SunlightService, modalService) {
+              $log.log('inside resolve');
               return SunlightService.getDistrictByZipCode($stateParams.zipCode).then(function (districtData) {
+                $log.log('inside return');
                 var districtInfo = {};
                 if(districtData.count <= 1) {
                   districtInfo = {
@@ -36,6 +39,8 @@ angular.module('districtSearch', [
 //                  what can we do? 1. get the street and find the lat and long from the street, 2. geolocate
 //                  3. we can show them the two districts and let them choose the district that they are apart of
 //                  4. we can get them to enter the +4 for the zip code
+                  $log.log('testing modal service');
+                  modalService.openModal({fuck: "this"});
                   var districts = _.map(districtData.results, function(district) {
                     return district.district;
                     

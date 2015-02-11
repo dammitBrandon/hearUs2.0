@@ -1,8 +1,6 @@
 'use strict';
 
-angular.module('services.SunlightApi', [
-  'ui.router'
-])
+angular.module('services.SunlightApi', [])
   .factory('SunlightService', function ($q, $http, $log) {
     var baseUrl = '/api/sunlight/';
 
@@ -67,6 +65,7 @@ angular.module('services.SunlightApi', [
     }
 
     function getDistrictByZipCode(zipCode) {
+      $log.log('sunlight service', zipCode);
       var deferred = $q.defer();
       var url = baseUrl + 'district/' + zipCode;
 

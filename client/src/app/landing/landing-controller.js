@@ -10,6 +10,7 @@ angular.module('landing.controllers', [
     };
 
     $scope.findDistrictLanding = function findDistrict() {
+      $log.log('button clicked ', $scope.zipCode);
       $state.go('districtSearch.zipCode', {zipCode: $scope.zipCode});
     };
   });
