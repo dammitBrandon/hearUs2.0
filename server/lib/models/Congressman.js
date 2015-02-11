@@ -12,7 +12,13 @@ var CongressmanSchema = new Schema({
   district: Number,
   party: String,
   state: String,
-  chamber: String,
+  chamber: {
+    type: String,
+    enum: [
+      'house',
+      'senate'
+    ]
+  },
   website: String,
   oc_email: String,
   phone: String,

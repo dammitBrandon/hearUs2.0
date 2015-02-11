@@ -180,6 +180,62 @@ var getCongressmanByIdArray = function (idArray) {
   return congressmen;
 };
 
+var getSenatorsForState = function (districtObj) {
+  var senators = Congressman.find({
+    chamber: 'senate',
+    state: districtObj.state
+  })
+    .exec(function (err, docs) {
+      if (err) {
+        console.error('error performing query ', err);
+      } else if (!_.isEmpty(docs)) {
+        return docs;
+      }
+    });
+};
+
+var getRepsForState = function (districtObj) {
+  var reps = Congressman.find({
+    chamber: 'house',
+    state: districtObj.state,
+    district: districtObj.district
+  })
+    .exec(function (err, docs) {
+      if (err) {
+        console.error('error performing query ', err);
+      } else if (!_.isEmpty(docs)) {
+        return docs;
+      }
+    });
+  return reps;
+};
+
+var getCongressmenForDistrict = function (districtObj) {
+  var congressmen = Congressman.find({
+    $or: [
+      {
+        district: districtObj.district,
+        chamber: 'house',
+        state: districtObj.state
+      },
+      {
+        chamber: 'senate',
+        state: districtObj.state
+      }
+    ]
+  })
+    .exec(function (err, docs) {
+      if (err) {
+        console.error('error performing query ', err);
+      } else if (!_.isEmpty(docs)) {
+        return docs;
+      }
+    });
+
+  console.log('congressmen ', congressmen);
+  return congressmen;
+};
+
 exports.getCongressmanById = function (req, res, next) {
   var id = req.params.id;
   Congressman.find(
@@ -241,20 +297,38 @@ exports.loadSenators = function (req, res, next) {
  */
 exports.searchDistrictByZipCode = function (req, res, next) {
   var zipCode = req.params.zipCode;
-  var filename;
 
-  if (zipCode === '60653') {
-    filename = 'Districts.json';
-  } else {
-    filename = 'District.json';
-  }
+  sunlight.districtsLocate()
+    .addZip(zipCode)
+    .call()
+    .then(function (data) {
+      if (!_.isUndefined(data.count) && (data.count === 1)) {
+        getCongressmenForDistrict(data.results[0])
+          .addBack(function (err, queryResults) {
+            if (err) {
+              console.error('error getting data from query ', err);
+            } else if (!_.isUndefined(queryResults)) {
+              data.results[0].congressmen = queryResults;
+              console.log('data being sent back zip ', data);
+              res.next(data);
+            } else {
+              res.next(data);
+            }
+          });
+      } else {
+        res.send(data);
+      }
+    });
 
-  var district = sunlight.districtsLocate();
-  district.addZip(zipCode);
-//  district.call();
-  var data = loadJsonFile(filename);
-
-  res.send(data);
+//  This is the mock data used for testing
+//  var filename;
+//  if (zipCode === '60653') {
+//    filename = 'Districts.json';
+//  } else {
+//    filename = 'District.json';
+//  }
+//  var data = loadJsonFile(filename);
+//  res.send(data);
 };
 
 exports.searchDistrictCoords = function (req, res, next) {
@@ -263,14 +337,30 @@ exports.searchDistrictCoords = function (req, res, next) {
     longitude: req.params.long
   };
 
-  var filename = 'District.json';
+  sunlight.districtsLocate()
+    .addCoordinates(coords)
+    .call()
+    .then(function (data) {
+      if (!_.isUndefined(data.count) && (data.count === 1)) {
+        getCongressmenForDistrict(data.results[0])
+          .addBack(function (err, queryResults) {
+            if (err) {
+              console.error('error getting data from query ', err);
+            } else if (!_.isUndefined(queryResults)) {
+              data.results[0].congressmen = queryResults;
+              console.log('data being sent back coords ', data);
+              res.next(data);
+            } else {
+              res.next(data);
+            }
+          });
+      } else {
+        res.send(data);
+      }
+    });
 
-  var district = sunlight.districtsLocate();
-  district.addCoordinates(coords);
-//  district.call();
-
-  var data = loadJsonFile(filename);
-
-  res.send(data);
+//  var filename = 'District.json';
+//  var data = loadJsonFile(filename);
+//  res.send(data);
 
 };
