@@ -95,7 +95,7 @@ angular.module('services.SunlightApi', [
         url: url
       })
         .success(function(data, status, headers, config) {
-//          $log.debug('successful getting data back: ', data);
+          $log.debug('successful getting district back by coords: ', data);
           deferred.resolve(data);
         })
         .error(function(err, status, headers, config){

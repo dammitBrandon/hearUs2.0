@@ -180,6 +180,13 @@ var getCongressmanByIdArray = function (idArray) {
   return congressmen;
 };
 
+// #getSenatorsForState, #getRepsForState, #getCongressmenForDistrict are methods that 
+// allow us to get the congressmen data, instead of making a round trip call from the 
+// front end back to the backend, not sure if this saves much time but it makes more
+// sense than making a backend call that resolves the district only to make a call 
+// to get the congressmen in the initialization function of the districtSearch 
+// controller
+
 var getSenatorsForState = function (districtObj) {
   var senators = Congressman.find({
     chamber: 'senate',
@@ -231,8 +238,6 @@ var getCongressmenForDistrict = function (districtObj) {
         return docs;
       }
     });
-
-  console.log('congressmen ', congressmen);
   return congressmen;
 };
 
@@ -309,10 +314,9 @@ exports.searchDistrictByZipCode = function (req, res, next) {
               console.error('error getting data from query ', err);
             } else if (!_.isUndefined(queryResults)) {
               data.results[0].congressmen = queryResults;
-              console.log('data being sent back zip ', data);
-              res.next(data);
+              res.send(data);
             } else {
-              res.next(data);
+              res.send(data);
             }
           });
       } else {
@@ -348,10 +352,9 @@ exports.searchDistrictCoords = function (req, res, next) {
               console.error('error getting data from query ', err);
             } else if (!_.isUndefined(queryResults)) {
               data.results[0].congressmen = queryResults;
-              console.log('data being sent back coords ', data);
-              res.next(data);
+              res.send(data);
             } else {
-              res.next(data);
+              res.send(data);
             }
           });
       } else {
@@ -362,5 +365,4 @@ exports.searchDistrictCoords = function (req, res, next) {
 //  var filename = 'District.json';
 //  var data = loadJsonFile(filename);
 //  res.send(data);
-
 };

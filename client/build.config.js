@@ -75,6 +75,7 @@ module.exports = {
       'vendor/angular-ui-utils/ui-utils.js',
       'vendor/angular-ui-map/ui-map.js',
       'vendor/angular-foundation/mm-foundation.js',
+      'vendor/angular-foundation/mm-foundation-tpls.js',
       'vendor/underscore/underscore.js'
     ],
     css: [
