@@ -3,7 +3,7 @@ angular.module('districtSearch.controllers', [
   'services.SunlightApi',
   'services.hearUsModal'
 ]).
-  controller('districtSearchCtrl', function districtSearchController($scope, $rootScope, $state, $stateParams, $log, districtInfo, ModalService) {
+  controller('districtSearchCtrl', function districtSearchController($scope, $rootScope, $state, $stateParams, $log, districtInfo) {
     
     function initDistrictSearch() {
 
@@ -21,13 +21,13 @@ angular.module('districtSearch.controllers', [
         
       } else if (districtInfo.count > 1){
         $log.log('find out what district they are in', districtInfo);
-        requestAdditionalInformation();
+//        requestAdditionalInformation();
       }
     }
     
-    function requestAdditionalInformation() {
-      ModalService.openModal();
-    }
+//    function requestAdditionalInformation() {
+//      ModalService.openModal();
+//    }
 
     initDistrictSearch();
     

@@ -22,7 +22,7 @@ angular.module('districtSearch', [
           controller: "districtSearchCtrl",
           templateUrl: "districtSearch/district-landing-template.html",
           resolve: {
-            districtInfo: function ($log, $stateParams, SunlightService) {
+            districtInfo: function ($log, $stateParams, SunlightService, ModalService) {
               return SunlightService.getDistrictByZipCode($stateParams.zipCode).then(function (districtData) {
                 var district = {};
                 if (districtData.count === 1 || districtData.count === 0) {
@@ -42,7 +42,7 @@ angular.module('districtSearch', [
 //                  4. we can get them to enter the +4 for the zip code
 
                   $log.log('pop up modal', districtData);
-//                  ModalService.openModal();
+                  ModalService.openModal();
                   var districtsArray = _.map(districtData.results, function (districtNumber) {
                     return districtNumber.district;
 
@@ -86,7 +86,7 @@ angular.module('districtSearch', [
 //                  4. we can get them to enter the +4 for the zip code
 
                   $log.log('pop up modal', districtData);
-//                  ModalService.openModal();
+                  ModalService.openModal();
                   var districtsArray = _.map(districtData.results, function (districtNumber) {
                     return districtNumber.district;
 
