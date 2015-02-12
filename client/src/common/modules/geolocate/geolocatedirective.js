@@ -7,7 +7,7 @@ angular.module('geolocate.directives', [
       replace: true,
       restrict: 'E',
       scope: {},
-      template: '<button id="geolocate" type="button" class="btn btn-default"><span class="icon-compass"></span></button>',
+      template: '<button id="geolocate" type="button" class="button secondary small postfix"><span class="icon-compass"></span></button>',
       link: function ($scope, elems, attrs) {
         elems.bind("click", function getLocation() {
           if (navigator.geolocation) {

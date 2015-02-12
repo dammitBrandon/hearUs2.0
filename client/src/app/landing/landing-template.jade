@@ -16,18 +16,13 @@
         
         .columns.small-3.medium-4.end
           .row.collapse
-            .small-9.columns
+            .small-7.columns
               input(type="text", placeholder="District", ng-model="zipCode")
-            .small-3.columns
-              button.button.postfix(type="button", ng-click="findDistrictLanding()") Go
-        //.col-md-3.col-sm-4
-        ////.columns.small-4.medium-3
-        //.input-group
-        //  input.form-control(type="text", placeholder="District", ng-model="zipCode")
-        //  .input-group-btn
-        //    hu-geolocate
-        //    button.bt\n.btn-default(type="button", ng-click="findDistrictLanding()")
-        //      span Go
+            .button-group
+              .small-2.columns
+                hu-geolocate
+              .small-3.columns
+                button.button.postfix(type="button", ng-click="findDistrictLanding()") Go
             
     br
     span We never store or share your info with third parties, let alone persist it.
