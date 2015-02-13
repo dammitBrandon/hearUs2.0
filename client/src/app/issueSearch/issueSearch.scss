@@ -4,11 +4,15 @@
 
 li.result-item {
   display: block;
-  padding: 10px;
+  padding: 0px 30px;
   border-bottom: 1px solid #808080;
   
   &:hover {
     background-color: #d3d3d3;  
+  }
+  
+  p {
+    padding: 0px 25px;
   }
   
 //  &:last-child {
