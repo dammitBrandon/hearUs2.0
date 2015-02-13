@@ -1,3 +1,4 @@
+
 h4 {{congressman.chamber | chamberFilter}} {{congressman | congressmanNameFilter}} {{congressman.party}}
   span title {{congressman.title}}
   h5(ng-if="congressman.chamber === 'house'") {{congressman.state | stateFilter}} {{congressman.district}}
@@ -16,13 +17,14 @@ h4 {{congressman.chamber | chamberFilter}} {{congressman | congressmanNameFilter
     br
     span Fax: {{congressman.fax}}
       
-.sponsored-bills
+.sponsored-bills.search-results
   h4 Bills Sponsored by {{congressman | congressmanNameFilter}}
   ul(ng-repeat="bill in bills | limitTo: 4")
     li.result-item
       div
-        h4
+        h5
           a(ui-sref="bill({id: bill.bill_id})") {{bill | titleFilter}}
             span.pull-right {{bill.bill_id}}
-        p {{bill.summary_short}}
+        p 
+          span {{bill | shortSummaryFilter}}
           span.pull-right Introduced on {{bill.introduced_on}}

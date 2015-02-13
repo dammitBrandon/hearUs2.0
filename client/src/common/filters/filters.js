@@ -1,7 +1,7 @@
 angular.module('hearUsFilters', [])
   .filter('titleFilter', function () {
     return function (bill) {
-      if(!_.isNull(bill.popular_title)){
+      if (!_.isNull(bill.popular_title)) {
         return bill.popular_title;
       } else if (!_.isNull(bill.short_title)) {
         return bill.short_title;
@@ -10,32 +10,32 @@ angular.module('hearUsFilters', [])
       }
     };
   })
-  .filter('congressmanFilter', function($filter, $log) {
+  .filter('congressmanFilter', function ($filter, $log) {
     return function (congressmanObj) {
       var name = $filter('congressmanNameFilter')(congressmanObj);
       if (congressmanObj.chamber === 'house') {
-        return 'Representative ' + name; 
+        return 'Representative ' + name;
       } else if (congressmanObj.chamber === 'senate') {
         return 'Senator ' + name;
       }
     };
   })
-  .filter('congressmanNameFilter', function($log) {
+  .filter('congressmanNameFilter', function ($log) {
     return function (congressmanObj) {
       var name = '';
-      
+
       if (!_.isNull(congressmanObj.first_name) && !_.isUndefined(congressmanObj.first_name)) {
         name += congressmanObj.first_name;
-      } 
-      
+      }
+
       if (!_.isNull(congressmanObj.middle_name) && !_.isUndefined(congressmanObj.middle_name)) {
         name += " " + congressmanObj.middle_name;
       }
-      
+
       if (!_.isNull(congressmanObj.last_name) && !_.isUndefined(congressmanObj.last_name)) {
         name += " " + congressmanObj.last_name;
       }
-      
+
       return name;
     };
   })
@@ -50,9 +50,9 @@ angular.module('hearUsFilters', [])
       }
     };
   })
-  .filter('summaryFilter', function($log) {
+  .filter('summaryFilter', function ($log) {
     return function (billObj) {
-      if(!_.isNull(billObj.summary_short) && !_.isUndefined(billObj.summary_short)) {
+      if (!_.isNull(billObj.summary_short) && !_.isUndefined(billObj.summary_short)) {
         return billObj.summary_short;
       } else if (!_.isNull(billObj.summary) && !_.isUndefined(billObj.summary)) {
         return billObj.summary;
@@ -61,9 +61,19 @@ angular.module('hearUsFilters', [])
       }
     };
   })
-  .filter('capitalizeFilter', function($log){
-    return function(string) {
-      if(!_.isUndefined(string) && !_.isNull(string)) {
+  .filter('shortSummaryFilter', function () {
+    return function (billObj) {
+      if (!_.isNull(billObj.summary_short) && !_.isUndefined(billObj.summary_short)) {
+        return billObj.summary_short;
+      }
+      else {
+        return "Continue to bill to view summary.";
+      }
+    };
+  })
+  .filter('capitalizeFilter', function ($log) {
+    return function (string) {
+      if (!_.isUndefined(string) && !_.isNull(string)) {
         return string.charAt(0).toUpperCase() + string.substring(1).toLowerCase();
       } else {
         return string;

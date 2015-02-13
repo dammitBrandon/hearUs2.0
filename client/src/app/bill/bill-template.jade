@@ -4,7 +4,7 @@
       
   .bill-container
     span {{bill.last_version.version_name}}
-    p {{bill.summary}}
+    p {{bill | summaryFilter}}
     a(href="{{bill.last_version.urls.pdf}}", target="_blank") View as Pdf
       
   .sponsor
