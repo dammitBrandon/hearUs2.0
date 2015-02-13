@@ -1,21 +1,24 @@
 
 h4 {{congressman.chamber | chamberFilter}} {{congressman | congressmanNameFilter}} {{congressman.party}}
-  span title {{congressman.title}}
-  h5(ng-if="congressman.chamber === 'house'") {{congressman.state | stateFilter}} {{congressman.district}}
-  h5(ng-if="congressman.chamber === 'sentate'") {{congressman.state | stateFilter}} {{congressman.rank}}
+  h5(style="padding-left: 25px;", ng-if="congressman.chamber === 'house'") {{congressman.state | stateFilter}} District {{congressman.district}}
+  h5(style="padding-left: 25px;", ng-if="congressman.chamber === 'sentate'") {{congressman.state | stateFilter}} Rank {{congressman.rank}}
     br
     a(href="{{congressman.website}}", target="_blank") {{congressman | congressmanNameFilter}}'s Official Website
       
-.contact-info
+.contact-info(style="padding: 20px 25px;")
+  img(src="http://placehold.it/200x247" alt="pic01", style="padding-bottom: 10px;")
+  
   p Washington, DC Office 
     br
     {{congressman.office}}
     br 
     span DC Washington, 20515 
     br
-    span Phone: {{congressman.phone}}
+    span Phone: 
+      a(href="{{congressman.phone}}", target="_bank", rel="nofollow") {{congressman.phone}}
     br
-    span Fax: {{congressman.fax}}
+    span Fax: 
+      a(href="{{congressman.fax}}", target="_blank", rel="nofollow") {{congressman.fax}}
       
 .sponsored-bills.search-results
   h4 Bills Sponsored by {{congressman | congressmanNameFilter}}

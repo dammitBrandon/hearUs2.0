@@ -42,9 +42,9 @@ angular.module('hearUsFilters', [])
   .filter('chamberFilter', function ($log) {
     return function (chamber) {
       if (chamber === 'house') {
-        return "House of Representatives";
+        return "House Representative";
       } else if (chamber === 'senate') {
-        return "Senate";
+        return "Senator";
       } else {
         return chamber.toUpperCase();
       }
