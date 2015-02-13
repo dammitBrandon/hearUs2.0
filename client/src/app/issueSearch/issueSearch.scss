@@ -1,13 +1,21 @@
+.search-results {
+  padding: 20px 25px;
+}
+
 li.result-item {
   display: block;
-  padding: 5px;
+  padding: 0px 30px;
   border-bottom: 1px solid #808080;
   
   &:hover {
     background-color: #d3d3d3;  
   }
   
-  &:last-child {
-    border-bottom: none;
+  p {
+    padding: 0px 25px;
   }
+  
+//  &:last-child {
+//    border-bottom: none;
+//  }
 }

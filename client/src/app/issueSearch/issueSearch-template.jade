@@ -1,16 +1,16 @@
 div
-  h4 Search results for {{issue}} 
+  h4.text-center Search results for {{issue}} 
     
-  div
+  div.search-results
     ul(ng-repeat="bill in bills")
       li.result-item
         div
-          h4 
+          h5
             a(ui-sref="bill({ id: bill.bill_id })") {{bill | titleFilter}}
               span.pull-right {{bill.bill_id}}
           p {{bill.summary_short}}
-          p 
-            span Sponsored By  
+          p
+            span Bill Sponsor  
               a(ui-sref="congressman({id: bill.sponsor.bioguide_id})") {{bill.sponsor | congressmanFilter}} 
             span.pull-right Introduced on {{bill.introduced_on}}
           

@@ -16,7 +16,7 @@
     ul
       li(ng-repeat="sponsor in cosponsors| limitTo: 4")
         a(ui-sref="congressman({id: sponsor.bioguide_id})") {{sponsor | congressmanNameFilter}}
-    a(href="#") See all cosponsors
+    a(ng-if="cosponsors.length > 4", href="#") See all cosponsors
             
   .additional-resources
     span Additional resources:
