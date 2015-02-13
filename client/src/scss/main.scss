@@ -39,6 +39,11 @@ body {
   margin-top: 60px;
 }
 
+h4 {
+  color: #777777;
+  padding: 0 15px;
+}
+
 .footer {
   background-color: $gray-lighter;
   padding-top: 10px;
@@ -68,5 +73,6 @@ body {
 //@import 'src/app/dashboard/dashboard.scss';
 @import "src/app/issueSearch/issueSearch.scss";
 @import "src/app/bill/bill.scss";
+@import "src/app/districtSearch/districtSearch.scss";
 
 

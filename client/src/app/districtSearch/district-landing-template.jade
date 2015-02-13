@@ -1,13 +1,17 @@
-div
-  h3 district landing page Test :: 
-    p {{district.state | stateFilter}} District: {{district.districtNumber}}
-      
-   div Rep
-     h4
-      a(ui-sref="congressman({id: houseRep.bioguide_id})") {{houseRep | congressmanNameFilter}}
-       
-   div Senate
-     h4 
-      a(ui-sref="congressman({id: senators[0].bioguide_id})") {{senators[0] | congressmanNameFilter}}
-     h4 
-      a(ui-sref="congressman({id: senators[1].bioguide_id})") {{senators[1] | congressmanNameFilter}}
+.container(style="padding-top: 20px;")
+  h4.text-center {{district.state | stateFilter}} District {{district.districtNumber}}
+
+  .district-container
+    div 
+      h5 House Representative
+        ul.no-bullet
+          li
+            a(ui-sref="congressman({id: houseRep.bioguide_id})") {{houseRep | congressmanNameFilter}}
+         
+    div 
+      h5 Senators 
+        ul.no-bullet
+          li
+            a(ui-sref="congressman({id: senators[0].bioguide_id})") {{senators[0] | congressmanNameFilter}}
+          li
+            a(ui-sref="congressman({id: senators[1].bioguide_id})") {{senators[1] | congressmanNameFilter}}
