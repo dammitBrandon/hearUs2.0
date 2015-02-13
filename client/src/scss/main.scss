@@ -32,7 +32,7 @@
 @import "../../vendor/foundation/scss/normalize.scss";
 
 body {
-  
+  background-color: #f8f8f8;
 }
 
 
@@ -64,5 +64,6 @@ body {
 
 //@import 'src/app/dashboard/dashboard.scss';
 @import "src/app/issueSearch/issueSearch.scss";
+@import "src/app/bill/bill.scss";
 
 

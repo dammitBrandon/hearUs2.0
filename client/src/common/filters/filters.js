@@ -57,7 +57,7 @@ angular.module('hearUsFilters', [])
       } else if (!_.isNull(billObj.summary) && !_.isUndefined(billObj.summary)) {
         return billObj.summary;
       } else {
-        return "There is no summary for this bill as of yet.  You can view the bill by clicking the provided link.";
+        return "There is no summary for this bill as of yet.  You can view this bill in its entirety by clicking the View as Pdf link below.";
       }
     };
   })

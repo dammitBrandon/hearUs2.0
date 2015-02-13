@@ -1,25 +1,24 @@
-.container
+.container(style="padding-top: 20px;")
   h4 {{bill | titleFilter}} 
-    span.pull-right {{bill.bill_id}}
+    span.right.subheader {{bill.bill_id}}
       
   .bill-container
     span {{bill.last_version.version_name}}
-    p {{bill | summaryFilter}}
+    p {{bill.summary}}
     a(href="{{bill.last_version.urls.pdf}}", target="_blank") View as Pdf
       
   .sponsor
-    span sponsor 
+    span Bill Sponsor: 
       a(ui-sref="congressman({id: bill.sponsor.bioguide_id})") {{bill.sponsor | congressmanNameFilter}}
   
   .cosponsors
-    span Cosponsors of {{bill | titleFilter}}
-    ul(ng-repeat="sponsor in cosponsors| limitTo: 4")
-      li
-        p 
-          a(ui-sref="congressman({id: sponsor.bioguide_id})") {{sponsor | congressmanNameFilter}}
+    span Cosponsors of {{bill.bill_id}}
+    ul
+      li(ng-repeat="sponsor in cosponsors| limitTo: 4")
+        a(ui-sref="congressman({id: sponsor.bioguide_id})") {{sponsor | congressmanNameFilter}}
     a(href="#") See all cosponsors
             
-  .additional_resources
+  .additional-resources
     span Additional resources:
-    div(ng-repeat="(resource, url) in bill.urls")
-      a(href="url") {{resource | capitalizeFilter}}
+    div(style="padding-left: 10px;", ng-repeat="(resource, url) in bill.urls")
+      a(href="{{url}}") {{resource | capitalizeFilter}}

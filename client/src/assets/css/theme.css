@@ -76,19 +76,19 @@
   /*box-shadow: none;*/
   /*font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
 /*}*/
-/*.font-body {*/
-  /*font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
-/*}*/
-/*.font-heading {*/
-  /*font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
-/*}*/
-/*body {*/
-  /*font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
-  /*-webkit-font-smoothing: antialiased;*/
-  /*color: #777777;*/
-  /*font-size: 14px;*/
-  /*line-height: 24px;*/
-/*}*/
+.font-body {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.font-heading {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+body {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #777777;
+  font-size: 14px;
+  line-height: 24px;
+}
 /*h1,*/
 /*h2,*/
 /*h3,*/
