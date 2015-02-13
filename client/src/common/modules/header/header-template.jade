@@ -1,16 +1,17 @@
-nav.navbar.navbar-static-top
-  .container-fluid
-    
-    .navbar-header
-      button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target="#nav-menu-items")
-        i.fa.fa-bars
-      a.navbar-brand(ui-sref="landingPage") The Hear Us Project
+.fixed
+  nav.top-bar(data-topbar, role="navigation")
+      ul.title-area
+        li.name
+          h2
+            a(ui-sref="landingPage") The Hear Us Project
+        li.toggle-topbar.menu-icon
+          i.fa.fa-bars
         
-    #nav-menu-items.collapse.navbar-collapse
-      ul.nav.navbar-nav
-        li
-          a(href="#") First Link
-        li
-          a(href="#") Second Link
-        li
-          a(href="#") Third Link
+      section.top-bar-section
+        ul.right  
+          li
+            a(href="#") Learn More
+          li
+            a(href="#") About this Project
+          li
+            a(href="#") Log in
