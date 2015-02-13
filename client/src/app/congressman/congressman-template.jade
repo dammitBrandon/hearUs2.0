@@ -19,6 +19,8 @@ h4 {{congressman.chamber | chamberFilter}} {{congressman | congressmanNameFilter
     br
     span Fax: 
       a(href="{{congressman.fax}}", target="_blank", rel="nofollow") {{congressman.fax}}
+    br
+    a(href="mailto:{{congressman.oc_email}}", rel="nofollow") Email
       
 .sponsored-bills.search-results
   h4 Bills Sponsored by {{congressman | congressmanNameFilter}}
