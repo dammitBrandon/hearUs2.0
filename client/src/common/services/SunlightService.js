@@ -75,7 +75,7 @@ angular.module('services.SunlightApi', [
         url: url
       })
         .success(function (data, status, headers, config) {
-          $log.debug('successful getting district back by zip: ', data);
+//          $log.debug('successful getting district back by zip: ', data);
           deferred.resolve(data);
         })
         .error(function(err, status, headers, config) {
@@ -95,7 +95,7 @@ angular.module('services.SunlightApi', [
         url: url
       })
         .success(function(data, status, headers, config) {
-          $log.debug('successful getting district back by coords: ', data);
+//          $log.debug('successful getting district back by coords: ', data);
           deferred.resolve(data);
         })
         .error(function(err, status, headers, config){
@@ -116,7 +116,7 @@ angular.module('services.SunlightApi', [
         params: {address: address}
       })
         .success(function(data, status, headers, config) {
-          $log.debug('successful getting district back by street', data);
+//          $log.debug('successful getting district back by street', data);
           deferred.resolve(data);
         })
         .error(function(err, status, headers, config) {

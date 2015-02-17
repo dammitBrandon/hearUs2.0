@@ -348,7 +348,7 @@ exports.searchDistrictByZipCode = function (req, res, next) {
           });
       } else if (!_.isUndefined(data.count) && (data.count === 2)) {
         googleMapsApi.getLocationInfoByZipCode(zipCode).then(function(addressData){
-          data.results.push(addressData);
+          data.results.push({address: addressData});
           res.send(data);
         });
       }
