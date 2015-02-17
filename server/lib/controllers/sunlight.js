@@ -303,7 +303,7 @@ exports.loadSenators = function (req, res, next) {
  */
 exports.searchDistrictByZipCode = function (req, res, next) {
   var zipCode = req.params.zipCode;
-
+  
   sunlight.districtsLocate()
     .addZip(zipCode)
     .call()
@@ -321,9 +321,10 @@ exports.searchDistrictByZipCode = function (req, res, next) {
             }
           });
       } else if (!_.isUndefined(data.count) && (data.count === 2)) {
-        console.log('getting city and state information for zip code, multiple districts');
-        gm.getLocationInfoByZipCode(zipCode);
-        res.send(data);
+        gm.getLocationInfoByZipCode(zipCode).then(function(addressData){
+          data.results.push(addressData);
+          res.send(data);
+        });
       }
     });
 
