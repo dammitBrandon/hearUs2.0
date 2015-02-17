@@ -1,20 +1,18 @@
 'use strict';
 
 var express = require('express'),
-    path = require('path'),
-    fs = require('fs'),
-    mongoose = require('mongoose'),
-    sunlight = require('sunlight-congress-api');
+  path = require('path'),
+  fs = require('fs'),
+  mongoose = require('mongoose'),
+  sunlight = require('sunlight-congress-api');
 
 /**
  * Main application file
  */
 
-
-
 // Default node environment to development
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
-
+console.log('process.env server file', process.env.NODE_ENV);
 // Application Config
 var config = require('./lib/config/config');
 

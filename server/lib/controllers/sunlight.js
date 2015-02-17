@@ -3,7 +3,8 @@
 var fs = require('fs'),
   sunlight = require('sunlight-congress-api'),
   config = require('../config/config'),
-  apikey = config.apikey,
+  gm = require('./googlemaps'),
+  apikey = config.sunlightLabs.apikey,
   mongoose = require('mongoose'),
   _ = require('lodash'),
   Congressman = mongoose.model('Congressman');
@@ -319,7 +320,9 @@ exports.searchDistrictByZipCode = function (req, res, next) {
               res.send(data);
             }
           });
-      } else {
+      } else if (!_.isUndefined(data.count) && (data.count === 2)) {
+        console.log('getting city and state information for zip code, multiple districts');
+        gm.getLocationInfoByZipCode(zipCode);
         res.send(data);
       }
     });

@@ -10,7 +10,8 @@
         "passport": "latest",
         "passport-local": "latest",
         "ejs": "~0.8.4",
-        "sunlight-congress-api": "latest"
+        "sunlight-congress-api": "latest",
+        "googlemaps": "latest"
     },
     "devDependencies": {
         "grunt": "~0.4.1",
