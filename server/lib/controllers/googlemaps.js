@@ -14,9 +14,8 @@ exports.getLocationInfoByZipCode = function (zipCode) {
       if (err) {
         console.error('error getting addy data ', err);
       } else if(data) {
-//  TODO: get formatted address and return to frontend formatted address will have the city state and zip code
+        
       }
     });  
   }
-  
 };
