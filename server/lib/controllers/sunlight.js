@@ -3,7 +3,8 @@
 var fs = require('fs'),
   sunlight = require('sunlight-congress-api'),
   config = require('../config/config'),
-  apikey = config.apikey,
+  googleMapsApi = require('./googlemaps'),
+  apikey = config.sunlightLabs.apikey,
   mongoose = require('mongoose'),
   _ = require('lodash'),
   Congressman = mongoose.model('Congressman');
@@ -297,12 +298,38 @@ exports.loadSenators = function (req, res, next) {
   res.send(data);
 };
 
+exports.searchDistrictByAddress = function (req, res, next) {
+  var address = req.query.address;
+  googleMapsApi.getCoords(address).then(function(coordsData) {
+    sunlight.districtsLocate()
+      .addCoordinates(coordsData)
+      .call()
+      .then(function (data) {
+        if (!_.isUndefined(data.count) && (data.count === 1)) {
+          getCongressmenForDistrict(data.results[0])
+            .addBack(function (err, queryResults) {
+              if (err) {
+                console.error('error getting data from query ', err);
+              } else if (!_.isUndefined(queryResults)) {
+                data.results[0].congressmen = queryResults;
+                res.send(data);
+              } else {
+                res.send(data);
+              }
+            });
+        } else {
+          res.send(data);
+        }
+      });
+  });
+};
+
 /**
  * search for district by zipcode
  */
 exports.searchDistrictByZipCode = function (req, res, next) {
   var zipCode = req.params.zipCode;
-
+  
   sunlight.districtsLocate()
     .addZip(zipCode)
     .call()
@@ -319,8 +346,11 @@ exports.searchDistrictByZipCode = function (req, res, next) {
               res.send(data);
             }
           });
-      } else {
-        res.send(data);
+      } else if (!_.isUndefined(data.count) && (data.count === 2)) {
+        googleMapsApi.getLocationInfoByZipCode(zipCode).then(function(addressData){
+          data.results.push({address: addressData});
+          res.send(data);
+        });
       }
     });
 

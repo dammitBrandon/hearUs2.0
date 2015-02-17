@@ -22,6 +22,9 @@ angular.module('hearUsFilters', [])
   })
   .filter('congressmanNameFilter', function ($log) {
     return function (congressmanObj) {
+      if(_.isUndefined(congressmanObj)) {
+        return;
+      }
       var name = '';
 
       if (!_.isNull(congressmanObj.first_name) && !_.isUndefined(congressmanObj.first_name)) {
