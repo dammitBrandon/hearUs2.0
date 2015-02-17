@@ -45,45 +45,25 @@ angular.module('districtSearch', [
 //                  ModalService.openModal($stateParams.zipCode);
 
                   var modalDefaults = {
-                    template: "<div>" +
-                      "<h3>We Need more info!</h3>" +
-                      "<div>" +
-                      " <p>We were unable to determine your district please provied additional information.</p>" +
-                      " <div class='row collapse'>" +
-                      "   <div class='columns small-5'>" +
-                      "     <input type='text' placeholder='Street Address' ng-model='streetAddress'/>" +
-                      "   </div>" +
-                      "   <div class='columns small-7'>" +
-                      "     <span class='postfix'>{{address}}</span>" +
-                      "   </div>" +
-                      " </div>" +
-                      "   <div class='row collapse'>" +
-                      "     <div class='columns small-4 large-3'>" +
-                      "       <span class='prefix'>{{zipCode}}</span>" +
-                      "     </div>" +
-                      "     <div class='columns small-8 large-9'>" +
-                      "     <input type='text' placeholder='+ 4'/>" +
-                      "     </div>" +
-                      "   </div>" +
-                      "   <div class='row collapse'>" +
-                      "     <div class='columns small-4 large-3'>" +
-                      "       <span class='prefix'>Geolocate</span>" +
-                      "     </div>" +
-                      "     <div class='columns small-8 large-9'>" +
-                      "       <hu-geolocate ng-click='ok()'></hu-geolocate>" +
-                      "     </div>" +
-                      "</div>" +
-                      "   <button class='button left' ng-click='cancel()'>Cancel</button>" +
-                      "   <button class='button right' ng-click='ok()'>Find</button>" +
-                      " </div>" +
-                      "</div>",
+                    templateUrl: 'districtSearch/moreInfoModal.html',
                     backdrop: true,
                     keyboard: true,
                     controller: function ($scope, $log, $modalInstance) {
                       $scope.address = districtData.results[2];
                       $scope.zipCode = $stateParams.zipCode;
+                      
                       $scope.ok = function () {
-                        $modalInstance.close();
+                        var fullAddress = $scope.$$childTail.$$childTail.streetName + ', ' + $scope.address;
+                        SunlightService.getDistrictByAddress(fullAddress).then(function(modalDistrictData) {
+                          $log.log('data in resolve get street, ', modalDistrictData);
+                          district = {
+                            state: modalDistrictData.results[0].state,
+                            districtNumber: modalDistrictData.district,
+                            count: modalDistrictData.count
+                          };
+                          $modalInstance.close();
+                          return district;
+                        });
                       };
 
                       $scope.cancel = function () {
@@ -94,16 +74,6 @@ angular.module('districtSearch', [
 
                   $modal.open(modalDefaults);
 
-                  var districtsArray = _.map(districtData.results, function (districtNumber) {
-                    return districtNumber.district;
-
-                  });
-                  district = {
-                    state: districtData.results[0].state,
-                    districtNumber: districtsArray,
-                    count: districtData.count
-                  };
-                  return district;
                 }
               });
             }

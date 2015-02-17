@@ -26,6 +26,7 @@ module.exports = function (app, config) {
   app.get('/api/sunlight/congressman/bills/:id', sunlightApi.billsSponsoredByCongressman);
   app.get('/api/sunlight/congressman/:id', sunlightApi.getCongressmanById);
   app.get('/api/sunlight/district/lat/:lat/long/:long', sunlightApi.searchDistrictCoords);
+  app.get('/api/sunlight/district/address', sunlightApi.searchDistrictByAddress);
   app.get('/api/sunlight/district/:zipCode', sunlightApi.searchDistrictByZipCode);
   app.get('/api/sunlight/representatives', sunlightApi.loadHouseReps);
   app.get('/api/sunlight/senators', sunlightApi.loadSenators);
