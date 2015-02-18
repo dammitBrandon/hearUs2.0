@@ -13,4 +13,3 @@ client/.sass-cache
 # files to ignore in server dir
 
 server/node_modules
-server/testData/

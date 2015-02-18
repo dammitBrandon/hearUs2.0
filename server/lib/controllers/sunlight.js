@@ -44,15 +44,6 @@ var success = function (data) {
   };
 };
 
-var gunControlBills = sunlight.billsSearch();
-gunControlBills.fields("official_title", "introduced_on", "last_vote_at", "popular_title", "short_title", "keywords", "summary_short");
-gunControlBills.search("\"gun control\"~5");
-gunControlBills.call(saveTestData("GunControlBills"));
-
-var districtBills = sunlight.districtsLocate();
-districtBills.addZip("60653");
-districtBills.call(saveTestData("DistrictBills"));
-
 /**
  * load json data
  */
