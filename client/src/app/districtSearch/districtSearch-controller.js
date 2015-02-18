@@ -41,11 +41,23 @@ angular.module('districtSearch.controllers', [
 
           $scope.ok = function () {
             var fullAddress = $scope.$$childTail.$$childTail.streetName + ', ' + $scope.address.address;
-            SunlightService.getDistrictByAddress(fullAddress).then(function (modalDistrictData) {
+            var plusFourZipCode = $scope.$$childTail.$$childTail.plusFourZipCode;
+            
+            if (!_.isUndefined(plusFourZipCode) && plusFourZipCode) {
+              var fullZipCode = $scope.zipCode + "-" + plusFourZipCode;
+              getDistrictByAddress(fullZipCode);
+              
+            } else if (!_.isUndefined($scope.$$childTail.$$childTail.streetName) && fullAddress) {
+              getDistrictByAddress(fullAddress);
+            }
+          };
+          
+          function getDistrictByAddress(address) {
+            SunlightService.getDistrictByAddress(address).then(function (modalDistrictData) {
               $rootScope.$broadcast('district:located', modalDistrictData);
               $modalInstance.close();
             });
-          };
+          }
 
           $scope.cancel = function () {
             $modalInstance.dismiss('cancel');
@@ -66,10 +78,6 @@ angular.module('districtSearch.controllers', [
         }
       });
     });
-
-    $scope.test = function () {
-      $log.log('test ');
-    };
-
+    
     initDistrictSearch();
   });

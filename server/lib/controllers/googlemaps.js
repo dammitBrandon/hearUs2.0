@@ -17,7 +17,7 @@ exports.getLocationInfoByZipCode = function (zipCode) {
   if (!_.isUndefined(zipCode)) {
     gm.geocode(zipCode, function (err, data) {
       if (err) {
-        console.error('error getting addy data ', err);
+        console.error('error getting address data #getLocationInfoByZipCode', err);
         deferred.reject(err);
       } else if (data) {
         address = data.results[0].formatted_address;
@@ -36,7 +36,7 @@ exports.getCoords = function (address) {
   if (!_.isUndefined(address)) {
     gm.geocode(address, function (err, data) {
       if (err) {
-        console.log('error getting addy data ', err);
+        console.log('error getting addy data #getCoords', err);
         deferred.reject(err);
       } else if (data) {
         coords = {
