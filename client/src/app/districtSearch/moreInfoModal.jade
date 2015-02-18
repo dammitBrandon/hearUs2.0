@@ -21,7 +21,7 @@ div
           span.prefix Geolocate
             
         .columns.small-8.large-9
-          hu-geolocate
+          hu-geolocate(ng-click='cancel();')
         
       button.button.left(ng-click='cancel()') Cancel
       button.button.right(ng-click='ok()') Find

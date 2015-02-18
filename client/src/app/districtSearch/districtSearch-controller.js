@@ -50,12 +50,14 @@ angular.module('districtSearch.controllers', [
             } else if (!_.isUndefined($scope.$$childTail.$$childTail.streetName) && fullAddress) {
               getDistrictByAddress(fullAddress);
             }
+            $log.log('closing');
+            $modalInstance.close();
           };
           
           function getDistrictByAddress(address) {
             SunlightService.getDistrictByAddress(address).then(function (modalDistrictData) {
               $rootScope.$broadcast('district:located', modalDistrictData);
-              $modalInstance.close();
+              return;
             });
           }
 
@@ -77,6 +79,7 @@ angular.module('districtSearch.controllers', [
           $scope.houseRep = congressman;
         }
       });
+      return;
     });
     
     initDistrictSearch();
