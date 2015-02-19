@@ -1,5 +1,7 @@
 .idea/
 
+/node_modules
+
 # files to ignore in client dir
 
 client/*.sw*

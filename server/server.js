@@ -3,8 +3,7 @@
 var express = require('express'),
   path = require('path'),
   fs = require('fs'),
-  mongoose = require('mongoose'),
-  sunlight = require('sunlight-congress-api');
+  mongoose = require('mongoose');
 
 /**
  * Main application file
@@ -29,6 +28,8 @@ fs.readdirSync(modelsPath).forEach(function (file) {
 require('./lib/config/dummydata');
 require('./lib/config/seedData');
   
+console.log('testing twitter');
+require('./lib/controllers/twitter');
 // Passport Configuration
 require('./lib/config/passport')();
 
