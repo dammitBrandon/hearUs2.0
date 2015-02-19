@@ -22,3 +22,12 @@
     span Additional resources:
     div(style="padding-left: 10px;", ng-repeat="(resource, url) in bill.urls")
       a(href="{{url}}") {{resource | capitalizeFilter}}
+        
+  .twitter-feed
+    span Tweets related to {{bill.bill_id}}
+    div
+      ul
+        li(ng-repeat="tweet in tweetCollection")
+          p( ng-bind="tweet.text")
+          h6 {{tweet.user.screen_name}}
+      

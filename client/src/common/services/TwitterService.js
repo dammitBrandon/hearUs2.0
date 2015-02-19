@@ -8,15 +8,15 @@ angular.module('services.TwitterApi', [
     
     function searchTweets(billSearchParams) {
       var deferred = $q.defer();
-      var url = baseUrl + '/search/bill';
+      var url = baseUrl + 'search/bill';
       
       $http({
         method: 'GET',
         url: url,
-        params: {q: billSearchParams}
+        params: {searchQuery: billSearchParams}
       })
         .success(function(data, status, headers, config) {
-                    $log.debug('successful getting tweets based on bill', data);
+          $log.debug('successful getting tweets based on bill', data);
           deferred.resolve(data);
         })
         .error(function(err, status, headers, config) {
