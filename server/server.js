@@ -29,7 +29,6 @@ require('./lib/config/dummydata');
 require('./lib/config/seedData');
   
 console.log('testing twitter');
-require('./lib/controllers/twitter');
 // Passport Configuration
 require('./lib/config/passport')();
 

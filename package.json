@@ -16,7 +16,8 @@
         "passport-local": "latest",
         "ejs": "~0.8.4",
         "sunlight-congress-api": "latest",
-        "twitter-js-client": "~0.0.5"
+        "twitter-js-client": "~0.0.5",
+        "node-twitter": "latest"
     },
     "devDependencies": {},
     "engines": {
