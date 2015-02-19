@@ -12,7 +12,6 @@ var twit = new Twitter.SearchClient(
   config.twitter.accessTokenSecret
 );
 
-console.log('search for hr234');
 
 twit.search({'q': 'hr234', 'count': 100, 'result_type': 'recent'}, function(error, results) {
   if (error) {
