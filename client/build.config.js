@@ -70,7 +70,6 @@ module.exports = {
       'vendor/skrollr/src/skrollr.js',
       'vendor/scrollReveal.js/scrollReveal.js',
       'vendor/angular/angular.js',
-      'vendor/angular-bootstrap/ui-bootstrap-tpls.min.js',
       'vendor/angular-ui-router/release/angular-ui-router.js',
       'vendor/angular-ui-utils/ui-utils.js',
       'vendor/angular-ui-map/ui-map.js',

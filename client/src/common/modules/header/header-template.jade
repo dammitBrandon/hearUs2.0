@@ -1,15 +1,15 @@
-.fixed
-  nav.top-bar(data-topbar, role="navigation")
-      ul.title-area
-        li.name
-          h2
-            a(ui-sref="landingPage") The Hear Us Project
-        li.toggle-topbar.menu-icon
-          i.fa.fa-bars
-        
-      section.top-bar-section
-        ul.right  
-          li
-            a(href="#") Learn More
-          li
-            a(href="#") About this Project
+div(ng-controller="HeaderCtrl")
+  top-bar
+    ul.title-area
+      li.name
+        h2
+          a(ui-sref="landingPage") The Hear Us Project
+      li.menu-icon(toggle-top-bar)
+        a(href="#") Menu
+          
+    top-bar-section
+      ul.right
+        li
+          a First
+        li
+          a 2nd
