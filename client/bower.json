@@ -2,7 +2,6 @@
   "name": "HearUsProject",
   "version": "0.0.1",
   "devDependencies": {
-    "bootstrap-sass": "git://github.com/twbs/bootstrap-sass.git#~3.1.1",
     "angular": "~1.3.0-beta",
     "angular-mocks": "1.2.12",
     "angular-ui-utils": "0.1.1",
