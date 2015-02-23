@@ -1,6 +1,7 @@
 'use strict';
 
 var fs = require('fs'),
+  _ = require('lodash'),
   Twitter = require('node-twitter'),
   config = require('../config/config'),
   util = require('util');
@@ -30,8 +31,14 @@ var loadJsonFile = function (filename) {
 
 exports.searchForBill = function (req, res, next) {
   var searchQueryParams = req.query.searchQuery;
+//  twit.search({'q': 'guns'}, function(error, data) {
+//    
+//    if(!_.isUndefined(other.search_metadata.next_results)) {
+//      console.log('get additional tweets');
+//    }
+//  });
   
-  var filename = 'twitterSearchResultsForHr234.json';
+  var filename = 'twitterSearchResultsForGuns.json';
   var data = loadJsonFile(filename);
   res.send(data);
   
