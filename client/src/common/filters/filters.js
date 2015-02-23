@@ -91,4 +91,18 @@ angular.module('hearUsFilters', [])
         return state;
       }
     };
+  })
+  .filter('addressFilter', function ($log) {
+    return function(address) {
+      var Country = /, USA/;
+      
+      var testForCountry = Country.exec(address);
+      
+      if (testForCountry) {
+        return testForCountry.input.substring(0, testForCountry.index);
+      } else {
+        return address;
+      }
+      
+    };
   });

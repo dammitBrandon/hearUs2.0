@@ -8,7 +8,7 @@ div
         .columns.small-5
           input(type='text', placeholder='Street Address', ng-model='streetName')
         .columns.small-7
-          span.postfix {{address.address}}
+          span.postfix {{address.address | addressFilter}}
             
       .row.collapse
         .columns.small-4.large-3

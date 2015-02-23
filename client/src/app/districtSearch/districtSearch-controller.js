@@ -18,7 +18,7 @@ angular.module('districtSearch.controllers', [
           }
         });
 
-      } else if (districtInfo.count > 2) {
+      } else if (districtInfo.count > 1) {
 
         requestAdditionalInformation(districtInfo);
       }
