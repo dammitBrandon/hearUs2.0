@@ -315,9 +315,6 @@ exports.searchDistrictByAddress = function (req, res, next) {
   });
 };
 
-/**
- * search for district by zipcode
- */
 exports.searchDistrictByZipCode = function (req, res, next) {
   var zipCode = req.params.zipCode;
   
