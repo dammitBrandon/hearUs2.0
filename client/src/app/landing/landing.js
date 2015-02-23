@@ -10,7 +10,7 @@ angular.module('landing', [
                 views: {
                     "main": {
                         controller: "landingCtrl",
-                        templateUrl: "landing/mobile-landing-template.html"
+                        templateUrl: "landing/landing-template.html"
                     }
                 },
                 data: { pageTitle: "Hear Us" }

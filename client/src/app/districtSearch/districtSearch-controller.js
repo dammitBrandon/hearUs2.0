@@ -7,7 +7,7 @@ angular.module('districtSearch.controllers', [
 
     function initDistrictSearch() {
       $scope.senators = [];
-
+      $log.log('info ', districtInfo);
       if (districtInfo.count === 1 || districtInfo.count === 0) {
         $scope.district = districtInfo.district;
         _.forEach(districtInfo.congressmen, function (congressman) {
@@ -18,42 +18,36 @@ angular.module('districtSearch.controllers', [
           }
         });
 
-      } else if (districtInfo.count === 2) {
-//                  zipcode returned 2 districts, need to find out the district that the user is apart of
-//                  what can we do? 1. get the street and find the lat and long from the street, 2. geolocate
-//                  3. we can show them the two districts and let them choose the district that they are apart of
-//                  4. we can get them to enter the +4 for the zip code
-        
+      } else if (districtInfo.count > 2) {
+
         requestAdditionalInformation(districtInfo);
       }
     }
 
     function requestAdditionalInformation(districtInfo) {
-//  TODO: Implement ModalService
-      
+
       var modalDefaults = {
         templateUrl: 'districtSearch/moreInfoModal.html',
         backdrop: true,
         keyboard: true,
         controller: function ($scope, $rootScope, $log, $modalInstance) {
-          $scope.address = districtInfo.results[2];
+          $scope.address = _.last(districtInfo.results);
           $scope.zipCode = $stateParams.zipCode;
 
           $scope.ok = function () {
             var fullAddress = $scope.$$childTail.$$childTail.streetName + ', ' + $scope.address.address;
             var plusFourZipCode = $scope.$$childTail.$$childTail.plusFourZipCode;
-            
+
             if (!_.isUndefined(plusFourZipCode) && plusFourZipCode) {
               var fullZipCode = $scope.zipCode + "-" + plusFourZipCode;
               getDistrictByAddress(fullZipCode);
-              
+
             } else if (!_.isUndefined($scope.$$childTail.$$childTail.streetName) && fullAddress) {
               getDistrictByAddress(fullAddress);
             }
-            $log.log('closing');
             $modalInstance.close();
           };
-          
+
           function getDistrictByAddress(address) {
             SunlightService.getDistrictByAddress(address).then(function (modalDistrictData) {
               $rootScope.$broadcast('district:located', modalDistrictData);
@@ -81,6 +75,6 @@ angular.module('districtSearch.controllers', [
       });
       return;
     });
-    
+
     initDistrictSearch();
   });

@@ -25,6 +25,7 @@ angular.module('districtSearch', [
             districtInfo: function ($log, $stateParams, SunlightService, $modal, ModalService) {
               return SunlightService.getDistrictByZipCode($stateParams.zipCode).then(function (districtData) {
                 var district = {};
+                $log.log('count in resolve ', districtData);
                 if (districtData.count === 1 || districtData.count === 0) {
                   district = {
                     state: districtData.results[0].state,
@@ -35,7 +36,7 @@ angular.module('districtSearch', [
                     congressmen: districtData.results[0].congressmen,
                     count: districtData.count
                   };
-                } else if (districtData.count === 2) {
+                } else if (districtData.count > 2) {
                 return districtData;
 
                 }
