@@ -56,6 +56,12 @@ angular.module('districtSearch.controllers', [
           $scope.cancel = function () {
             $modalInstance.dismiss('cancel');
           };
+
+          $rootScope.$on('$stateChangeStart', function(event, toState, fromState, fromParams) {
+            if (toState.url === "/") {
+              $modalInstance.dismiss('cancel');
+            }
+          });
         }
       };
 
