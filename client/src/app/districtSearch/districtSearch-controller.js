@@ -7,7 +7,7 @@ angular.module('districtSearch.controllers', [
 
     function initDistrictSearch() {
       $scope.senators = [];
-
+      $log.log('info ', districtInfo);
       if (districtInfo.count === 1 || districtInfo.count === 0) {
         $scope.district = districtInfo.district;
         _.forEach(districtInfo.congressmen, function (congressman) {
@@ -18,7 +18,12 @@ angular.module('districtSearch.controllers', [
           }
         });
 
+<<<<<<< Updated upstream
       } else if (districtInfo.count === 2) {
+=======
+      } else if (districtInfo.count > 2) {
+
+>>>>>>> Stashed changes
         requestAdditionalInformation(districtInfo);
       }
     }
@@ -30,7 +35,7 @@ angular.module('districtSearch.controllers', [
         backdrop: true,
         keyboard: true,
         controller: function ($scope, $rootScope, $log, $modalInstance) {
-          $scope.address = districtInfo.results[2];
+          $scope.address = _.last(districtInfo.results);
           $scope.zipCode = $stateParams.zipCode;
 
           $scope.ok = function () {
