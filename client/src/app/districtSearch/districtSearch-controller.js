@@ -17,13 +17,7 @@ angular.module('districtSearch.controllers', [
             $scope.houseRep = congressman;
           }
         });
-
-<<<<<<< Updated upstream
-      } else if (districtInfo.count === 2) {
-=======
-      } else if (districtInfo.count > 2) {
-
->>>>>>> Stashed changes
+      } else if (districtInfo.count > 1) {
         requestAdditionalInformation(districtInfo);
       }
     }
