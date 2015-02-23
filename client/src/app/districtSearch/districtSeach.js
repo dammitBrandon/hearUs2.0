@@ -35,7 +35,7 @@ angular.module('districtSearch', [
                     congressmen: districtData.results[0].congressmen,
                     count: districtData.count
                   };
-                } else if (districtData.count === 2) {
+                } else if (districtData.count > 2) {
                 return districtData;
 
                 }

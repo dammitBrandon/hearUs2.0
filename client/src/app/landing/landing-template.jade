@@ -1,27 +1,17 @@
-.container(style="vertical-align: middle;")
-  .row.text-center
-    h1 The project that allows us to keep our Congress accountable.  We the people.
-      
-  .row.text-center
-    span Find
-    br
-    .row
-      .columns.small-3.small-offset-3.medium-offset-2.medium-4
-        .row.collapse
-          .small-9.columns
-            input(type="text", placeholder="Bills", ng-click="findTopic", ng-model="searchTopic")
+form
+  .row
+    .small-12.large-6.columns
+      .row.collapse.postfix-radius
+        .small-9.columns
+          input(type="text", placeholder="Search For Bills", ng-model="searchTopic")
+        .small-3.columns
+          button.button.postfix(type="button", ng-click="findTopic()") Find
+    .small-12.large-6.columns
+      .row.collapse.postfix-radius
+        .small-7.columns
+          input(type="text", placeholder="Search For District", ng-model="zipCode")
+        .button-group
+          .small-2.columns
+            hu-geolocate
           .small-3.columns
-            button.button.postfix(type="button", ng-click="findTopic()") Go
-      
-      .columns.small-3.medium-4.end
-        .row.collapse
-          .small-7.columns
-            input(type="text", placeholder="Your District", ng-click="findDistrictLanding", ng-model="zipCode")
-          .button-group
-            .small-2.columns
-              hu-geolocate
-            .small-3.columns
-              button.button.postfix(type="button", ng-click="findDistrictLanding()") Go
-            
-    br
-    span We never store or share your info with third parties, let alone persist it.
+            button.button.postfix(type="button", ng-click="findDistrictLanding()") Disrict
