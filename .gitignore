@@ -1,4 +1,7 @@
 .idea/
+node_modules/
+
+/node_modules
 
 # files to ignore in client dir
 
@@ -13,4 +16,3 @@ client/.sass-cache
 # files to ignore in server dir
 
 server/node_modules
-server/testData/

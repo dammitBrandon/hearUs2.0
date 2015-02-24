@@ -44,15 +44,6 @@ var success = function (data) {
   };
 };
 
-var gunControlBills = sunlight.billsSearch();
-gunControlBills.fields("official_title", "introduced_on", "last_vote_at", "popular_title", "short_title", "keywords", "summary_short");
-gunControlBills.search("\"gun control\"~5");
-gunControlBills.call(saveTestData("GunControlBills"));
-
-var districtBills = sunlight.districtsLocate();
-districtBills.addZip("60653");
-districtBills.call(saveTestData("DistrictBills"));
-
 /**
  * load json data
  */
@@ -324,14 +315,11 @@ exports.searchDistrictByAddress = function (req, res, next) {
   });
 };
 
-/**
- * search for district by zipcode
- */
 exports.searchDistrictByZipCode = function (req, res, next) {
   var zipCode = req.params.zipCode;
   
   sunlight.districtsLocate()
-    .addZip(zipCode)
+    .addZipCode(zipCode)
     .call()
     .then(function (data) {
       if (!_.isUndefined(data.count) && (data.count === 1)) {
@@ -346,7 +334,7 @@ exports.searchDistrictByZipCode = function (req, res, next) {
               res.send(data);
             }
           });
-      } else if (!_.isUndefined(data.count) && (data.count === 2)) {
+      } else if (!_.isUndefined(data.count) && (data.count > 1)) {
         googleMapsApi.getLocationInfoByZipCode(zipCode).then(function(addressData){
           data.results.push({address: addressData});
           res.send(data);
