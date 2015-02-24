@@ -1,9 +1,9 @@
 angular.module('hearUsFilters', [])
   .filter('titleFilter', function () {
     return function (bill) {
-      if (!_.isNull(bill.popular_title)) {
+      if (!_.isNull(bill.popular_title) && !_.isEmpty(bill.popular_title)) {
         return bill.popular_title;
-      } else if (!_.isNull(bill.short_title)) {
+      } else if (!_.isNull(bill.short_title) && !_.isEmpty(bill.short_title)) {
         return bill.short_title;
       } else {
         return bill.official_title;
