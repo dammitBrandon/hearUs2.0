@@ -31,7 +31,7 @@ angular.module('hearUsFilters', [])
         name += congressmanObj.first_name;
       }
 
-      if (!_.isNull(congressmanObj.middle_name) && !_.isUndefined(congressmanObj.middle_name)) {
+      if (!_.isNull(congressmanObj.middle_name) && !_.isUndefined(congressmanObj.middle_name) && !_.isEmpty(congressmanObj.middle_name)) {
         name += " " + congressmanObj.middle_name;
       }
 
