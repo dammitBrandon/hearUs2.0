@@ -83,10 +83,10 @@ angular.module('hearUsFilters', [])
       }
     };
   })
-  .filter('stateFilter', function ($log, states) {
+  .filter('stateFilter', function ($log, STATES) {
     return function (state) {
-      if (!_.isUndefined(states[state])) {
-        return states[state];
+      if (!_.isUndefined(STATES[state])) {
+        return STATES[state];
       } else {
         return state;
       }

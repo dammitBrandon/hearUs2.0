@@ -1,7 +1,6 @@
 angular.module('districtSearch', [
   'ui.router',
   'districtSearch.controllers',
-  'test.controllers',
   'services.SunlightApi'
 ]).config(function districtSearchConfig($stateProvider) {
   $stateProvider
