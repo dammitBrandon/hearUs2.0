@@ -5,7 +5,6 @@ var express = require('express'),
   cookieParser = require('cookie-parser'),
   errorHandler = require('errorhandler'),
   morgan = require('morgan'),
-  json = require('express-json'),
   bodyParser = require('body-parser'),
   methodOverride = require('method-override'),
   compression = require('compression'),
@@ -73,8 +72,8 @@ module.exports = function (app, config) {
   app.engine('html', require('ejs').renderFile);
   app.set('view engine', 'html');
   app.use(morgan('dev'));
-  app.use(json());
-  app.use(bodyParser.urlencoded());
+  app.use(bodyParser.json());
+  app.use(bodyParser.urlencoded({ extended: true }));
   app.use(methodOverride());
 //    app.use(express.cookieParser());
 
