@@ -40,8 +40,6 @@ InMemoryUserRepository.prototype.save = function(user, callback) {
       user.set('id', id);
     }
   }
-  
-  console.log('user being stored', user);
 
   this._store[user._attrs._id] = user;
   callback(null, user);
