@@ -1,0 +1,12 @@
+form(name="form.sign-up")
+  .row
+    .small-12.large-12.columns
+      .row.collapse.radius
+        input(type="email", placeholder="email", ng-model="user.email")
+    .small-12.large-12.columns
+      .row.collapse.radius
+        input(type="password", placeholder="password", ng-model="user.password")
+    .small-12.large-12.columns
+      .row.collapse.radius
+        input(type="password", placeholder="re enter password", ng-model="user.verifyPassword")
+    button.button(type="button", ng-click="signUp()") Sign Up

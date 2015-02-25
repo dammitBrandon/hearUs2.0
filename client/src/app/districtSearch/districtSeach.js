@@ -9,7 +9,7 @@ angular.module('districtSearch', [
       abstract: true,
       views: {
         "main": {
-          templateUrl: "districtSearch/districtSearch-template.html"
+          templateUrl: "templates/child-view-container.html"
         }
       },
 //        TODO: dynamically update the data to reflect the zipcode

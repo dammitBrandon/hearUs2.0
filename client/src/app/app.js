@@ -7,6 +7,7 @@ angular.module('hearUs', [
   'ui.router',
   'ui.map',
   'mm.foundation',
+  'auth',
   'landing',
   'issueSearch',
   'districtSearch',
