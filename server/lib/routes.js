@@ -1,7 +1,6 @@
 'use strict';
 
 var express = require('express'),
-  passport = require('passport'),
   index = require('./controllers'),
   users = require('./controllers/users'),
   session = require('./controllers/session'),
@@ -12,7 +11,7 @@ var middleware = require('./middleware');
 /**
  * Application routes
  */
-module.exports = function (app, config) {
+module.exports = function (app, config, passport) {
 
   app.post('/api/users', users.create);
   app.put('/api/users', users.changePassword);

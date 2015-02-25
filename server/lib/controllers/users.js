@@ -10,6 +10,8 @@ var UserRepository = require('../repositories/UserRepository'),
 exports.create = function (req, res, next) {
   var newUser = new User(req.body);
   newUser.set('provider', 'local');
+  // As of right now we just want to set the users role  
+  newUser.set('role', '1');
 
   UserRepository.save(newUser, function(err) {
     if (err) {
@@ -23,7 +25,11 @@ exports.create = function (req, res, next) {
     req.logIn(newUser, function(err) {
       if (err) return next(err);
       
-      return res.json(req.user.userInfo);
+      return res.json({
+        id: req.user.get('id'),
+        email: req.user.get('email'),
+        role: req.user.get('role')
+      });
     });
   });
 };

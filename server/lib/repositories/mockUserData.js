@@ -8,7 +8,7 @@ module.exports = [
   {
     firstName: 'Test',
     lastName: 'User2',
-    email: 'test1@slalom.com',
+    email: 'test2@slalom.com',
     password: 'password1'
   }
 ];

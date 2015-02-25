@@ -19,7 +19,7 @@ var UserSchema = new Schema({
   },
   role: {
     type: String,
-    default: 'user'
+    default: '0'
   },
   hashedPassword: String,
   provider: String,

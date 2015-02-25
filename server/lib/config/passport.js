@@ -3,13 +3,12 @@
 var mongoose = require('mongoose'),
     User = mongoose.model('User'),
     UserRepository = require('../repositories/UserRepository'),
-    passport = require('passport'),
     LocalStrategy = require('passport-local').Strategy;
 
 /**
  * Passport configuration
  */
-module.exports = function() {
+module.exports = function(passport) {
   passport.serializeUser(function(user, done) {
     console.log('Serializing user with id %s', user.get('_id'));
     done(null, user.get('_id'));

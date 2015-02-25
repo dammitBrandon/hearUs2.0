@@ -11,14 +11,13 @@ var express = require('express'),
   favicon = require('serve-favicon'),
   path = require('path'),
   config = require('./config'),
-  passport = require('passport'),
   mongoStore = require('connect-mongo')(session),
   MemoryStore = session.MemoryStore;
 
 /**
  * Express configuration
  */
-module.exports = function (app, config) {
+module.exports = function (app, config, passport) {
   if (config.env === 'development') {
     //    app.use(require('connect-livereload')());
 

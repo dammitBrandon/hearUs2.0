@@ -1,6 +1,7 @@
 'use strict';
 
 var express = require('express'),
+  passport = require('passport'),
   path = require('path'),
   fs = require('fs'),
   mongoose = require('mongoose'),
@@ -31,15 +32,15 @@ require('./lib/config/dummydata');
 require('./lib/config/seedData');
   
 // Passport Configuration
-require('./lib/config/passport')();
+require('./lib/config/passport')(passport);
 
 var app = express();
 
 // Express settings
-require('./lib/config/express')(app, config);
+require('./lib/config/express')(app, config, passport);
 
 // Routing
-require('./lib/routes')(app, config);
+require('./lib/routes')(app, config, passport);
 
 // Start server
 app.listen(config.port, function () {
