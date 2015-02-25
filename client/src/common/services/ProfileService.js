@@ -6,13 +6,17 @@ angular.module('services.ProfileApi', [
 .factory('ProfileService', function($q, $http, $log) {
     var baseUrl = 'api/session';
     
-    function signup(userObj) {
+    function signUpAuth(userObj) {
       var deferred = $q.defer();
-      var url = baseUrl + 'sign-up';
+      var url = baseUrl + '/ServiceSignUpAuth';
+      
+      $log.log('user obj ', userObj);
       
       $http({
         method: 'POST',
-        url: url
+        url: url,
+        headers: { 'Content-Type': 'application/json'},
+        data: {userObj: userObj}
       })
         .success(function(data, status, headers, config) {
           $log.log('successful signing up in user', data);
@@ -27,6 +31,6 @@ angular.module('services.ProfileApi', [
     }
     
     return {
-      signup: signup
+      signUpAuth: signUpAuth
     };
   });

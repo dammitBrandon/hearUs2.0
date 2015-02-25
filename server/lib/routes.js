@@ -33,6 +33,7 @@ module.exports = function (app, config) {
 
   app.post('/api/session', session.login);
   app.del('/api/session', session.logout);
+  app.post('/api/session/ServiceSignUpAuth', users.create);
 
   // All other routes to use Angular routing in app/scripts/app.js
   app.get('/partials/*', index.partials);

@@ -6,15 +6,13 @@ angular.module('auth.controllers', [
     function initAuthPage() {
       $scope.user = {
         email: null,
-        password: null,
-        verifyPassword: null
+        password: null
       };
+      $scope.verifyPassword = null;
     }
     
     $scope.signUp = function() {
-      $log.log('email ', $scope.user.email);
-      $log.log('password ', $scope.user.password);
-      $log.log('matching?', _.isEqual($scope.user.password, $scope.user.verifyPassword));
+      ProfileService.signUpAuth($scope.user);
     };
     
     initAuthPage();
