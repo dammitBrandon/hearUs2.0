@@ -3,7 +3,7 @@
 var fs = require('fs'),
   sunlight = require('sunlight-congress-api'),
   config = require('../config/config'),
-  googleMapsService = require('./../services/googleMapsService'),
+  googleMapsService = require('../services/googleMapsService'),
   apikey = config.sunlightLabs.apikey,
   mongoose = require('mongoose'),
   _ = require('lodash'),

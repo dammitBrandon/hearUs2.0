@@ -10,8 +10,6 @@
          
     div 
       h5 Senators 
-        ul.no-bullet
+        ul.no-bullet(ng-repeat="senator in senators")
           li
-            a(ng-bind="senators[0] | congressmanNameFilter", ui-sref="congressman({id: senators[0].bioguide_id})")
-          li
-            a(ng-bind="senators[1] | congressmanNameFilter", ui-sref="congressman({id: senators[1].bioguide_id})")
+            a(ng-bind="senator | congressmanNameFilter", ui-sref="congressman({id: senator.bioguide_id})")
