@@ -11,9 +11,9 @@ angular.module('bill', [
             controller: 'billCtrl',
             templateUrl: "bill/bill-template.html",
             resolve: {
-              bill: function($log, $stateParams, SunlightService) {
+              bill: function($log, $stateParams, sunlightService) {
                 
-                return SunlightService.getBill($stateParams.id).then(function(billData){
+                return sunlightService.getBill($stateParams.id).then(function(billData){
                   var bill;
                   if(billData.count === 1) {
                     bill = billData.results[0];
