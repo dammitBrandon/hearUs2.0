@@ -13,12 +13,21 @@ angular.module('auth', [
           
         }
       })
-      .state('auth.signup', {
-        url: '/signup',
+      .state('auth.sign_up', {
+        url: '/sign_up',
         views: {
           "childView": {
             controller: "authCtrl",
             templateUrl: "auth/sign-up.html"
+          }
+        }
+      })
+      .state('auth.sign_in', {
+        url: '/sign_in',
+        views: {
+          "childView": {
+            controller: "authCtrl",
+            templateUrl: "auth/sign-in.html"
           }
         }
       });

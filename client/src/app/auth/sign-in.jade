@@ -1,0 +1,13 @@
+form(name="form.sign-in")
+  .row
+    .small-12.large-12.columns
+      .large-6.large-offset-3.small-12.columns
+        .row.collapse.radius
+          input(type="email", placeholder="email", ng-model="user.email")
+        .row.collapse.radius
+          input(type="password", placeholder="Password", ng-model="user.password")
+        ul.button-group.even-2
+          li
+            a.button.tertiary.large-offset-2.small-6(ui-sref="auth.sign_up") Sign up
+          li 
+            button.button.small-6(type="button", ng-click="signUp()") Sign in
