@@ -3,7 +3,7 @@ angular.module('districtSearch.controllers', [
   'services.SunlightApi',
   'services.hearUsModal'
 ]).
-  controller('districtSearchCtrl', function districtSearchController($scope, $rootScope, $state, $stateParams, $log, districtInfo, SunlightService, $modal) {
+  controller('districtSearchCtrl', function districtSearchController($scope, $rootScope, $state, $stateParams, $log, districtInfo, sunlightService, $modal) {
 
     function initDistrictSearch() {
       $scope.senators = [];
@@ -47,7 +47,7 @@ angular.module('districtSearch.controllers', [
           };
 
           function getDistrictByAddress(address) {
-            SunlightService.getDistrictByAddress(address).then(function (modalDistrictData) {
+            sunlightService.getDistrictByAddress(address).then(function (modalDistrictData) {
               $rootScope.$broadcast('district:located', modalDistrictData);
               return;
             });

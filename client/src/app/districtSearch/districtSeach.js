@@ -22,8 +22,8 @@ angular.module('districtSearch', [
           controller: "districtSearchCtrl",
           templateUrl: "districtSearch/district-landing-template.html",
           resolve: {
-            districtInfo: function ($log, $stateParams, SunlightService, $modal, ModalService) {
-              return SunlightService.getDistrictByZipCode($stateParams.zipCode).then(function (districtData) {
+            districtInfo: function ($log, $stateParams, sunlightService, $modal, ModalService) {
+              return sunlightService.getDistrictByZipCode($stateParams.zipCode).then(function (districtData) {
                 var district = {};
                 if (districtData.count === 1 || districtData.count === 0) {
                   district = {
@@ -51,8 +51,8 @@ angular.module('districtSearch', [
           controller: "districtSearchCtrl",
           templateUrl: "districtSearch/district-landing-template.html",
           resolve: {
-            districtInfo: function ($log, $stateParams, SunlightService) {
-              return SunlightService.getDistrictByCoords({lat: $stateParams.lat, long: $stateParams.long}).then(function (districtData) {
+            districtInfo: function ($log, $stateParams, sunlightService) {
+              return sunlightService.getDistrictByCoords({lat: $stateParams.lat, long: $stateParams.long}).then(function (districtData) {
                 var district;
                 if (districtData.count == 1 || districtData.count === 0) {
                   district = {

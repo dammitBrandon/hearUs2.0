@@ -3,7 +3,7 @@
 angular.module('services.SunlightApi', [
   'ui.router'
 ])
-  .factory('SunlightService', function ($q, $http, $log) {
+  .factory('sunlightService', function ($q, $http, $log) {
     var baseUrl = '/api/sunlight/';
 
     function getIssues(issue) {
