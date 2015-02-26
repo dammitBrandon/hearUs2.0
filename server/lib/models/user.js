@@ -19,7 +19,7 @@ var UserSchema = new Schema({
   },
   role: {
     type: String,
-    default: '0'
+    default: '1'
   },
   hashedPassword: String,
   provider: String,
@@ -29,7 +29,6 @@ var UserSchema = new Schema({
 /**
  * Virtuals
  */
-
 UserSchema
   .virtual('password')
   .set(function (password) {
