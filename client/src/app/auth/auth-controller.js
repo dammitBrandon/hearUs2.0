@@ -15,5 +15,10 @@ angular.module('auth.controllers', [
       ProfileService.signUpAuth($scope.user);
     };
     
+    $scope.logOut = function() {
+      $log.log('#logOutAuth');
+      profileService.logOut();
+    };
+    
     initAuthPage();
   });

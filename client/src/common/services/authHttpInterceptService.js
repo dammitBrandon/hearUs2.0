@@ -3,6 +3,7 @@ angular.module('services.authHttpIntercept', [
 ])
   .run(function ($rootScope, $log, $state, profileService) {
     $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
+      $log.log('toState', toState);
       if(!_.isUndefined(toState.access_level)) {
         $log.log('this state has access levels');
         if (!profileService.isAuthorized(toState.access_level)) {
@@ -14,6 +15,7 @@ angular.module('services.authHttpIntercept', [
             event.preventDefault();
             $state.go('landingPage');
           } else {
+            event.preventDefault();
             $state.go('auth.sign_in');
           }
         }

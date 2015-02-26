@@ -3,7 +3,7 @@
 angular.module('services.ProfileApi', [
   'ui.router'
 ])
-.factory('ProfileService', function($q, $http, $log) {
+.factory('profileService', function($rootScope, $q, $http, $log) {
     var baseUrl = 'api/session';
     
     function signUpAuth(userObj) {
@@ -20,7 +20,9 @@ angular.module('services.ProfileApi', [
       })
         .success(function(data, status, headers, config) {
           $log.log('successful signing up in user', data);
-          deferred.resolve(data);
+          setUserProfile(data);
+          $rootScope.$broadcast('user:loggedIn');
+          deferred.resolve();
         })
         .error(function(err, status, headers, config) {
           $log.error('failed to sign up user', err);
@@ -30,7 +32,58 @@ angular.module('services.ProfileApi', [
       return deferred.promise;
     }
     
+    function getId() {
+      return _user ? _user.id : null;
+    }
+    
+    function getUser() {
+      return _user;
+    }
+    
+    function getRole() {
+      return _user ? _user.role : null;
+    }
+    
+    function isLoggedIn() {
+      return  (!_.isNull(_user) && !_.isUndefined(_user.id)) ? true : false;
+    }
+    
+    function isAuthorized(role) {
+      if(!_.isNull(_user) && !_.isUndefined(_user.role)) {
+        return _user.role >= role;  
+      } else {
+        return false;
+      }
+    }
+    
+    function logOut() {
+      var deferred = $q.defer();
+      
+      $http({
+        method: 'DELETE',
+        url: baseUrl
+      })
+        .success(function(data, status, headers, config) {
+          $log.log('successfully logged user out', data);
+          deferred.resolve();
+        })
+        .error(function(err, status, headers, config) {
+          $log.error('failed to log user out', err);
+          deferred.reject();
+        });
+      // for right now it makes sense to set the _user to null regardless
+      _user = null;
+      
+      return deferred.promise;
+    }
+    
     return {
-      signUpAuth: signUpAuth
+      signUpAuth: signUpAuth,
+      getId: getId,
+      getUser: getUser,
+      getRole: getRole,
+      isLoggedIn: isLoggedIn,
+      isAuthorized: isAuthorized,
+      logOut: logOut
     };
   });

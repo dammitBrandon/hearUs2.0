@@ -15,4 +15,11 @@ div(ng-controller="HeaderCtrl")
         li
           a 2nd
         li
-          a(ui-sref="auth.sign_up") Sign in
+          a.button(ng-if="!isLoggedIn()", ui-sref="auth.sign_in") Sign in
+          a.button.alert(ng-if="isLoggedIn()", dropdown-toggle="#logoutDropdown") {{user.email}} 
+      div#logoutDropdown.f-dropdown.content.open
+        ul.button-group.stack-for-small
+          li
+            button.button(type="button") Profile
+          li(ng-controller="authCtrl")
+            button.button.alert(type="button", ng-click="logOut()") Log out
