@@ -27,9 +27,9 @@ exports.login = function (req, res, next) {
           id: user._id,
           email: user.email,
           role: user.role
-        }, flashObj.signInMessage);
+        });
       } else {
-        return res.json(401, flashObj.signInMessage);
+        return res.json(401);
       }
     });
   })(req, res, next);
