@@ -44,6 +44,10 @@ UserSchema
  * Methods
  */
 UserSchema.methods = {
+  authenticate: function(plainText) {
+    return this.encryptPassword(plainText) === this.hashedPassword;
+  },
+  
   makeSalt: function() {
     return crypto.randomBytes(16).toString('base64');
   },
