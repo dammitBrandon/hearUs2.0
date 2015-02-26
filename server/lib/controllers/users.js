@@ -1,19 +1,15 @@
 'use strict';
 
 var UserRepository = require('../repositories/UserRepository'),
-    User = require('../domain/User'),
-    passport = require('passport');
+    User = require('../models/user');
 
 /**
  * Create user
  */
 exports.create = function (req, res, next) {
-  var newUser = new User(req.body);
-  newUser.set('provider', 'local');
-  // As of right now we just want to set the users role  
-  newUser.set('role', '1');
+  var newUserData = req.body;
 
-  UserRepository.save(newUser, function(err) {
+  User.create(newUserData, function(err, user) {
     if (err) {
       // Manually provide our own message for 'unique' validation errors, can't do it from schema
       if(err.errors.email.type === 'Value is not unique.') {
@@ -22,13 +18,13 @@ exports.create = function (req, res, next) {
       return res.json(400, err);
     }
 
-    req.logIn(newUser, function(err) {
+    req.logIn(user, function(err) {
       if (err) return next(err);
       
       return res.json({
-        id: req.user.get('id'),
-        email: req.user.get('email'),
-        role: req.user.get('role')
+        id: req.user._id,
+        email: req.user.email,
+        role: req.user.role
       });
     });
   });

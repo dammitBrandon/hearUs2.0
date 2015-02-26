@@ -15,14 +15,22 @@ exports.logout = function (req, res) {
  * Login
  */
 exports.login = function (req, res, next) {
+  var flashObj = req.flash();
   passport.authenticate('local', function(err, user, info) {
     var error = err || info;
     if (error) return res.json(401, error);
 
     req.logIn(user, function(err) {
-      
       if (err) return res.send(err);
-      res.json(req.user.userInfo);
+      if(user) {
+        return res.json({
+          id: user._id,
+          email: user.email,
+          role: user.role
+        }, flashObj.signInMessage);
+      } else {
+        return res.json(401, flashObj.signInMessage);
+      }
     });
   })(req, res, next);
 };
