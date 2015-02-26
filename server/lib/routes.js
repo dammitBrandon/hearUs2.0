@@ -13,8 +13,8 @@ var middleware = require('./middleware');
  */
 module.exports = function (app, config, passport) {
 
-  app.post('/api/users', users.create);
-  app.put('/api/users', users.changePassword);
+//  app.post('/api/users', users.create);
+//  app.put('/api/users', users.changePassword);
   app.get('/api/users/me', ensureAuthenticated, users.me);
   app.get('/api/users/:id', users.show);
 //  app.get('/api/sunlight/topic/:issue', sunlightApi.searchIssue);
