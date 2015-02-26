@@ -6,6 +6,7 @@ var express = require('express'),
   errorHandler = require('errorhandler'),
   morgan = require('morgan'),
   bodyParser = require('body-parser'),
+  flash = require('connect-flash'),
   methodOverride = require('method-override'),
   compression = require('compression'),
   favicon = require('serve-favicon'),
@@ -71,6 +72,7 @@ module.exports = function (app, config, passport) {
   app.engine('html', require('ejs').renderFile);
   app.set('view engine', 'html');
   app.use(morgan('dev'));
+  app.use(flash());
   app.use(bodyParser.json());
   app.use(bodyParser.urlencoded({ extended: true }));
   app.use(methodOverride());

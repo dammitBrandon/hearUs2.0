@@ -2,7 +2,6 @@
 
 var mongoose = require('mongoose'),
     User = mongoose.model('User'),
-//    UserRepository = require('../repositories/UserRepository'),
     LocalStrategy = require('passport-local').Strategy;
 
 /**
@@ -23,32 +22,41 @@ module.exports = function(passport) {
     });
   });
 
-  // add other strategies for more authentication flexibility
-//  passport.use(new LocalStrategy({
-//      usernameField: 'email',
-//      passwordField: 'password' // this is the virtual field on the model
-//    },
-//    function(email, password, done) {
-//
-//      console.log('Authorizing user i think...', email, password);
-//      UserRepository.findOne({
-//        email: email
-//      }, function(err, user) {
-//        if (err) return done(err);
-//        
-//        if (!user) {
-//          return done(null, false, {
-//            message: 'This email is not registered.'
-//          });
-//        }
-//        if (!user.authenticate(password)) {
-//          return done(null, false, {
-//            message: 'This password is not correct.'
-//          });
-//        }
-//        console.log('User authorized.', user.get('email'));
-//        return done(null, user);
-//      });
-//    }
-//  ));
+//  add other strategies for more authentication flexibility
+  passport.use(new LocalStrategy({
+      usernameField: 'email',
+      passwordField: 'password', // this is the virtual field on the model
+      passReqToCallback: true // allows us to pass back the entire request to cb
+    },
+    function(req, email, password, done) {
+
+      console.log('Authorizing user i think...', email, password);
+      User.findOne({
+        email: email
+      }, function(err, user) {
+        if (err) return done(err);
+        
+        if(user) {
+          if (req.route.path === '/api/session/ServiceSignUpAuth') {
+            console.log('attempting to signup with an email that already exists', user);
+            return done(null, false, req.flash('signUpMessage', 'This email is registered already.'));  
+          } else {
+            return done(null, user);
+          }
+        } else if (!user && req.route.path === '/api/session/ServiceSignUpAuth')  {
+          console.log('creating a new user');
+          User.create({ email: email, password: password },function(err, newUser) {
+            if (err) {
+              console.error('error saving new user record', err);
+              return done(err);
+            }
+            return done(null, newUser, req.flash('signUpMessage', 'success'));
+          });
+        } else {
+          console.log('unable to find user based on email provided');
+          return done(null, false, req.flash('signInMessage', 'Unable to find email'));
+        }
+      });
+    }
+  ));
 };

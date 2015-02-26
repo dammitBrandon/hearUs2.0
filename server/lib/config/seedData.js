@@ -26,7 +26,7 @@ Congressman.remove({}, function(){
  * Populate DB with mock user data
  * Clear out old data, if any
  */
-var mockUserData = require('../repositories/mockUserData.json');
+var mockUserData = require('../../testData/mockUserData.json');
 
 User.remove({}, function() {
   User.create(mockUserData, function() {

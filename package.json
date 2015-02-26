@@ -40,6 +40,7 @@
     "morgan": "~1.0.0",
     "method-override": "~1.0.0",
     "express-json": "~1.0.0",
+    "connect-flash": "latest",
     "body-parser": "~1.0.0",
     "compression": "~1.0.0",
     "serve-favicon": "~2.0.0",

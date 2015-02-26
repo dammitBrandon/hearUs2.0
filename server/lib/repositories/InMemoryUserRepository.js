@@ -41,7 +41,7 @@ InMemoryUserRepository.prototype.save = function(user, callback) {
     }
   }
 
-  this._store[user._attrs._id] = user;
+  this._store[user._id] = user;
   callback(null, user);
 };
 
