@@ -56,6 +56,29 @@ angular.module('services.ProfileApi', [
       }
     }
     
+    function logIn(userObj) {
+      var deferred = $q.defer();
+      
+      $http({
+        method: 'POST',
+        url: baseUrl,
+        headers: { 'Content-Type': 'application/json'},
+        data: userObj
+      })
+        .success(function(data, status, headers, config) {
+          $log.log('successful signing user in', data);
+          setUserProfile(data);
+          $rootScope.$broadcast('user:loggedIn');
+          deferred.resolve();
+        })
+        .error(function(err, status, headers, config){
+          $log.error('failed to sign in user', err);
+          deferred.reject(err);
+        });
+      
+      return deferred.promise;
+    }
+    
     function logOut() {
       var deferred = $q.defer();
       
@@ -65,6 +88,7 @@ angular.module('services.ProfileApi', [
       })
         .success(function(data, status, headers, config) {
           $log.log('successfully logged user out', data);
+          $rootScope.$broadcast('user:loggedOut');
           deferred.resolve();
         })
         .error(function(err, status, headers, config) {
@@ -84,6 +108,7 @@ angular.module('services.ProfileApi', [
       getRole: getRole,
       isLoggedIn: isLoggedIn,
       isAuthorized: isAuthorized,
+      logIn: logIn,
       logOut: logOut
     };
   });

@@ -12,7 +12,21 @@ angular.module('auth.controllers', [
     }
     
     $scope.signUp = function() {
-      ProfileService.signUpAuth($scope.user);
+      profileService.signUpAuth($scope.user).then(function() {
+        // User will go to the home page on success
+        // $state.go('homepage');
+      }, function(err) {
+        $log.error('error', err);
+      });
+    };
+    
+    $scope.signIn = function() {
+      profileService.logIn($scope.user).then(function() {
+        // User will go to the home page on success
+        // $state.go('homepage');
+      }, function(err){
+        $log.log('error', err);
+      });
     };
     
     $scope.logOut = function() {
