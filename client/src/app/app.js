@@ -15,8 +15,8 @@ angular.module('hearUs', [
   'congressman',
   'geolocate',
   'resize.directive',
-  'hearUsFilters'
-//  'services.authHttpIntercept'
+  'hearUsFilters',
+  'services.authHttpIntercept'
 ])
   .config(function myAppConfig($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
