@@ -6,13 +6,13 @@ form(name="hearUsForm.sign-up")
           input.error(type="email", name="userEmail", placeholder="email", ng-model="user.email", ng-model-options="{ updateOn: 'blur' }", required)
           small.error(ng-show="hearUsForm['sign-up'].userEmail.$invalid && !hearUsForm['sign-up'].userEmail.$pristine") Invalid Email
         .row.collapse.radius
-          input.error(type="password", name="userPassword", placeholder="Password", ng-model="user.password", minlength="6", ng-minlength="6", required)
+          input.error(type="password", name="userPassword", placeholder="Password", ng-model="user.password", minlength="6", ng-minlength="6", ng-change="passwordEquality()", required)
           small.error(ng-show="hearUsForm['sign-up'].userPassword.$invalid && !hearUsForm['sign-up'].userPassword.$pristine") Must be longer than 6 characters
         .row.collapse.radius
-          input.error(type="password", name="verifyPassword", placeholder="Confirm password", ng-model="verifyPassword", ng-change="passwordEquality()", ng-model-options="{ updateOn: 'blur' }", required)
+          input.error(type="password", name="verifyPassword", placeholder="Confirm password", ng-model="verifyPassword", ng-change="passwordEquality()", required)
           small.error(ng-show="hearUsForm['sign-up'].verifyPassword.$invalid && !hearUsForm['sign-up'].verifyPassword.$pristine") Passwords do not match
         ul.button-group.even-2
           li
             a.button.tertiary.large-offset-2(ui-sref="auth.sign_in") Sign in
           li
-            button.button(type="button", ng-click="signUp()", ng-disabled="hearUsForm['sign-up'].$invalid") Sign up
+            button.button(type="button", ng-click="signUp()", ng-disabled="!isFormValid()") Sign up
