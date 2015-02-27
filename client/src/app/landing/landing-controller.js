@@ -28,4 +28,16 @@ angular.module('landing.controllers', [
     $scope.disableZipSearch = function() {
       return $scope.zipCode.length != 5;
     };
+    
+    $scope.findTopicOnKeyEvent = function(e) {
+      if (e.keyCode === 13 && !$scope.disableTopicSearch()) {
+        $scope.findTopic();
+      }
+    };
+    
+    $scope.findDistrictOnKeyEvent = function(e) {
+      if (e.keyCode === 13 && !$scope.disableZipSearch()){
+        $scope.findDistrictLanding();
+      }
+    };
   });
