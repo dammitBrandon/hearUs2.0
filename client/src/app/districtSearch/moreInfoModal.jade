@@ -1,0 +1,27 @@
+div
+  h3 We Need more info
+    
+    div
+      p We were unable to determine your district please provided additional information.
+        
+      .row.collapse
+        .columns.small-5
+          input(type='text', placeholder='Street Address', ng-model='streetName')
+        .columns.small-7
+          span.postfix {{address.address}}
+            
+      .row.collapse
+        .columns.small-4.large-3
+          span.prefix {{zipCode}}
+        .columns.small-8.large-9
+          input(type='text', ng-maxlength='4', maxlength='4', placeholder='+ 4', ng-model='plusFourZipCode')
+            
+      .row.collapse
+        .columns.small-4.large-3
+          span.prefix Geolocate
+            
+        .columns.small-8.large-9
+          hu-geolocate(ng-click='cancel();')
+        
+      button.button.left(ng-click='cancel()') Cancel
+      button.button.right(ng-click='ok()') Find

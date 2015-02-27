@@ -3,35 +3,84 @@ angular.module('districtSearch.controllers', [
   'services.SunlightApi',
   'services.hearUsModal'
 ]).
-  controller('districtSearchCtrl', function districtSearchController($scope, $rootScope, $state, $stateParams, $log, districtInfo) {
-    
-    function initDistrictSearch() {
+  controller('districtSearchCtrl', function districtSearchController($scope, $rootScope, $state, $stateParams, $log, districtInfo, sunlightService, $modal) {
 
-      if(districtInfo.count <= 1) {
-        $log.log('district ', districtInfo);
+    function initDistrictSearch() {
+      $scope.senators = [];
+      $log.log('info ', districtInfo);
+      if (districtInfo.count === 1 || districtInfo.count === 0) {
         $scope.district = districtInfo.district;
-        $scope.senators = [];
-        _.forEach(districtInfo.congressmen, function(congressman){
-          if(congressman.chamber === 'senate') {
+        _.forEach(districtInfo.congressmen, function (congressman) {
+          if (congressman.chamber === 'senate') {
             $scope.senators.push(congressman);
           } else if (congressman.chamber === 'house') {
             $scope.houseRep = congressman;
           }
         });
-        
-      } else if (districtInfo.count > 1){
-        $log.log('find out what district they are in', districtInfo);
-//        requestAdditionalInformation();
+
+      } else if (districtInfo.count > 1) {
+
+        requestAdditionalInformation(districtInfo);
       }
     }
-    
-//    function requestAdditionalInformation() {
-//      ModalService.openModal();
-//    }
+
+    function requestAdditionalInformation(districtInfo) {
+
+      var modalDefaults = {
+        templateUrl: 'districtSearch/moreInfoModal.html',
+        backdrop: true,
+        keyboard: true,
+        controller: function ($scope, $rootScope, $log, $modalInstance) {
+          $scope.address = _.last(districtInfo.results);
+          $scope.zipCode = $stateParams.zipCode;
+
+          $scope.ok = function () {
+            var fullAddress = $scope.$$childTail.$$childTail.streetName + ', ' + $scope.address.address;
+            var plusFourZipCode = $scope.$$childTail.$$childTail.plusFourZipCode;
+
+            if (!_.isUndefined(plusFourZipCode) && plusFourZipCode) {
+              var fullZipCode = $scope.zipCode + "-" + plusFourZipCode;
+              getDistrictByAddress(fullZipCode);
+
+            } else if (!_.isUndefined($scope.$$childTail.$$childTail.streetName) && fullAddress) {
+              getDistrictByAddress(fullAddress);
+            }
+            $modalInstance.close();
+          };
+
+          function getDistrictByAddress(address) {
+            sunlightService.getDistrictByAddress(address).then(function (modalDistrictData) {
+              $rootScope.$broadcast('district:located', modalDistrictData);
+              return;
+            });
+          }
+
+          $scope.cancel = function () {
+            $modalInstance.dismiss('cancel');
+          };
+
+          $rootScope.$on('$stateChangeStart', function(event, toState, fromState, fromParams) {
+            if (toState.url === "/") {
+              $modalInstance.dismiss('cancel');
+            }
+          });
+        }
+      };
+
+      $modal.open(modalDefaults);
+    }
+
+    $scope.$on('district:located', function (event, data) {
+      $scope.district = data.results[0].district;
+      _.forEach(data.results[0].congressmen, function (congressman) {
+        if (congressman.chamber === 'senate') {
+          $scope.senators.push(congressman);
+        } else if (congressman.chamber === 'house') {
+          $scope.houseRep = congressman;
+        }
+      });
+      return;
+    });
 
     initDistrictSearch();
-    
-    $scope.test = function () {
-      $log.log('test ');
-    };
   });

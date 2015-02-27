@@ -3,7 +3,8 @@
 var fs = require('fs'),
   sunlight = require('sunlight-congress-api'),
   config = require('../config/config'),
-  apikey = config.apikey,
+  googleMapsService = require('../services/googleMapsService'),
+  apikey = config.sunlightLabs.apikey,
   mongoose = require('mongoose'),
   _ = require('lodash'),
   Congressman = mongoose.model('Congressman');
@@ -42,15 +43,6 @@ var success = function (data) {
     var testData = JSON.stringify(data, null, 4);
   };
 };
-
-var gunControlBills = sunlight.billsSearch();
-gunControlBills.fields("official_title", "introduced_on", "last_vote_at", "popular_title", "short_title", "keywords", "summary_short");
-gunControlBills.search("\"gun control\"~5");
-gunControlBills.call(saveTestData("GunControlBills"));
-
-var districtBills = sunlight.districtsLocate();
-districtBills.addZip("60653");
-districtBills.call(saveTestData("DistrictBills"));
 
 /**
  * load json data
@@ -297,14 +289,37 @@ exports.loadSenators = function (req, res, next) {
   res.send(data);
 };
 
-/**
- * search for district by zipcode
- */
+exports.searchDistrictByAddress = function (req, res, next) {
+  var address = req.query.address;
+  googleMapsService.getCoords(address).then(function(coordsData) {
+    sunlight.districtsLocate()
+      .addCoordinates(coordsData)
+      .call()
+      .then(function (data) {
+        if (!_.isUndefined(data.count) && (data.count === 1)) {
+          getCongressmenForDistrict(data.results[0])
+            .addBack(function (err, queryResults) {
+              if (err) {
+                console.error('error getting data from query ', err);
+              } else if (!_.isUndefined(queryResults)) {
+                data.results[0].congressmen = queryResults;
+                res.send(data);
+              } else {
+                res.send(data);
+              }
+            });
+        } else {
+          res.send(data);
+        }
+      });
+  });
+};
+
 exports.searchDistrictByZipCode = function (req, res, next) {
   var zipCode = req.params.zipCode;
 
   sunlight.districtsLocate()
-    .addZip(zipCode)
+    .addZipCode(zipCode)
     .call()
     .then(function (data) {
       if (!_.isUndefined(data.count) && (data.count === 1)) {
@@ -319,8 +334,11 @@ exports.searchDistrictByZipCode = function (req, res, next) {
               res.send(data);
             }
           });
-      } else {
-        res.send(data);
+      } else if (!_.isUndefined(data.count) && (data.count > 1)) {
+        googleMapsService.getLocationInfoByZipCode(zipCode).then(function(addressData){
+          data.results.push({address: addressData});
+          res.send(data);
+        });
       }
     });
 

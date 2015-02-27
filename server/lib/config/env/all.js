@@ -21,5 +21,10 @@ module.exports = {
         sessionSecret: 'oursupersecretkey',
         sessionCookieName: 'MBP_TOKEN'
     },
+  sunlightLabs: {
     apikey: "d9836e25aa044e26bf6008212dab2514"
+  },
+  googleMaps: {
+    apikey: "AIzaSyAeT2qiRj4vcpDOw1TegMmXeQu4SHl9QQQ"    
+  }
 };

@@ -2,7 +2,7 @@ angular.module('bill.controllers', [
   'ui.router',
   'services.SunlightApi'
 ])
-  .controller('billCtrl', function billController($scope, $state, $stateParams, $log, SunlightService, bill){
+  .controller('billCtrl', function billController($scope, $state, $stateParams, $log, sunlightService, bill){
     function initBillPage() {
       if (bill.cosponsors_count > 0 ) {
         getCosponsors(bill.cosponsor_ids);
@@ -11,7 +11,7 @@ angular.module('bill.controllers', [
     }
     
     function getCosponsors(cosponsorIds) {
-      SunlightService.getCosponsors(cosponsorIds).then(function(cosponsorsData) {
+      sunlightService.getCosponsors(cosponsorIds).then(function(cosponsorsData) {
         $scope.cosponsors = cosponsorsData;
       });
     }
