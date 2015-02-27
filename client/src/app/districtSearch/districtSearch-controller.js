@@ -6,6 +6,7 @@ angular.module('districtSearch.controllers', [
   controller('districtSearchCtrl', function districtSearchController($scope, $rootScope, $state, $stateParams, $log, districtInfo, sunlightService, $modal) {
 
     function initDistrictSearch() {
+      $log.log('initDisCtrl');
       $scope.senators = [];
       $log.log('info ', districtInfo);
       if (districtInfo.count === 1 || districtInfo.count === 0) {
