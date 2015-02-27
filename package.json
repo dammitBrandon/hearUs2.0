@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "name": "HearUsProject",
     "author": "Brandon Bailey",
     "version": "0.2.0",
@@ -23,3 +24,41 @@
     }
 }
 
+=======
+  "name": "HearUsProject",
+  "author": "Brandon Bailey",
+  "version": "0.2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/slalom-consulting/the-hearus-project.git"
+  },
+  "dependencies": {
+    "express": "~4.0.0",
+    "express-session": "~1.0.0",
+    "cookie-parser": "~1.0.0",
+    "errorhandler": "~1.0.0",
+    "morgan": "~1.0.0",
+    "method-override": "~1.0.0",
+    "express-json": "~1.0.0",
+    "body-parser": "~1.0.0",
+    "compression": "~1.0.0",
+    "serve-favicon": "~2.0.0",
+    "lodash": "~2.4.1",
+    "mongoose": "~3.5.5",
+    "mongoose-unique-validator": "~0.3.0",
+    "connect-mongo": "~0.4.0",
+    "passport": "~0.2.1",
+    "passport-local": "~1.0.0",
+    "ejs": "~0.8.4",
+    "sunlight-congress-api": "git://github.com/dammitBrandon/sunlight-congress-api.git#master",
+    "googlemaps": "latest",
+    "es6-promise": "^1.0.0",
+    "twitter-js-client": "~0.0.5",
+    "node-twitter": "latest"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=0.10.23"
+  }
+}
+>>>>>>> 4ca3134... Upgraded express to 4.x

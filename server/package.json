@@ -11,7 +11,7 @@
     "passport-local": "latest",
     "es6-promise": "^1.0.0",
     "ejs": "~0.8.4",
-    "sunlight-congress-api": "latest",
+    "sunlight-congress-api": "git://github.com/dammitBrandon/sunlight-congress-api.git#master",
     "googlemaps": "latest"
   },
   "devDependencies": {
