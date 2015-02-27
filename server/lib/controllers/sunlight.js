@@ -317,7 +317,7 @@ exports.searchDistrictByAddress = function (req, res, next) {
 
 exports.searchDistrictByZipCode = function (req, res, next) {
   var zipCode = req.params.zipCode;
-  
+
   sunlight.districtsLocate()
     .addZipCode(zipCode)
     .call()
