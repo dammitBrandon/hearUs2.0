@@ -36,7 +36,6 @@ angular.module('districtSearch', [
                   };
                 } else if (districtData.count > 1 ) {
                 return districtData;
-
                 }
               });
             }

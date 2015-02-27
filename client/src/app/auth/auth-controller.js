@@ -2,7 +2,7 @@ angular.module('auth.controllers', [
   'ui.router',
   'services.ProfileApi' 
 ])
-.controller('authCtrl', function authController($scope, $state, $log, ProfileService) {
+.controller('authCtrl', function authController($scope, $state, $log, profileService) {
     function initAuthPage() {
       $scope.user = {
         email: null,
