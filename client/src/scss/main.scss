@@ -56,6 +56,13 @@ h4 {
   }
 }
 
+/**
+ * Form styling
+ */
+
+form .row.collapse.radius {
+  min-height: 53px;
+}
 
 /**
  * Now that all app-wide styles have been applied, we can load the styles for

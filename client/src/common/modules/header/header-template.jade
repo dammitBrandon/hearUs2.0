@@ -11,9 +11,9 @@ div(ng-controller="HeaderCtrl")
     top-bar-section
       ul.right
         li
-          a(ui-sref="test") First
+          a(ui-sref="test.test1") First
         li
-          a 2nd
+          a(ui-sref="test.test2") 2nd
         li
           a.button(ng-if="!isLoggedIn()", ui-sref="auth.sign_in") Sign in
           a.button.alert(ng-if="isLoggedIn()", dropdown-toggle="#logoutDropdown") {{user.email}} 
