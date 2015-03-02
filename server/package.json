@@ -34,7 +34,11 @@
     "karma-phantomjs-launcher": "~0.1.1",
     "karma": "~0.10.9",
     "karma-ng-html2js-preprocessor": "~0.1.0",
-    "node-inspector": "latest"
+    "node-inspector": "latest",
+    "jasmine-node": "latest",
+    "mongoose-mock": "latest",
+    "sinon": "latest",
+    "jasmine-sinon": "latest"
   },
   "engines": {
     "node": ">=0.10.0"
