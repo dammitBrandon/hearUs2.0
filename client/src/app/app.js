@@ -13,6 +13,7 @@ angular.module('hearUs', [
   'districtSearch',
   'bill',
   'congressman',
+  'dashboard',
   'geolocate',
   'resize.directive',
   'hearUsFilters',
