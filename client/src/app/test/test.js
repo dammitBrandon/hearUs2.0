@@ -1,3 +1,5 @@
+// TODO: As the name suggests this is a test module used to test authorization and security of routes / states
+// this module and its other associated components will be removed see Issue #27
 angular.module('test', [
   'ui.router',
   'ACCESS'

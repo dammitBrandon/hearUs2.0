@@ -6,7 +6,7 @@
   padding: 20px 25px;
 
   ul {
-    
+
     li {
       display: block;
       padding: 5px 30px;
@@ -20,10 +20,10 @@
       p {
         padding: 0px 25px;
       }
-      
-        &:last-child {
-          border-bottom-style: none;
-        }
+
+      &:last-child {
+        border-bottom-style: none;
+      }
     }
   }
 }

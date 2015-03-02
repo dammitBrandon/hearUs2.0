@@ -11,15 +11,9 @@ angular.module('services.ProfileApi', [
         _user = {};
       }
       if(!_.isUndefined(userObj) && !_.isNull(userObj)) {
-        if(!_.isUndefined(userObj.id) && !_.isNull(userObj.id)) {
           _user.id = userObj.id;
-        }
-        if(!_.isUndefined(userObj.email) && !_.isNull(userObj.email)) {
           _user.email = userObj.email;
-        }
-        if(!_.isUndefined(userObj.role) && !_.isNull(userObj.role)) {
           _user.role = userObj.role;
-        }
       }
       $log.log('setUserProfile _user', _user);
     }
