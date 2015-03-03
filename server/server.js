@@ -4,8 +4,7 @@ var express = require('express'),
   passport = require('passport'),
   path = require('path'),
   fs = require('fs'),
-  mongoose = require('mongoose'),
-  sunlight = require('sunlight-congress-api');
+  mongoose = require('mongoose');
 
 /**
  * Main application file

@@ -80,7 +80,7 @@ module.exports = function (grunt) {
   grunt.renameTask('watch', 'delta');
   grunt.registerTask('server', ['jshint:server', 'express:dev']);
   grunt.registerTask('watch', ['server', 'delta']);
-
+  
   grunt.registerTask('default', ['server']);
 
 

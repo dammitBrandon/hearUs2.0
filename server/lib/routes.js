@@ -4,7 +4,8 @@ var express = require('express'),
   index = require('./controllers'),
   users = require('./controllers/users'),
   session = require('./controllers/session'),
-  sunlightApi = require('./controllers/sunlight');
+  sunlightApi = require('./controllers/sunlight'),
+  twitterApi = require('./controllers/nodeTwitter');
 
 var middleware = require('./middleware');
 
@@ -29,6 +30,7 @@ module.exports = function (app, config, passport) {
   app.get('/api/sunlight/district/:zipCode', sunlightApi.searchDistrictByZipCode);
   app.get('/api/sunlight/representatives', sunlightApi.loadHouseReps);
   app.get('/api/sunlight/senators', sunlightApi.loadSenators);
+  app.get('/api/twitter/search/bill', twitterApi.searchForBill);
 
   app.post('/api/session', session.login);
   app.del('/api/session', session.logout);

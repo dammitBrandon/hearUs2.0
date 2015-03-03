@@ -648,6 +648,11 @@ module.exports = function (grunt) {
   ]);
 
   /**
+   * The 'test' task runs all unit tests once
+   */
+  grunt.registerTask('test', ['karma:continuous']);
+
+  /**
    * The `compile` task gets your app ready for deployment by concatenating and
    * minifying your code.
    */

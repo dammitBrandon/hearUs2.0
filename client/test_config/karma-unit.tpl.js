@@ -70,4 +70,3 @@ module.exports = function ( karma ) {
     captureTimeout: 5000
   });
 };
-
