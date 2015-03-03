@@ -20,9 +20,9 @@ module.exports = function ( karma ) {
       'src/**/*.e2e.coffee'
     ],
     frameworks: [ 'jasmine' ],
-    plugins: [ 'karma-jasmine', 'karma-firefox-launcher', 'karma-chrome-launcher', 'karma-phantomjs-launcher', 'karma-coffee-preprocessor' ],
+    plugins: [ 'karma-jasmine', 'karma-coverage', 'karma-firefox-launcher', 'karma-chrome-launcher', 'karma-phantomjs-launcher', 'karma-coffee-preprocessor', 'karma-osx-reporter' ],
     preprocessors: {
-      '**/*.coffee': 'coffee',
+      'src/**/*.js': ['coverage'],
     },
 
     coffeePreprocessor: {
@@ -35,7 +35,10 @@ module.exports = function ( karma ) {
     /**
      * How to report, by default.
      */
-    reporters: ['dots'],
+    reporters: ['dots', 'coverage'],
+    coverageReporter: {
+      dir: 'build/reports/coverage'
+    },
 
     /**
      * On which port should the browser connect, on which port is the test runner
