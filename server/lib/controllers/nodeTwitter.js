@@ -53,28 +53,6 @@ var loadJsonFile = function (filename) {
 
 var count = 0;
 
-//function responseCallback(error, results) {
-//  var deferred = defer();
-//  var response;
-//  
-//  
-//  if (error) {
-//    console.error('error ', error);
-//    deferred.reject(error);  
-//  } else if (results) {
-////    response += results;
-//    deferred.resolve(results);
-////    do {
-////      twit.next(results.search_metadata.next_results, responseCallback);
-////      count++;
-////    } while (results.search_metadata.next_results && count <= 3);
-//  }
-//  console.log(response);
-//  return deferred.promise;
-//}
-
-//twit.search({'q': 'guns', 'count': 10, 'result_type': 'recent'}, responseCallback);
-
 function search(query) {
   var deferred = defer();
   twit.search({'q': query.join(' OR '), 'count': 10, 'result_type': 'recent'}, function(error, results) {
