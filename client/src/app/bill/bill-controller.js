@@ -1,6 +1,7 @@
 angular.module('bill.controllers', [
   'ui.router',
-  'services.SunlightApi'
+  'services.SunlightApi',
+  'services.TwitterApi'
 ])
   .controller('billCtrl', function billController($scope, $state, $stateParams, $log, sunlightService, bill){
     function initBillPage() {
