@@ -6,7 +6,7 @@ angular.module('services.TwitterApi', [
   .factory('twitterService', function ($q, $http, $log) {
     var baseUrl = '/api/twitter/';
 
-    function searchTweets(billSearchParams) {
+    function searchForTweets(billSearchParams) {
       var deferred = $q.defer();
       var url = baseUrl + 'search/bill';
 
@@ -28,6 +28,6 @@ angular.module('services.TwitterApi', [
     }
 
     return {
-      searchTweets: searchTweets
+      searchForTweets: searchForTweets
     };
   });

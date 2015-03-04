@@ -1,6 +1,7 @@
 'use strict';
 
 var fs = require('fs'),
+  Promise = require('es6-promise').Promise,
   Twitter = require('node-twitter'),
   config = require('../config/config'),
   util = require('util'),
@@ -51,24 +52,54 @@ var loadJsonFile = function (filename) {
 };
 
 var count = 0;
+
 function responseCallback(error, results) {
+  var deferred = defer();
+  var response;
+  
+  
   if (error) {
     console.error('error ', error);
+    deferred.reject(error);  
   } else if (results) {
-    if(results.search_metadata.next_results && count <= 3) {
+    response += results;
+    do {
       twit.next(results.search_metadata.next_results, responseCallback);
       count++;
-    }
+    } while (results.search_metadata.next_results && count <= 3);
   }
+  console.log(response);
+  deferred.resolve(response);
 }
 
-twit.search({'q': 'guns', 'count': 10, 'result_type': 'recent'}, responseCallback);
+//twit.search({'q': 'guns', 'count': 10, 'result_type': 'recent'}, responseCallback);
+
+function search(query) {
+  twit.search({'q': query.join(' OR '), 'count': 10, 'result_type': 'recent'}, responseCallback);
+}
 
 exports.searchForBill = function (req, res, next) {
   var searchQueryParams = req.query.searchQuery;
-
-  var filename = 'twitterSearchResultsForHr234.json';
-  var data = loadJsonFile(filename);
-  res.send(data);
-
+  search(searchQueryParams).then(function(data){
+    console.log('data returned', data);
+    res.send(data);
+  });
+  
+//  var filename = 'twitterSearchResultsForHr234.json';
+//  var data = loadJsonFile(filename);
+//  res.send(data);
 };
+
+var defer = function () {
+  var resolve, reject;
+  var promise = new Promise(function() {
+    resolve = arguments[0];
+    reject = arguments[1];
+  });
+  return {
+    resolve: resolve,
+    reject: reject,
+    promise: promise
+  };
+};
+
