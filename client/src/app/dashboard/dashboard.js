@@ -1,8 +1,9 @@
 angular.module('dashboard', [
   'ui.router',
-  'dashboard.controllers'
+  'dashboard.controllers',
+  'ACCESS'
 ])
-  .config(function dashboardConfig($stateProvider) {
+  .config(function dashboardConfig($stateProvider, ACCESS_LEVELS) {
     $stateProvider
       .state('dashboard', {
         url: '/dashboard',
@@ -13,5 +14,6 @@ angular.module('dashboard', [
           }
         },
         data: {pageTitle: "dashboard"}
+        
       });
   });
