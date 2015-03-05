@@ -1,22 +1,29 @@
-.search-results {
-  padding: 20px 25px;
+.title {
+  position: relative;
 }
 
-li.result-item {
-  display: block;
-  padding: 0px 30px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #808080;
-  
-  &:hover {
-    background-color: #d3d3d3;  
+.search-results {
+  padding: 20px 25px;
+
+  ul {
+    
+    li {
+      display: block;
+      padding: 5px 30px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #808080;
+
+      &:hover {
+        background-color: #d3d3d3;
+      }
+
+      p {
+        padding: 0px 25px;
+      }
+
+      &:last-child {
+        border-bottom-style: none;
+      }
+    }
   }
-  
-  p {
-    padding: 0px 25px;
-  }
-  
-//  &:last-child {
-//    border-bottom: none;
-//  }
 }

@@ -1,9 +1,9 @@
 div
-  h4.text-center Search results for {{issue}} 
+  h2.title.text-center Search results for {{issue}} 
     
-  div.search-results
-    ul(ng-repeat="bill in bills")
-      li.result-item
+.search-results.panel.radius
+    ul
+      li(ng-repeat="bill in bills")
         div
           h5
             a(ui-sref="bill({ id: bill.bill_id })") {{bill | titleFilter}}

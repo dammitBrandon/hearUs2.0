@@ -1,28 +1,23 @@
-.container(style="vertical-align: middle;")
-  .row.text-center
-    h1 The project that allows us to keep our Congress accountible.  We the people.
-      
-  .row.text-center
-    span Find
-    br
-    form(name="form.landingPage")
-      .row
-        .columns.small-3.small-offset-3.medium-offset-2.medium-4
-          .row.collapse
-            .small-9.columns
-              input(type="text", placeholder="Bills", ng-click="findTopic", ng-model="searchTopic")
-            .small-3.columns
-              button.button.postfix(type="button", ng-click="findTopic()") Go
-        
-        .columns.small-3.medium-4.end
-          .row.collapse
-            .small-7.columns
-              input(type="text", placeholder="Your District", ng-model="zipCode")
-            .button-group
-              .small-2.columns
-                hu-geolocate
-              .small-3.columns
-                button.button.postfix(type="button", ng-click="findDistrictLanding()") Go
-            
-    br
-    span We never store or share your info with third parties, let alone persist it.
+.row.hero
+  .large-12.columns
+    .text-center
+      h3 Empowering Constituents by providing us with the data that we need to make the informed decision.
+    .large-8.large-offset-2
+      p.text-center The purpose of this project is to enable everyday people by making the task of finding out about topics that are important to you and who represents you in Congress.
+form(name="hearUsForm.landing")
+  .row
+    .small-12.large-6.columns
+      .row.collapse.postfix-radius
+        .small-9.columns
+          input(autofocus, type="text", name="searchTopic", placeholder="Search For Bills", ng-model="searchTopic", ng-keyup="findTopicOnKeyEvent($event)")
+        .small-3.columns
+          button.button.postfix(type="button", ng-click="findTopic()", ng-disabled="disableTopicSearch()") Find
+    .small-12.large-6.columns
+      .row.collapse.postfix-radius
+        .small-7.columns
+          input(type="text", name="searchDistrict", max="5", placeholder="Search for District with your Zip code", maxlength="5" ng-model="zipCode", ng-change="isNewCharNumber()", ng-keyup="findDistrictOnKeyEvent($event)")
+        .button-group
+          .small-2.columns
+            hu-geolocate
+          .small-3.columns
+            button.button.postfix(type="button", ng-click="findDistrictLanding()", ng-disabled="disableZipSearch()") Disrict

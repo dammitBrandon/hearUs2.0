@@ -1,0 +1,10 @@
+$include-html-button-classes: $include-html-classes;
+
+$tertiary-color: #f8f8f8 !default;
+
+.tertiary {
+  @include button-base;
+  @include button-size;
+  @include button-style($tertiary-color);
+}
+

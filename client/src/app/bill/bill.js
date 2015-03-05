@@ -9,7 +9,7 @@ angular.module('bill', [
         views: {
           "main": {
             controller: 'billCtrl',
-            templateUrl: "bill/bill-template.html",
+            templateUrl: 'bill/bill-template.html',
             resolve: {
               bill: function($log, $stateParams, sunlightService) {
                 

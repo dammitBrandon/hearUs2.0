@@ -1,5 +1,5 @@
-angular.module('hearUs')
-  .constant('states', {
+angular.module('hearUs')  
+  .constant('STATES', {
     "AK": "Alaska",
     
     "AL": "Alabama",

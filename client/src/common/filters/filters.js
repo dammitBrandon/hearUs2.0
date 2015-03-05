@@ -1,9 +1,9 @@
 angular.module('hearUsFilters', [])
   .filter('titleFilter', function () {
     return function (bill) {
-      if (!_.isNull(bill.popular_title)) {
+      if (!_.isNull(bill.popular_title) && !_.isEmpty(bill.popular_title)) {
         return bill.popular_title;
-      } else if (!_.isNull(bill.short_title)) {
+      } else if (!_.isNull(bill.short_title) && !_.isEmpty(bill.short_title)) {
         return bill.short_title;
       } else {
         return bill.official_title;
@@ -31,7 +31,7 @@ angular.module('hearUsFilters', [])
         name += congressmanObj.first_name;
       }
 
-      if (!_.isNull(congressmanObj.middle_name) && !_.isUndefined(congressmanObj.middle_name)) {
+      if (!_.isNull(congressmanObj.middle_name) && !_.isUndefined(congressmanObj.middle_name) && !_.isEmpty(congressmanObj.middle_name)) {
         name += " " + congressmanObj.middle_name;
       }
 
@@ -83,12 +83,26 @@ angular.module('hearUsFilters', [])
       }
     };
   })
-  .filter('stateFilter', function ($log, states) {
+  .filter('stateFilter', function ($log, STATES) {
     return function (state) {
-      if (!_.isUndefined(states[state])) {
-        return states[state];
+      if (!_.isUndefined(STATES[state])) {
+        return STATES[state];
       } else {
         return state;
       }
+    };
+  })
+  .filter('addressFilter', function ($log) {
+    return function(address) {
+      var Country = /, USA/;
+      
+      var testForCountry = Country.exec(address);
+      
+      if (testForCountry) {
+        return testForCountry.input.substring(0, testForCountry.index);
+      } else {
+        return address;
+      }
+      
     };
   });

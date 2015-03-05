@@ -39,15 +39,17 @@ body {
   margin-top: 60px;
 }
 
+.hero{
+  padding: 10px 0;
+  
+  h3 {
+    padding-bottom: 15px;
+  }
+}
+
 h4 {
   color: #777777;
   padding: 0 15px;
-}
-
-.footer {
-  background-color: $gray-lighter;
-  padding-top: 10px;
-  padding-bottom: 10px;
 }
 
 .navbar-links {
@@ -62,6 +64,13 @@ h4 {
   }
 }
 
+/**
+ * Form styling
+ */
+
+form .row.collapse.radius {
+  min-height: 53px;
+}
 
 /**
  * Now that all app-wide styles have been applied, we can load the styles for
@@ -74,5 +83,6 @@ h4 {
 @import "src/app/issueSearch/issueSearch.scss";
 @import "src/app/bill/bill.scss";
 @import "src/app/districtSearch/districtSearch.scss";
+@import "src/app/auth/auth.scss";
 
 

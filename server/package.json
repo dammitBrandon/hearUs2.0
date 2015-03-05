@@ -11,7 +11,7 @@
     "passport-local": "latest",
     "es6-promise": "^1.0.0",
     "ejs": "~0.8.4",
-    "sunlight-congress-api": "latest",
+    "sunlight-congress-api": "git://github.com/dammitBrandon/sunlight-congress-api.git#master",
     "googlemaps": "latest"
   },
   "devDependencies": {
@@ -34,7 +34,11 @@
     "karma-phantomjs-launcher": "~0.1.1",
     "karma": "~0.10.9",
     "karma-ng-html2js-preprocessor": "~0.1.0",
-    "node-inspector": "latest"
+    "node-inspector": "latest",
+    "jasmine-node": "latest",
+    "mongoose-mock": "latest",
+    "sinon": "latest",
+    "jasmine-sinon": "latest"
   },
   "engines": {
     "node": ">=0.10.0"
