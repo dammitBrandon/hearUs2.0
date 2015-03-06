@@ -3,10 +3,10 @@ form(name="hearUsForm.sign-in")
     .small-12.large-12.columns
       .large-6.large-offset-3.small-12.columns
         .row.collapse.radius
-          input#email.error(type="email", name="userEmail", placeholder="email", ng-model="user.email", ng-model-options="{ updateOn: 'blur' }", required)
+          input.error(type="email", name="userEmail", placeholder="email", ng-model="user.email", ng-model-options="{ updateOn: 'blur' }", required)
           small.error(ng-show="hearUsForm['sign-in'].userEmail.$invalid && !hearUsForm['sign-in'].userEmail.$pristine") Invalid Email
         .row.collapse.radius
-          input#password.error(type="password", name="userPassword", placeholder="Password", ng-model="user.password", ng-model-options="{ updateOn: 'keyup' }", required)
+          input.error(type="password", name="userPassword", placeholder="Password", ng-model="user.password", ng-model-options="{ updateOn: 'keyup' }", required)
           small.error(ng-show="hearUsForm['sign-in'].userPassword.$invalid && !hearUsForm['sign-in'].userPassword.$pristine") Password Required
         ul.button-group.even-2
           li
