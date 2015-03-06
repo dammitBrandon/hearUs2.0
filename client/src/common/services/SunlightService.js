@@ -29,7 +29,7 @@ angular.module('services.SunlightApi', [
 
     function getBill(billId) {
       var deferred = $q.defer();
-      var url = baseUrl + 'bill/' + "hr2910-113";
+      var url = baseUrl + 'bill/' + billId;
 
       $http({
         method: 'GET',
