@@ -13,7 +13,7 @@ angular.module('dashboard', [
             templateUrl: 'dashboard/dashboard.html'
           }
         },
-        data: {pageTitle: "dashboard"}
-        
+        data: {pageTitle: "dashboard"},
+        access_level: ACCESS_LEVELS.authenticated        
       });
   });
