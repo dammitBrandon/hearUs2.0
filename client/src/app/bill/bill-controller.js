@@ -9,7 +9,7 @@ angular.module('bill.controllers', [
         getCosponsors(bill.cosponsor_ids);
       }
       $scope.bill = bill;
-      getTweetsForBill();
+      getTweetsForBill($scope.bill);
     }
     
     function getCosponsors(cosponsorIds) {
@@ -18,7 +18,7 @@ angular.module('bill.controllers', [
       });
     }
     
-    function getTweetsForBill() {
+    function getTweetsForBill(bill) {
       var queryParams = [bill.bill_id.split('-')[0]];
       _.forEach([bill.popular_title, bill.short_title], function(title) {
         if (!_.isUndefined(title) && !_.isNull(title)){
