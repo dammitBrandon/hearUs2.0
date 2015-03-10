@@ -124,7 +124,6 @@ describe('billCtrl', function () {
       beforeEach(function () {
         spyOn(twitterService, 'searchForTweets');
       });
-//      expect(twitterService.searchForTweets).toHaveBeenCalledWith(['hr2910', 'Gun Violence Prevention and Reduction Act of 2013']);
       expect(twitterService.searchForTweets).toHaveBeenCalled();
     });
   });

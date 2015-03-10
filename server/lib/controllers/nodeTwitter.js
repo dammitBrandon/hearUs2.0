@@ -14,14 +14,12 @@ Twitter.SearchClient.prototype.next = function(parameters, callback)
   var self = this;
 
   var requestUrlString = this._apiBaseUrlString + '/';
-  if (this._apiVersion !== null)
-  {
+  if (this._apiVersion !== null) {
     requestUrlString += this._apiVersion + '/';
   }
   requestUrlString += 'search/tweets.json';
 
-  if (parameters !== undefined && parameters !== null && parameters.length > 0)
-  {
+  if (parameters !== undefined && parameters !== null && parameters.length > 0) {
     requestUrlString = requestUrlString + parameters;
   }
 
@@ -73,10 +71,6 @@ exports.searchForBill = function (req, res, next) {
     console.log('data returned', data);
     res.send(data);
   });
-  
-//  var filename = 'twitterSearchResultsForHr234.json';
-//  var data = loadJsonFile(filename);
-//  res.send(data);
 };
 
 var defer = function () {
