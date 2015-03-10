@@ -9,7 +9,7 @@ describe('billCtrl', function () {
         q = $q;
         $rootScope = _$rootScope_;
         $scope = $rootScope.$new();
-        twitterService = _twitterService_;        
+        twitterService = _twitterService_;
         billCtrl = $controller('billCtrl', {
           $scope: $scope,
           twitterService: twitterService,

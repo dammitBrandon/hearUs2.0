@@ -8,8 +8,7 @@ var fs = require('fs'),
   request = require('request'),
   Crypto = require('crypto');
 
-Twitter.SearchClient.prototype.next = function(parameters, callback)
-{
+Twitter.SearchClient.prototype.next = function(parameters, callback) {
 
   var self = this;
 
