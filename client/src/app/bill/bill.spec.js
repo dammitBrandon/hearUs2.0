@@ -1,5 +1,5 @@
 describe('billCtrl', function () {
-  ddescribe('init', function () {
+  describe('init', function () {
     var billCtrl, $rootScope, $scope, twitterService, q, deferred;
 
     beforeEach(function () {
@@ -9,17 +9,7 @@ describe('billCtrl', function () {
         q = $q;
         $rootScope = _$rootScope_;
         $scope = $rootScope.$new();
-//        twitterService = _twitterService_;
-        twitterService = {
-          getTweetsForBill: function(bill) {
-            deferred = q.defer();
-            console.log('called with bill', bill.bill_id);
-            console.log('Deferred saved');
-            return deferred.promise;
-          }
-        };
-        spyOn(twitterService, 'getTweetsForBill').and.callThrough();
-        
+        twitterService = _twitterService_;        
         billCtrl = $controller('billCtrl', {
           $scope: $scope,
           twitterService: twitterService,
@@ -131,10 +121,9 @@ describe('billCtrl', function () {
       expect(billCtrl).toBeDefined();
     });
 
-    it('makes call to twitterService#getTweetsForBill for bill', function () {
-//      spyOn(twitterService, 'getTweetsForBill');
-//      expect(twitterService.getTweetsForBill).toHaveBeenCalledWith(billCtrl.bill);
-      expect(billCtrl.initBillPage).toBeDefined();
+    xit('makes call to twitterService#getTweetsForBill for bill', function () {
+      spyOn(twitterService, 'getTweetsForBill');
+      expect(twitterService.getTweetsForBill).toHaveBeenCalled();
     });
   });
 });
