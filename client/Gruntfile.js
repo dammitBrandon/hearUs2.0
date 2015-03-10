@@ -309,7 +309,7 @@ module.exports = function (grunt) {
         eqnull: true,
         node: true,
         globalstrict: false,
-        predef: ["angular", "$"]
+        predef: ["angular", "$", "_"]
       },
       globals: {}
     },
