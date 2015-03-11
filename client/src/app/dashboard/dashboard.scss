@@ -1,0 +1,11 @@
+.bill-favorites {
+
+  li {
+    border-bottom: 1px solid #808080;
+    display: block;
+
+    &:hover {
+      background-color: #d3d3d3;
+    }
+  }
+}
