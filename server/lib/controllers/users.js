@@ -1,29 +1,35 @@
 'use strict';
 
 var UserRepository = require('../repositories/UserRepository'),
-    User = require('../domain/User'),
-    passport = require('passport');
+  User = require('../models/user');
 
 /**
  * Create user
  */
 exports.create = function (req, res, next) {
-  var newUser = new User(req.body);
-  newUser.set('provider', 'local');
+  var newUserData = req.body;
 
-  UserRepository.save(newUser, function(err) {
+  User.create(newUserData, function (err, user) {
     if (err) {
       // Manually provide our own message for 'unique' validation errors, can't do it from schema
-      if(err.errors.email.type === 'Value is not unique.') {
+      if (err.errors.email.type === 'Value is not unique.') {
         err.errors.email.type = 'The specified email address is already in use.';
       }
       return res.json(400, err);
     }
 
-    req.logIn(newUser, function(err) {
+    req.logIn(user, function (err) {
       if (err) return next(err);
-      
-      return res.json(req.user.userInfo);
+
+      if (user) {
+        return res.json({
+            id: req.user._id,
+            email: req.user.email,
+            role: req.user.role
+        });
+      } else {
+        return res.json(401);
+      }
     });
   });
 };
@@ -36,7 +42,7 @@ exports.show = function (req, res, next) {
 
   UserRepository.findOne({_id: userId}, function (err, user) {
     if (err) return next(new Error('Failed to load User'));
-  
+
     if (user) {
       res.send({ profile: user.profile });
     } else {
@@ -48,16 +54,16 @@ exports.show = function (req, res, next) {
 /**
  * Change password
  */
-exports.changePassword = function(req, res, next) {
+exports.changePassword = function (req, res, next) {
   var userId = req.user._id;
   var oldPass = String(req.body.oldPassword);
   var newPass = String(req.body.newPassword);
 
   UserRepository.findOne({_id: userId}, function (err, user) {
-    if(user.authenticate(oldPass)) {
+    if (user.authenticate(oldPass)) {
 
       user.password = newPass;
-      UserRepository.save(user, function(err) {
+      UserRepository.save(user, function (err) {
         if (err) {
           res.send(500, err);
         } else {
@@ -73,6 +79,6 @@ exports.changePassword = function(req, res, next) {
 /**
  * Get current user
  */
-exports.me = function(req, res) {
+exports.me = function (req, res) {
   res.json(req.user || null);
 };

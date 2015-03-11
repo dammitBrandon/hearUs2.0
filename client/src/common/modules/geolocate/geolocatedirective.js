@@ -1,8 +1,7 @@
 angular.module('geolocate.directives', [
-  'ui.router',
-  'services.SunlightApi'
+  'ui.router'
 ])
-  .directive('huGeolocate', function (SunlightService, $state, $stateParams, $rootScope, $log) {
+  .directive('huGeolocate', function ($state, $stateParams, $rootScope, $log) {
     return {
       replace: true,
       restrict: 'E',

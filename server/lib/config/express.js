@@ -1,19 +1,26 @@
 'use strict';
 
 var express = require('express'),
-    path = require('path'),
-    config = require('./config'),
-    passport = require('passport'),
-    mongoStore = require('connect-mongo')(express),
-    MemoryStore = express.session.MemoryStore;
-
+  session = require('express-session'),
+  cookieParser = require('cookie-parser'),
+  errorHandler = require('errorhandler'),
+  morgan = require('morgan'),
+  bodyParser = require('body-parser'),
+  flash = require('connect-flash'),
+  methodOverride = require('method-override'),
+  compression = require('compression'),
+  favicon = require('serve-favicon'),
+  path = require('path'),
+  config = require('./config'),
+  mongoStore = require('connect-mongo')(session),
+  MemoryStore = session.MemoryStore;
 
 /**
  * Express configuration
  */
-module.exports = function(app) {
-  app.configure('development', function(){
-//    app.use(require('connect-livereload')());
+module.exports = function (app, config, passport) {
+  if (config.env === 'development') {
+    //    app.use(require('connect-livereload')());
 
     // Disable caching of scripts for easier testing
     app.use(function noCache(req, res, next) {
@@ -27,12 +34,12 @@ module.exports = function(app) {
 
 //    app.use(express.static(path.join(config.root, '.tmp')));
 //    app.use(express.static(path.join(config.root, 'app')));
-    app.use(express.errorHandler());
+    app.use(errorHandler());
     app.set('views', config.root + '/app/views');
 
     console.log('Configuring Express Sessions for dev');
-    app.use(express.cookieParser());
-    app.use(express.session({
+    app.use(cookieParser());
+    app.use(session({
       secret: config.server.sessionSecret,
       store: new mongoStore({
         url: config.mongo.uri,
@@ -42,17 +49,15 @@ module.exports = function(app) {
       proxy: true
     }));
 
-  });
-
-  app.configure('production', function(){
-    app.use(express.favicon(path.join(config.root, 'public', 'favicon.ico')));
+  } else if (config.env === 'production') {
+//    app.use(favicon(path.join(config.root, 'public', 'favicon.ico')));
 //    app.use(express.static(path.join(config.root, 'public')));
     app.set('views', config.root + '/views');
 
     // Persist sessions with mongoStore
     console.log('Configuring Express Sessions.');
-    app.use(express.cookieParser());
-    app.use(express.session({
+    app.use(cookieParser());
+    app.use(session({
       secret: config.server.sessionSecret,
       store: new mongoStore({
         url: config.mongo.uri,
@@ -62,28 +67,24 @@ module.exports = function(app) {
       proxy: true
     }));
 
-  });
+  }
 
-  app.configure(function(){
-    app.engine('html', require('ejs').renderFile);
-    app.set('view engine', 'html');
-    app.use(express.logger('dev'));
-    app.use(express.json());
-    app.use(express.urlencoded());
-    app.use(express.methodOverride());
+  app.engine('html', require('ejs').renderFile);
+  app.set('view engine', 'html');
+  app.use(morgan('dev'));
+  app.use(flash());
+  app.use(bodyParser.json());
+  app.use(bodyParser.urlencoded({ extended: true }));
+  app.use(methodOverride());
 //    app.use(express.cookieParser());
 
-    // Server static resources from the compiled client application folder (either build or dist,
-    // depending on environment)
-    app.use(config.server.staticUrl, express.compress());
-    app.use(config.server.staticUrl, express.static(config.server.distFolder));
+  // Server static resources from the compiled client application folder (either build or dist,
+  // depending on environment)
+  app.use(config.server.staticUrl, compression());
+  app.use(config.server.staticUrl, express.static(config.server.distFolder));
 
-    //use passport session
-    console.log('Configuring Passport auth module.');
-    app.use(passport.initialize());
-    app.use(passport.session());
-
-    // Router needs to be last
-    app.use(app.router);
-  });
+  //use passport session
+  console.log('Configuring Passport auth module.');
+  app.use(passport.initialize());
+  app.use(passport.session());
 };

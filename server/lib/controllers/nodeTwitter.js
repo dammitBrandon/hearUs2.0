@@ -1,10 +1,37 @@
 'use strict';
 
 var fs = require('fs'),
-  _ = require('lodash'),
+  Promise = require('es6-promise').Promise,
   Twitter = require('node-twitter'),
   config = require('../config/config'),
-  util = require('util');
+  util = require('util'),
+  request = require('request'),
+  Crypto = require('crypto');
+
+Twitter.SearchClient.prototype.next = function(parameters, callback) {
+
+  var self = this;
+
+  var requestUrlString = this._apiBaseUrlString + '/';
+  if (this._apiVersion !== null) {
+    requestUrlString += this._apiVersion + '/';
+  }
+  requestUrlString += 'search/tweets.json';
+
+  if (parameters !== undefined && parameters !== null && parameters.length > 0) {
+    requestUrlString = requestUrlString + parameters;
+  }
+
+  var requestOptions = {method: 'GET', url: requestUrlString, oauth: this.oauth()};
+
+  var httpRequest = request.get(requestOptions);
+  httpRequest.hash = Crypto.createHash('sha1').update(JSON.stringify(httpRequest.headers), 'utf8').digest('hex');
+  this._connections[httpRequest.hash] = {callback: callback, data: '', httpRequest: httpRequest};
+
+
+  this._createEventListenersForRequest(httpRequest);
+
+};
 
 var twit = new Twitter.SearchClient(
   config.twitter.consumerKey,
@@ -21,25 +48,40 @@ var loadJsonFile = function (filename) {
   return jsonData;
 };
 
-//twit.search({'q': 'hr234', 'count': 100, 'result_type': 'recent'}, function(error, results) {
-//  if (error) {
-//    console.log('error ', error);
-//  } else if (results) {
-//    console.log('results ', results);
-//  }
-//});
+var count = 0;
+
+function search(query) {
+  var deferred = defer();
+  twit.search({'q': query.join(' OR '), 'count': 10, 'result_type': 'recent'}, function(error, results) {
+    if (error) {
+      console.error('error ', error);
+      deferred.reject(error);
+    } else if (results) {
+      deferred.resolve(results);
+    }
+  });
+  
+  return deferred.promise;
+}
 
 exports.searchForBill = function (req, res, next) {
   var searchQueryParams = req.query.searchQuery;
-//  twit.search({'q': 'guns'}, function(error, data) {
-//    
-//    if(!_.isUndefined(other.search_metadata.next_results)) {
-//      console.log('get additional tweets');
-//    }
-//  });
-  
-  var filename = 'twitterSearchResultsForGuns.json';
-  var data = loadJsonFile(filename);
-  res.send(data);
-  
+  search(searchQueryParams).then(function(data){
+    console.log('data returned', data);
+    res.send(data);
+  });
 };
+
+var defer = function () {
+  var resolve, reject;
+  var promise = new Promise(function() {
+    resolve = arguments[0];
+    reject = arguments[1];
+  });
+  return {
+    resolve: resolve,
+    reject: reject,
+    promise: promise
+  };
+};
+

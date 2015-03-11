@@ -3,7 +3,7 @@
 var fs = require('fs'),
   sunlight = require('sunlight-congress-api'),
   config = require('../config/config'),
-  googleMapsApi = require('./googlemaps'),
+  googleMapsService = require('../services/googleMapsService'),
   apikey = config.sunlightLabs.apikey,
   mongoose = require('mongoose'),
   _ = require('lodash'),
@@ -291,7 +291,7 @@ exports.loadSenators = function (req, res, next) {
 
 exports.searchDistrictByAddress = function (req, res, next) {
   var address = req.query.address;
-  googleMapsApi.getCoords(address).then(function(coordsData) {
+  googleMapsService.getCoords(address).then(function(coordsData) {
     sunlight.districtsLocate()
       .addCoordinates(coordsData)
       .call()
@@ -317,7 +317,7 @@ exports.searchDistrictByAddress = function (req, res, next) {
 
 exports.searchDistrictByZipCode = function (req, res, next) {
   var zipCode = req.params.zipCode;
-  
+
   sunlight.districtsLocate()
     .addZipCode(zipCode)
     .call()
@@ -335,7 +335,7 @@ exports.searchDistrictByZipCode = function (req, res, next) {
             }
           });
       } else if (!_.isUndefined(data.count) && (data.count > 1)) {
-        googleMapsApi.getLocationInfoByZipCode(zipCode).then(function(addressData){
+        googleMapsService.getLocationInfoByZipCode(zipCode).then(function(addressData){
           data.results.push({address: addressData});
           res.send(data);
         });

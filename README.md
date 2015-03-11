@@ -81,28 +81,28 @@ It’s generally installed in your local dev environment as part of the [Heroku 
 The Heroku Command Line Interface (CLI) is the main tool that is used for the majority of tasks related to Heroku and deployment, 
 more about the CLI can be found [here](https://devcenter.heroku.com/categories/command-line "Heroku CLI").
 
-### Getting access to the Portfolio Matrix Application Heroku instance.
-To gain access to the Heroku instance of the Portfolio Matrix application and push code to the Heroku repository you must request
+### Getting access to the HearUs Project Application Heroku instance.
+To gain access to the Heroku instance of the HearUs Project application and push code to the Heroku repository you must request
 access to the Heroku repository and set up your local Git repo correctly.  To gain access to the Heroku platform please contact
 [Brandon Bailey](brandon.bailey@slalom.com) or [Dennis Janek](dennisj@slalom.com).  After you have gained access to the repo you
 can set up Heroku git repo locally.
 
-### Adding Portfolio Matrix Heroku repo remote
-You can create a new Heroku remote but that will be its own application and more documentaion for that can be found [here](git@heroku.com:portfolio-matrix.git "Heroku Docs").
-To contribute to this project's Heroku instance you will add a remote using the git URL which is `git@heroku.com:portfolio-matrix.git`. like so:
+### Adding HearUs Project Heroku repo remote
+You can create a new Heroku remote but that will be its own application and more documentaion for that can be found [here](git@heroku.com:hear-us-project.git "Heroku Docs").
+To contribute to this project's Heroku instance you will add a remote using the git URL which is `git@heroku.com:hear-us-project.git`. like so:
  
  ```shell
- heroku git:remote -a portfolio-matrix
+ heroku git:remote -a hear-us-project
  Git remote heroku added
  ```
  
 You can verify the remote in you git configuration as such:
 ```shell
 git remote -v
-heroku	git@heroku.com:portfolio-matrix.git (fetch)
-heroku	git@heroku.com:portfolio-matrix.git (push)
-origin	https://[username]@bitbucket.org/slalom-consulting/slalom-portfolio-matrix.git (fetch)
-origin	https://[username]@bitbucket.org/slalom-consulting/slalom-portfolio-matrix.git (push)
+heroku	git@heroku.com:hear-us-project.git (fetch)
+heroku	git@heroku.com:hear-us-project.git (push)
+origin	https://[username]@bitbucket.org/slalom-consulting/git@heroku.com:hear-us-project.git (fetch)
+origin	https://[username]@bitbucket.org/slalom-consulting/git@heroku.com:hear-us-project.git (push)
 ```
 
 ### Deploying code

@@ -1,22 +1,20 @@
 'use strict';
 
 var express = require('express'),
-  passport = require('passport'),
   index = require('./controllers'),
   users = require('./controllers/users'),
   session = require('./controllers/session'),
+  middleware = require('./middleware'),
   sunlightApi = require('./controllers/sunlight'),
   twitterApi = require('./controllers/nodeTwitter');
-
-var middleware = require('./middleware');
 
 /**
  * Application routes
  */
-module.exports = function (app, config) {
+module.exports = function (app, config, passport) {
 
-  app.post('/api/users', users.create);
-  app.put('/api/users', users.changePassword);
+//  app.post('/api/users', users.create);
+//  app.put('/api/users', users.changePassword);
   app.get('/api/users/me', ensureAuthenticated, users.me);
   app.get('/api/users/:id', users.show);
 //  app.get('/api/sunlight/topic/:issue', sunlightApi.searchIssue);
@@ -35,6 +33,7 @@ module.exports = function (app, config) {
 
   app.post('/api/session', session.login);
   app.del('/api/session', session.logout);
+  app.post('/api/session/ServiceSignUpAuth', users.create);
 
   // All other routes to use Angular routing in app/scripts/app.js
   app.get('/partials/*', index.partials);

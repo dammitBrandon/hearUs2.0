@@ -20,6 +20,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-ngmin');
   grunt.loadNpmTasks('grunt-html2js');
   grunt.loadNpmTasks('grunt-contrib-jade');
+  grunt.loadNpmTasks('grunt-protractor-webdriver');
   grunt.loadNpmTasks('grunt-protractor-runner');
 
   /**
@@ -308,7 +309,7 @@ module.exports = function (grunt) {
         eqnull: true,
         node: true,
         globalstrict: false,
-        predef: ["angular", "$"]
+        predef: ["angular", "$", "_"]
       },
       globals: {}
     },
@@ -646,6 +647,11 @@ module.exports = function (grunt) {
     'copy:build_appjs', 'copy:build_vendorjs', 'index:build', 'karmaconfig',
     'karma:continuous'
   ]);
+
+  /**
+   * The 'test' task runs all unit tests once
+   */
+  grunt.registerTask('test', ['karma:continuous']);
 
   /**
    * The `compile` task gets your app ready for deployment by concatenating and

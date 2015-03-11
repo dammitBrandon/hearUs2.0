@@ -3,12 +3,13 @@
 angular.module('services.SunlightApi', [
   'ui.router'
 ])
-  .factory('SunlightService', function ($q, $http, $log) {
+  .factory('sunlightService', function ($q, $http, $log) {
     var baseUrl = '/api/sunlight/';
 
     function getIssues(issue) {
       var deferred = $q.defer();
       var url = baseUrl + 'topic/' + issue;
+      $log.log('url ', url);
 
       $http({
         method: 'GET',
@@ -51,7 +52,7 @@ angular.module('services.SunlightApi', [
       var url = baseUrl + 'congressman/bills/' + congressmanId;
 
       $http({
-        method: 'Get',
+        method: 'GET',
         url: url
       })
         .success(function(data, status, headers, config){
@@ -71,7 +72,7 @@ angular.module('services.SunlightApi', [
       var url = baseUrl + 'district/' + zipCode;
 
       $http({
-        method: 'Get',
+        method: 'GET',
         url: url
       })
         .success(function (data, status, headers, config) {
@@ -91,7 +92,7 @@ angular.module('services.SunlightApi', [
       var url = baseUrl + 'district/lat/' + coords.lat + '/long/' + coords.long;
 
       $http({
-        method: 'Get',
+        method: 'GET',
         url: url
       })
         .success(function(data, status, headers, config) {
@@ -130,10 +131,9 @@ angular.module('services.SunlightApi', [
     function getCongressmenByDistrict(districtObj) {
       var deferred = $q.defer();
       var url = baseUrl + 'district/congressmen/state/' + districtObj.state + '/district/' + districtObj.districtNumber;
-      $log.log('dis obj ', districtObj);
-      $log.log('url ', url);
+      
       $http({
-        method: 'Get',
+        method: 'GET',
         url: url
       })
         .success(function (data, status, headers, config) {
@@ -192,7 +192,7 @@ angular.module('services.SunlightApi', [
       var url = baseUrl + 'senators';
 
       $http({
-        method: 'Get',
+        method: 'GET',
         url: url
       })
         .success(function (data, status, headers, config) {
@@ -212,7 +212,7 @@ angular.module('services.SunlightApi', [
       var url = baseUrl + 'representatives';
 
       $http({
-        method: 'Get',
+        method: 'GET',
         url: url
       })
         .sucess(function (data, status, headers, config) {

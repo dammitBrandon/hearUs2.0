@@ -4,30 +4,35 @@
       
   .bill-container
     span {{bill.last_version.version_name}}
-    p {{bill | summaryFilter}}
+    p {{bill.summary}}
     a(href="{{bill.last_version.urls.pdf}}", target="_blank") View as Pdf
       
   .sponsor
     span Bill Sponsor: 
       a(ui-sref="congressman({id: bill.sponsor.bioguide_id})") {{bill.sponsor | congressmanNameFilter}}
   
-  .cosponsors
-    span Cosponsors of {{bill.bill_id}}
-    ul
-      li(ng-repeat="sponsor in cosponsors| limitTo: 4")
-        a(ui-sref="congressman({id: sponsor.bioguide_id})") {{sponsor | congressmanNameFilter}}
-    a(ng-if="cosponsors.length > 4", href="#") See all cosponsors
-            
-  .additional-resources
-    span Additional resources:
-    div(style="padding-left: 10px;", ng-repeat="(resource, url) in bill.urls")
-      a(href="{{url}}") {{resource | capitalizeFilter}}
-        
-  .twitter-feed
-    span Tweets related to {{bill.bill_id}}
-    div
+  div.left
+    .cosponsors
+      span Cosponsors of {{bill.bill_id}}
       ul
-        li(ng-repeat="tweet in tweetCollection")
-          span {{tweet.user.screen_name}}
-          p(ng-bind="tweet.text")
-      
+        li(ng-repeat="sponsor in cosponsors| limitTo: 4")
+          a(ui-sref="congressman({id: sponsor.bioguide_id})") {{sponsor | congressmanNameFilter}}
+      a(ng-if="cosponsors.length > 4", href="#") See all cosponsors
+              
+    .additional-resources
+      span Additional resources:
+      div(style="padding-left: 10px;", ng-repeat="(resource, url) in bill.urls")
+        a(href="{{url}}") {{resource | capitalizeFilter}}
+        
+  div.right
+    a.twitter-timeline(href="https://twitter.com/hashtag/corgi", data-widget-id="573533863160455170") #corgi Tweets
+      script(type="text/javascript").
+        !function (d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+          if (!d.getElementById(id)) {
+            js = d.createElement(s);
+            js.id = id;
+            js.src = p + "://platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
+          }
+        }(document, "script", "twitter-wjs");

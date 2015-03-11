@@ -3,9 +3,10 @@ angular.module('districtSearch.controllers', [
   'services.SunlightApi',
   'services.hearUsModal'
 ]).
-  controller('districtSearchCtrl', function districtSearchController($scope, $rootScope, $state, $stateParams, $log, districtInfo, SunlightService, $modal) {
+  controller('districtSearchCtrl', function districtSearchController($scope, $rootScope, $state, $stateParams, $log, districtInfo, sunlightService, $modal) {
 
     function initDistrictSearch() {
+      $log.log('initDisCtrl');
       $scope.senators = [];
       $log.log('info ', districtInfo);
       if (districtInfo.count === 1 || districtInfo.count === 0) {
@@ -17,9 +18,7 @@ angular.module('districtSearch.controllers', [
             $scope.houseRep = congressman;
           }
         });
-
       } else if (districtInfo.count > 1) {
-
         requestAdditionalInformation(districtInfo);
       }
     }
@@ -49,7 +48,7 @@ angular.module('districtSearch.controllers', [
           };
 
           function getDistrictByAddress(address) {
-            SunlightService.getDistrictByAddress(address).then(function (modalDistrictData) {
+            sunlightService.getDistrictByAddress(address).then(function (modalDistrictData) {
               $rootScope.$broadcast('district:located', modalDistrictData);
               return;
             });

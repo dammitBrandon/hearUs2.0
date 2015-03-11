@@ -7,14 +7,17 @@ angular.module('hearUs', [
   'ui.router',
   'ui.map',
   'mm.foundation',
+  'auth',
   'landing',
   'issueSearch',
   'districtSearch',
   'bill',
   'congressman',
+  'dashboard',
   'geolocate',
   'resize.directive',
-  'hearUsFilters'
+  'hearUsFilters',
+  'services.authHttpIntercept'
 ])
   .config(function myAppConfig($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
@@ -26,9 +29,9 @@ angular.module('hearUs', [
       });
   })
   .run(function ($rootScope, $state, $stateParams) {
-      $rootScope.$state = $state;
-      $rootScope.$stateParams = $stateParams;
-    })
+    $rootScope.$state = $state;
+    $rootScope.$stateParams = $stateParams;
+  })
   .controller('AppCtrl', function AppCtrl($scope, $location) {
     $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
       if (angular.isDefined(toState.data.pageTitle)) {
