@@ -10,6 +10,6 @@ form(name="hearUsForm.sign-in")
           small.error(ng-show="hearUsForm['sign-in'].userPassword.$invalid && !hearUsForm['sign-in'].userPassword.$pristine") Password Required
         ul.button-group.even-2
           li
-            a.button.tertiary.large-offset-2.small-6(ui-sref="auth.sign_up") Sign up
+            button.button.tertiary.large-offset-2.small-6(ui-sref="auth.sign_up") Sign up
           li 
-            button.button.small-6(type="button", ng-click="signIn()", ng-disabled="hearUsForm['sign-in'].$invalid") Sign in
+            button#sign-in-btn.button.small-6(type="button", ng-click="signIn()", ng-disabled="hearUsForm['sign-in'].$invalid") Sign in

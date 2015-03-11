@@ -27,7 +27,8 @@
     "ejs": "~0.8.4",
     "sunlight-congress-api": "git://github.com/dammitBrandon/sunlight-congress-api.git#master",
     "googlemaps": "latest",
-    "es6-promise": "^1.0.0"
+    "es6-promise": "^1.0.0",
+    "node-twitter": "latest"
   },
   "devDependencies": {},
   "engines": {

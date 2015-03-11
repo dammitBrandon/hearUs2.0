@@ -4,10 +4,9 @@ var express = require('express'),
   index = require('./controllers'),
   users = require('./controllers/users'),
   session = require('./controllers/session'),
+  middleware = require('./middleware'),
   sunlightApi = require('./controllers/sunlight'),
   twitterApi = require('./controllers/nodeTwitter');
-
-var middleware = require('./middleware');
 
 /**
  * Application routes

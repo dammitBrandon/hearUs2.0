@@ -26,5 +26,11 @@ module.exports = {
   },
   googleMaps: {
     apikey: "AIzaSyAeT2qiRj4vcpDOw1TegMmXeQu4SHl9QQQ"
+  },
+  twitter: {
+    "consumerKey": "hBRolSpFC8mW8JfL0QDDg",
+    "consumerSecret": "lDBy6KwLec8gX4oS338IG9BaPAJJHOvwPM0iH5a6Ef0",
+    "accessToken": "376208330-1AoYnFgmNICvNLrOctZMZgax1GMuVARCCGRmhhy9",
+    "accessTokenSecret": "S26w6mwU6A45CZrm7aLqzBshWHFV0454KPYFekjyak"
   }
 };
