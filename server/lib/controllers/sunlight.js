@@ -209,7 +209,7 @@ var getRepsForState = function (districtObj) {
   return reps;
 };
 
-var getCongressmenForDistrict = function (districtObj) {
+var getCongressmenForDistrict = exports.getCongressmenForDistrict = function (districtObj) {
   var congressmen = Congressman.find({
     $or: [
       {
