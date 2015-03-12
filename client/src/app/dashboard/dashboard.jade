@@ -1,19 +1,21 @@
 .container(style="padding-top: 20px;")
-  h3 Brandon's Dashboard
+  h3 {{user.lastName}}'s Dashboard
 
 .row
   .medium-7.large-8.columns.panel.left
-    h4 District 5 Information
-    ul.no-bullet
-      li
-        div
-          span Representative Steny Hoyer
-      li
-        div
-          span Congressman Blah Blahher
-      li
-        div
-          span Congressman Blah Blahher 2
+    h4 District {{user.District}} Information
+    div
+      h5 House Representative
+        ul.no-bullet
+          li
+            a(ng-bind="houseRep | congressmanNameFilter", ui-sref="congressman({id: houseRep.bioguide_id})")
+
+      div
+        h5 Senators 
+          ul.no-bullet(ng-repeat="senator in senators")
+            li
+              a(ng-bind="senator | congressmanNameFilter", ui-sref="congressman({id: senator.bioguide_id})")
+  
   .medium-1.large-1.columns
   .medium-4.large-3.columns.panel.right
     h4 Favorite Bills
