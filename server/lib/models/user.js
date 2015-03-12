@@ -21,6 +21,8 @@ var UserSchema = new Schema({
     type: String,
     default: '1'
   },
+  district: String,
+  favoriteBills: [{type: String}], 
   hashedPassword: String,
   provider: String,
   salt: String

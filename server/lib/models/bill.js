@@ -13,7 +13,7 @@ var BillSchema = new Schema({
     required: true
   },
   
-  officialTitle: {
+  title: {
     type: String,
     unique: true,
     required: true
