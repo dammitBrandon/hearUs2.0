@@ -32,7 +32,8 @@ exports.login = function (req, res, next) {
           return res.json({
             id: user._id,
             email: user.email,
-            role: user.role
+            role: user.role,
+            favoriteBills: user.favoriteBills
           });
         } else {
           return res.json(401);
