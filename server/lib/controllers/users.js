@@ -1,6 +1,7 @@
 'use strict';
 
 var UserRepository = require('../repositories/UserRepository'),
+  sunlight = require('./sunlight'),
   User = require('../models/user');
 
 /**
@@ -22,10 +23,23 @@ exports.create = function (req, res, next) {
       if (err) return next(err);
 
       if (user) {
-        return res.json({
-            id: req.user._id,
-            email: req.user.email,
-            role: req.user.role
+        console.log('user is ', user );
+        sunlight.getCongressmenForDistrict({district: req.user.district, state: req.user.state}).addBack(function (err, queryResults) {
+          if (err) {
+            console.error('error getting data from query', err);
+          } else {
+            console.log('congressmen found', queryResults);
+            return res.json({
+              id: req.user._id,
+              firstName: req.user.firstName,
+              lastName: req.user.lastName,
+              email: req.user.email,
+              role: req.user.role,
+              state: req.user.state,
+              district: req.user.district,
+              congressmen: queryResults
+            });
+          }
         });
       } else {
         return res.json(401);

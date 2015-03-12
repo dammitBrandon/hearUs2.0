@@ -2,6 +2,7 @@
 
 var mongoose = require('mongoose'),
     passport = require('passport'),
+    sunlight = require('./sunlight'),
     _ = require('lodash');
 
 /**
@@ -23,16 +24,30 @@ exports.login = function (req, res, next) {
     if (error) return res.status(401).json(error);
     
     if(user) {
+      console.log('first user in session is ', user);
       req.logIn(user, function(err) {
         if (err) {
           console.error(err);
           return res.send(err);
         }
         if(user) {
-          return res.json({
-            id: user._id,
-            email: user.email,
-            role: user.role
+          console.log('second user in session is ', user);
+          sunlight.getCongressmenForDistrict({district: req.user.district, state: req.user.state}).addBack(function (err, queryResults) {
+            if (err) {
+              console.error('error getting data from query', err);
+            } else {
+              console.log('congressman found', queryResults);
+              return res.json({
+                id: req.user._id,
+                firstName: req.user.firstName,
+                lastName: req.user.lastName,
+                email: req.user.email,
+                role: req.user.role,
+                state: req.user.state,
+                district: req.user.district,
+                congressmen: queryResults
+              });
+            }
           });
         } else {
           return res.json(401);
