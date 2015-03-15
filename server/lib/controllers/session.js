@@ -45,7 +45,8 @@ exports.login = function (req, res, next) {
                 role: req.user.role,
                 state: req.user.state,
                 district: req.user.district,
-                congressmen: queryResults
+                congressmen: queryResults,
+                favoriteBills: user.favoriteBills
               });
             }
           });

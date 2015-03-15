@@ -17,6 +17,9 @@ module.exports = function (app, config, passport) {
 //  app.put('/api/users', users.changePassword);
   app.get('/api/users/me', ensureAuthenticated, users.me);
   app.get('/api/users/:id', users.show);
+  app.post('/api/users/:id/bills', users.addBill);
+  app.del('/api/users/:id/bills/:bill_id', users.removeBill);
+  
 //  app.get('/api/sunlight/topic/:issue', sunlightApi.searchIssue);
   app.get('/api/sunlight/topic/:issue', sunlightApi.searchForIssue);
   app.get('/api/sunlight/bill/:id', sunlightApi.getBill);

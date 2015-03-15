@@ -1,8 +1,11 @@
 'use strict';
 
-var UserRepository = require('../repositories/UserRepository'),
+var mongoose = require('mongoose'),
+  _ = require('lodash'),
+  UserRepository = require('../repositories/UserRepository'),
   sunlight = require('./sunlight'),
-  User = require('../models/user');
+  User = require('../models/user'),
+  Bill = require('../models/bill');
 
 /**
  * Create user
@@ -37,7 +40,8 @@ exports.create = function (req, res, next) {
               role: req.user.role,
               state: req.user.state,
               district: req.user.district,
-              congressmen: queryResults
+              congressmen: queryResults,
+              bills: req.user.favoriteBills
             });
           }
         });
@@ -65,6 +69,65 @@ exports.show = function (req, res, next) {
   });
 };
 
+exports.addBill = function (req, res, next) {
+  var userId = mongoose.Types.ObjectId(req.params.id);
+  var billId = req.body.billId;
+  
+  User.findOne({"_id": userId}, function (err, user) {
+    if (err) {
+      return next(err);
+    }
+    
+    if(_.indexOf(user.favoriteBills, billId) === -1) {
+      console.log('Bill currently not in favorites');
+      user.favoriteBills.push(billId);
+      user.save(function(err, user) {
+        if (err) {
+          console.error(err);
+          res.send(500, err);
+        }
+        console.log('successfully saved bill in favorites', user);
+      });
+    }
+    res.json({
+      id: user._id,
+      email: user.email,
+      role: user.role,
+      favoriteBills: user.favoriteBills
+    });
+  });
+};
+
+exports.removeBill = function(req, res, next) {
+  console.log('removeing bill');
+  var userId = mongoose.Types.ObjectId(req.params.id);
+  var billId = req.params.bill_id;
+
+  User.findOne({"_id": userId}, function(err, user) {
+    if (err) {
+      return res.send(500, err);
+    }
+    
+    var billIndex = _.indexOf(user.favoriteBills, billId);
+    if( billIndex !== -1) {
+      console.log('billid found', billIndex);
+      user.favoriteBills.splice(billIndex, 1);
+      user.save(function(err, user) {
+        if (err) {
+          console.error(err);
+          res.send(500, err);
+        }
+        console.log('successfully removed bill from favorites', user);
+      });
+    }
+    res.json({
+      id: user._id,
+      email: user.email,
+      role: user.role,
+      favoriteBills: user.favoriteBills
+    });
+  });
+};
 /**
  * Change password
  */

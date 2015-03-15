@@ -18,6 +18,7 @@ angular.module('services.ProfileApi', [
           _user.role = userObj.role;
           _user.congressmen = userObj.congressmen;
           _user.district = userObj.district;
+          _user.favoriteBills = userObj.favoriteBills;
       }
       $log.log('setUserProfile _user', _user);
     }
@@ -117,6 +118,62 @@ angular.module('services.ProfileApi', [
       return deferred.promise;
     }
     
+    function favoriteBill(bill) {
+      var deferred = $q.defer();
+      $log.log('updateFavorites', bill);
+      $log.log('user', _user);
+      
+      $http({
+        method: 'POST',
+        url: '/api/users/' + _user.id + '/bills',
+        data: {billId: bill.bill_id}
+      })
+        .success(function(data, status, headers, config) {
+          $log.log('successfully added bill', data);
+          setUserProfile(data);
+          deferred.resolve(data);
+        })
+        .error(function(err, status, headers, config) {
+          $log.error('failed to add bill', err);
+        });
+      
+      return deferred.promise;
+    }
+    
+    function unfavoriteBill(bill) {
+      var deferred = $q.defer();
+      $log.log('updateFavorites', bill);
+      $log.log('user', _user);
+
+      $http({
+        method: 'DELETE',
+        url: '/api/users/' + _user.id + '/bills/' + bill.bill_id
+      })
+        .success(function(data, status, headers, config) {
+          $log.log('successfully deleted bill', data);
+          setUserProfile(data);
+          deferred.resolve(data);
+        })
+        .error(function(err, status, headers, config) {
+          $log.error('failed to delete bill', err);
+          deferred.reject(err);          
+        });
+
+      return deferred.promise;
+    }
+    
+    function isFavorited(billId) {
+      var test = _.indexOf(_user.favoriteBills, billId);
+      $log.log('bill favorited?', test);
+      if(test === -1) {
+        $log.log('false');
+        return false;
+      } else {
+        $log.log('true');
+        return true;
+      }
+    }
+    
     return {
       signUpAuth: signUpAuth,
       getId: getId,
@@ -125,6 +182,9 @@ angular.module('services.ProfileApi', [
       isLoggedIn: isLoggedIn,
       isAuthorized: isAuthorized,
       logIn: logIn,
-      logOut: logOut
+      logOut: logOut,
+      favoriteBill: favoriteBill,
+      unfavoriteBill: unfavoriteBill,
+      isFavorited: isFavorited
     };
   });

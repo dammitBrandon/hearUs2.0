@@ -1,7 +1,12 @@
 .container(style="padding-top: 20px;")
-  h4 {{bill | titleFilter}} 
-    span.right.subheader {{bill.bill_id}}
-      
+  h4 {{bill | titleFilter}} - 
+    span.subheader {{bill.bill_id}}
+    div(ng-show="isBillFavorited(bill.bill_id)")
+      a.right(ng-click="unfavoriteBill(bill)")
+        i.fa.fa-star
+    div(ng-show="!isBillFavorited(bill.bill_id)")
+      a.right(ng-click="favoriteBill(bill)")
+        i.fa.fa-star-o
   .bill-container
     span {{bill.last_version.version_name}}
     p {{bill.summary}}
